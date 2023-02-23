@@ -1,9 +1,12 @@
-replicaCount: 1
+statefulSet:
+  annotations: {}
+  labels: {}
+  replicaCount: 1
+  # The maximum number of revisions that will be maintained in the StatefulSet's revision history
+  # Default in 10.
+  revisionHistoryLimit: 5
 
 updateStrategy:
-  rollingUpdate:
-    maxUnavailable: 1
-    maxSurge: 0
   type: RollingUpdate
 
 image:
@@ -14,20 +17,20 @@ image:
   tag: ""
 
 env:
-  WOODPECKER_ADMIN: "xxxx"
-  WOODPECKER_HOST: https://"xxxxxxx"
-  WOODPECKER_GITHUB: true
+  WOODPECKER_ADMIN: "woodpecker,admin"
+  WOODPECKER_HOST: "https://xxxxxxx"
+  # WOODPECKER_GITHUB: "true"
 
 extraSecretNamesForEnvFrom:
-- woodpecker-github-client
-- woodpecker-github-secret
-- woodpecker-secret
+  # - woodpecker-github-client
+  # - woodpecker-github-secret
+  - woodpecker-secret
 
 persistentVolume:
   enabled: true
   size: 10Gi
   mountPath: "/var/lib/woodpecker"
-  storageClass: "gp2"
+  storageClass: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -43,6 +46,7 @@ serviceAccount:
   name: ""
 
 podAnnotations: {}
+  # prometheus.io/scrape: "true"
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -57,7 +61,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: &servicePort 80
 
 ingress:
   enabled: false
@@ -74,7 +78,7 @@ ingress:
       - path: /
         backend:
           serviceName: chart-example.local
-          servicePort: 80
+          servicePort: *servicePort
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
