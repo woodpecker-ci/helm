@@ -2,8 +2,8 @@ apiVersion: v2
 name: woodpecker-agent
 description: A Helm chart for the Woodpecker agent
 type: application
-version: <version>
-appVersion: "v<version>"
+version: next
+appVersion: "next"
 keywords:
 - continuous-delivery
 - continuous-deployment
