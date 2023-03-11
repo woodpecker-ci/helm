@@ -1,5 +1,5 @@
 variables:
-  - &helm_image alpine/helm:3.5.3
+  - &helm_image alpine/helm:latest
 
 pipeline:
   set-version:
@@ -21,7 +21,7 @@ pipeline:
       - helm lint woodpecker-server/
 
   release:
-    image: quay.io/helmpack/chart-releaser:v1.4.0
+    image: quay.io/helmpack/chart-releaser:v1.5.0
     secrets:
       - source: github_token
         target: CR_TOKEN
