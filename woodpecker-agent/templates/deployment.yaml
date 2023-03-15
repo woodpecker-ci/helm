@@ -2,10 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "woodpecker-agent.fullname" . }}
+  {{- with .Values.deployment.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   labels:
     {{- include "woodpecker-agent.labels" . | nindent 4 }}
+    {{- with .Values.deployment.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.deployment.replicaCount }}
+  revisionHistoryLimit: {{ .Values.deployment.revisionHistoryLimit }}
   selector:
     matchLabels:
       {{- include "woodpecker-agent.selectorLabels" . | nindent 6 }}
