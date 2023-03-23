@@ -39,11 +39,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.command }}
           command:
-          {{- toYaml . | trim | nindent 12 }}
+            {{- toYaml . | trim | nindent 12 }}
           {{- end }}
           {{- with .Values.args }}
           args:
-          {{- toYaml . | trim | nindent 12 }}
+            {{- toYaml . | trim | nindent 12 }}
           {{- end }}
           ports:
             - name: http
@@ -51,11 +51,9 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.extraVolumeMounts }}
+          {{- with .Values.extraVolumeMounts }}
           volumeMounts:
-          {{- if .Values.extraVolumeMounts }}
-            {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
-          {{- end }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
             {{- range $key, $value := .Values.env }}
@@ -79,11 +77,9 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- if .Values.extraVolumes }}
+      {{- with .Values.extraVolumes }}
       volumes:
-      {{- if .Values.extraVolumes }}
-        {{- toYaml .Values.extraVolumes | nindent 6 }}
-      {{- end }}
+        {{- toYaml . | nindent 6 }}
       {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:

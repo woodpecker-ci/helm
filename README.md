@@ -2,7 +2,7 @@
 
 This repository contains the helm charts of the [Woodpecker](https://woodpecker-ci.org) project.
 
-![Version: 0.3.2](https://img.shields.io/badge/Version-0.3.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.0](https://img.shields.io/badge/AppVersion-v1.0.0-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.2](https://img.shields.io/badge/AppVersion-1.0.2-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -47,11 +47,21 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 0.3.2
+  version          = 1.0.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
 ```
+
+## Upgrading
+
+<details>
+
+<summary>To 1.0.0</summary>
+* split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
+    * move `metrics.interval` to `prometheus.podmonitor.interval`
+
+</details>
 
 ## Versioning
 
@@ -63,11 +73,6 @@ to communicate when admins have to do manual migration steps and when they can j
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | agent.affinity | object | `{}` | Specifies the affinity |
-| agent.dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
-| agent.dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
-| agent.dind.extraVolumeMounts | list | `[]` | Defines extra volumes to mount in the Docker-in-Docker container |
-| agent.dind.image | string | `"docker:20.10.24-dind"` | Specifies the image for Docker-in-Docker |
-| agent.dind.resources | object | `{}` | Defines the resources for Docker-in-Docker |
 | agent.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | agent.enabled | bool | `true` | Enable the agent component |
 | agent.env.WOODPECKER_BACKEND | string | `"kubernetes"` |  |

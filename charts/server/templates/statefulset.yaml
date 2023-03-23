@@ -44,11 +44,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.command }}
           command:
-          {{- toYaml . | trim | nindent 12 }}
+            {{- toYaml . | trim | nindent 12 }}
           {{- end }}
           {{- with .Values.args }}
           args:
-          {{- toYaml . | trim | nindent 12 }}
+            {{- toYaml . | trim | nindent 12 }}
           {{- end }}
           ports:
             - name: http
@@ -57,11 +57,11 @@ spec:
             - name: grpc
               containerPort: 9000
               protocol: TCP
-          {{- if .Values.metrics.enabled }}
+            {{- if .Values.metrics.enabled }}
             - name: metrics
               containerPort: {{ .Values.metrics.port }}
               protocol: TCP
-          {{- end }}
+            {{- end }}
           livenessProbe:
             httpGet:
               path: /healthz
@@ -72,16 +72,14 @@ spec:
               port: 8000
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if or (.Values.persistentVolume.enabled) (.Values.extraVolumeMounts.enabled) }}
           volumeMounts:
-          {{- if .Values.persistentVolume }}
-          - name: data
-            mountPath: {{ .Values.persistentVolume.mountPath }}
-          {{- end }}
-          {{- if .Values.extraVolumeMounts }}
-            {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
-          {{- end }}
-          {{- end }}
+            {{- if .Values.persistentVolume }}
+            - name: data
+              mountPath: {{ .Values.persistentVolume.mountPath }}
+            {{- end }}
+            {{- with .Values.extraVolumeMounts }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           env:
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
@@ -108,9 +106,9 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- with .Values.extraVolumes }}
       volumes:
-      {{- if .Values.extraVolumes }}
-        {{- toYaml .Values.extraVolumes | nindent 8 }}
+        {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:

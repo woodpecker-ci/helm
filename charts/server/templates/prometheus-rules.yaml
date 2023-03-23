@@ -1,0 +1,31 @@
+{{- if and .Values.metrics.enabled .Values.prometheus.rules.enabled (.Capabilities.APIVersions.Has "monitoring.coreos.com/v1") }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "woodpecker-server.fullname" . }}
+  labels:
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
+    {{- with .Values.prometheus.rules.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  groups:
+    - alert: "[Woodpecker] No Worker"
+      expr: woodpecker_worker_count <= 0
+      for: 5m
+      labels:
+        severity: critical
+        {{- with .Values.prometheus.rules.alertLabels }}
+        {{- toYaml . | nindent 12 }}
+        {{- end }}
+      {{`
+      annotations:
+        summary: Woodpecker Instance has no worker
+        description: "Woodpecker Instance {{ $labels.instance }} has no worker"
+      `}}
+    {{- if .Values.prometheus.rules.additionalRules }}
+    - name: {{ template "woodpecker-server.fullname" . }}-Additional
+      rules:
+        {{- toYaml .Values.prometheus.rules.additionalRules | nindent 4 }}
+    {{- end }}
+{{- end }}
