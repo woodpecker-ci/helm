@@ -1,0 +1,22 @@
+{{- if and .Values.prometheus.servicemonitor.enabled ( .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" ) }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "woodpecker-server.fullname" . }}
+  labels:
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
+    {{- with .Values.prometheus.servicemonitor.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  endpoints:
+    - port: http
+      path: /metrics
+      bearerTokenSecret:
+        name: {{ include "woodpecker-server.fullname" . }}-metrics
+        key: "WOODPECKER_PROMETHEUS_AUTH_TOKEN"
+  selector:
+    matchLabels:
+      {{- include "woodpecker-server.selectorLabels" . | nindent 6 }}
+      type: headless
+{{- end }}

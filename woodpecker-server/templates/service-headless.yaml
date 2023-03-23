@@ -4,6 +4,7 @@ metadata:
   name: {{ include "woodpecker-server.fullname" . }}-headless
   labels:
     {{- include "woodpecker-server.labels" . | nindent 4 }}
+    type: headless
 spec:
   clusterIP: None
   ports:

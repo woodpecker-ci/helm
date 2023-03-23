@@ -4,6 +4,7 @@ metadata:
   name: {{ include "woodpecker-server.fullname" . }}
   labels:
     {{- include "woodpecker-server.labels" . | nindent 4 }}
+    type: {{ .Values.service.type }}
 spec:
   type: {{ .Values.service.type }}
   ports:

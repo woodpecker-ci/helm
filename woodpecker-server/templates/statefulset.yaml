@@ -74,6 +74,10 @@ spec:
             - secretRef:
                 name: {{ . }}
             {{- end }}
+            {{- if .Values.woodpecker.metrics }}
+            - secretRef:
+                name: {{ include "woodpecker-server.fullname" . }}-metrics
+            {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

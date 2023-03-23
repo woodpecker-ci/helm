@@ -26,6 +26,25 @@ extraSecretNamesForEnvFrom:
   # - woodpecker-github-secret
   - woodpecker-secret
 
+woodpecker:
+  metrics: false
+
+prometheus:
+  servicemonitor:
+    enabled: false
+    labels: {}
+  rules:
+    enabled: false
+    labels: {}
+    additionalRules: []
+  
+grafana:
+  dashboards:
+    enabled: false
+    labels:
+      grafana_dashboard: "1"
+    annotations: {}
+
 persistentVolume:
   enabled: true
   size: 10Gi
