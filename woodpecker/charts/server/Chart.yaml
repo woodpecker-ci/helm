@@ -2,8 +2,8 @@ apiVersion: v2
 name: server
 description: A Helm chart for the Woodpecker server
 type: application
-version: <version>
-appVersion: "v<version>"
+version: 0.1.0
+appVersion: "v0.15.7"
 keywords:
   - continuous-delivery
   - continuous-deployment
