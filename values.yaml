@@ -5,7 +5,13 @@
 agent:
   enabled: true
 
-  replicaCount: 2
+  deployment:
+    annotations: {}
+    labels: {}
+    replicaCount: 2
+    # The maximum number of revisions that will be maintained for the replicaset.
+    # Default is 10
+    revisionHistoryLimit: 5
 
   image:
     registry: docker.io
