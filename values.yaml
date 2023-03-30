@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 
 agent:
+  enabled: true
+
   replicaCount: 2
 
   image:
@@ -109,6 +111,8 @@ agent:
   #       "app.kubernetes.io/name": woodpecker-agent
 
 server:
+  enabled: true
+
   statefulSet:
     annotations: {}
     labels: {}
