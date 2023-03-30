@@ -151,6 +151,60 @@ server:
   nameOverride: ""
   fullnameOverride: ""
 
+  extraContainers: []
+  # Example from https://litestream.io/guides/kubernetes/#litestream-application-container
+  # - name: litestream
+  #   image: litestream/litestream:0.3.9
+  #   args: ['replicate']
+  #   volumeMounts:
+  #     - name: data
+  #       mountPath: /var/lib/woodpecker
+  #     - name: configmap
+  #       mountPath: /etc/litestream.yml
+  #       subPath: litestream.yml
+  #   env:
+  #     - name: LITESTREAM_ACCESS_KEY_ID
+  #       valueFrom:
+  #         secretKeyRef:
+  #           name: litestream
+  #           key: LITESTREAM_ACCESS_KEY_ID
+  #     - name: LITESTREAM_SECRET_ACCESS_KEY
+  #       valueFrom:
+  #         secretKeyRef:
+  #           name: litestream
+  #           key: LITESTREAM_SECRET_ACCESS_KEY
+  #   ports:
+  #     - name: metrics
+  #       containerPort: 9090
+
+  initContainers: []
+  # Example from https://litestream.io/guides/kubernetes/#automatic-recovery
+  # - name: init-litestream
+  #   image: litestream/litestream:0.3.9
+  #   args: ['restore', '-if-db-not-exists', '-if-replica-exists', '-v', '/var/lib/woodpecker/woodpecker.sqlite']
+  #   volumeMounts:
+  #     - name: data
+  #       mountPath: /var/lib/woodpecker
+  #     - name: configmap
+  #       mountPath: /etc/litestream.yml
+  #       subPath: litestream.yml
+  #   env:
+  #     - name: LITESTREAM_ACCESS_KEY_ID
+  #       valueFrom:
+  #         secretKeyRef:
+  #           name: litestream
+  #           key: LITESTREAM_ACCESS_KEY_ID
+  #     - name: LITESTREAM_SECRET_ACCESS_KEY
+  #       valueFrom:
+  #         secretKeyRef:
+  #           name: litestream
+  #           key: LITESTREAM_SECRET_ACCESS_KEY
+
+  extraVolumes: []
+  # - name: configmap
+  #   configMap:
+  #     name: litestream
+
   serviceAccount:
     # Specifies whether a service account should be created
     create: true
