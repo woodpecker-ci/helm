@@ -1,6 +1,12 @@
 variables:
   - &helm_image alpine/helm:latest
 
+when:
+  - event: tag
+  - event: push
+    branch: main
+  - event: pull_request
+
 pipeline:
   set-version:
     image: *helm_image
