@@ -1,12 +1,16 @@
 apiVersion: v2
 name: woodpecker
 description: A Helm chart for Woodpecker CI
-
 type: application
+version: 0.1.1
+appVersion: "0.15.7"
+home: https://woodpecker-ci.org/
+icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
 
 maintainers:
   - name: Woodpecker Maintainers
     email: owner@woodpecker-ci.org
+    url: https://github.com/woodpecker-ci
 
 keywords:
   - continuous-delivery
@@ -19,19 +23,10 @@ sources:
   - https://github.com/woodpecker-ci/woodpecker
   - https://github.com/woodpecker-ci/helm
 
-# This is the chart version. This version number should be incremented each time you make changes
-# to the chart and its templates, including the app version.
-# Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.0
-
-# This is the version number of the application being deployed. This version number should be
-# incremented each time you make changes to the application. Versions are not expected to
-# follow Semantic Versioning. They should reflect the version the application is using.
-# It is recommended to use it with quotes.
-appVersion: "1.15.7"
-
 dependencies:
   - name: server
+    version: 0.1.0
     condition: server.enabled
   - name: agent
+    version: 0.1.0
     condition: agent.enabled
