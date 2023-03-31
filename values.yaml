@@ -20,7 +20,7 @@ agent:
     tag: ""
 
   env:
-    # -- Add the environement variables for the agent component
+    # -- Add the environment variables for the agent component
     WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
     WOODPECKER_BACKEND: kubernetes
     WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
@@ -33,14 +33,15 @@ agent:
   dind:
     # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
     enabled: false
-    # -- Specifies the image of th DinD
+    # -- Specifies the image for Docker-in-Docker
     image: "docker:20.10.12-dind"
     env:
+      # -- Defines the docker driver for Docker-in-Docker
       DOCKER_DRIVER: "overlay2"
-    # -- Defines the resources for the DinD
+    # -- Defines the resources for Docker-in-Docker
     resources: {}
 
-  # Add extra secret that is contains environement variables
+  # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
     - woodpecker-secret
 
@@ -259,7 +260,7 @@ server:
     #   cpu: 100m
     #   memory: 128Mi
 
-  # Defines the labels of the node where the server component must be running
+  # -- Defines the labels of the node where the server component must be running
   nodeSelector: {}
 
   # -- Add tolerations rules
