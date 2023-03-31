@@ -160,7 +160,7 @@ server:
     # -- Overrides the image tag whose default is the chart appVersion.
     tag: ""
 
-  # -- Add environement variables for the server componenent
+  # -- Add environment variables for the server component
   env:
     WOODPECKER_ADMIN: "woodpecker,admin"
     WOODPECKER_HOST: "https://xxxxxxx"
@@ -186,6 +186,7 @@ server:
   imagePullSecrets: []
   # -- Overrides the name of the helm chart of the server component
   nameOverride: ""
+  # -- Overrides the full name of the helm chart of the server component
   fullnameOverride: ""
 
   serviceAccount:
