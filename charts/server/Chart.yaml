@@ -2,8 +2,8 @@ apiVersion: v2
 name: server
 description: A Helm chart for the Woodpecker server
 type: application
-version: 0.1.0
-appVersion: "v0.15.7"
+version: 0.1.1
+appVersion: "v0.15.8"
 home: https://woodpecker-ci.org/
 icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
 
@@ -13,9 +13,10 @@ keywords:
   - continuous-integration
   - docker
   - go
+  - kubernetes
 
 sources:
-  - https://github.com/woodpecker-ci/woodpecker
+  - https://github.com/woodpecker-ci/woodpecker.git
 
 maintainers:
   - name: Woodpecker Maintainers
