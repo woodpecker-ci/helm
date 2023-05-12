@@ -36,7 +36,7 @@ pipeline:
       - helm-docs -t README.md.gotmpl
       - cat README.md
 
-  push-updated-readme:
+  push-readme:
     image: appleboy/drone-git-push
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
