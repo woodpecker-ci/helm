@@ -26,8 +26,8 @@ sources:
 
 dependencies:
   - name: server
-    version: 0.1.2
+    version: "0.1.0"
     condition: server.enabled
   - name: agent
-    version: 0.1.2
+    version: "0.1.0"
     condition: agent.enabled
