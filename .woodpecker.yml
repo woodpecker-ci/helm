@@ -26,6 +26,18 @@ pipeline:
     when:
       - event: tag
 
+  release-dry-run:
+    image: quay.io/helmpack/chart-releaser:v1.5.0
+    commands:
+      - git config --global user.email "woodpecker-bot@obermui.de"
+      - git config --global user.name "woodpecker-bot"
+      - mkdir -p .cr-index
+      - cr package .
+    when:
+      - event: push
+        branch: main
+      - event: pull_request
+
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
