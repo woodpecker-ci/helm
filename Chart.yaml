@@ -2,7 +2,7 @@ apiVersion: v2
 name: woodpecker
 description: A Helm chart for Woodpecker CI
 type: application
-version: 0.1.4
+version: 0.1.5
 appVersion: "v0.15.9"
 home: https://woodpecker-ci.org/
 icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
@@ -26,8 +26,8 @@ sources:
 
 dependencies:
   - name: server
-    version: "0.1.4"
+    version: "0.1.5"
     condition: server.enabled
   - name: agent
-    version: "0.1.4"
+    version: "0.1.5"
     condition: agent.enabled
