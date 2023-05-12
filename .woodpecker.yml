@@ -10,24 +10,6 @@ pipeline:
     commands:
       - helm lint --with-subcharts
 
-  update-readme:
-    image: jnorwood/helm-docs:v1.11.0
-    commands:
-      - helm-docs -t README.md.gotmpl
-    when:
-      - event: tag
-
-  push-updated-readme:
-    image: appleboy/drone-git-push
-    settings:
-      branch: main
-      commit: true
-      ssh_key:
-        from_secret: BOT_PRIVATE_KEY
-      commit_message: "[skip ci] Update README.md"
-    when:
-      - event: tag   
-
   release:
     image: quay.io/helmpack/chart-releaser:v1.5.0
     secrets:
@@ -43,3 +25,22 @@ pipeline:
       - cd woodpecker-ci.github.io/ && cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --charts-repo https://woodpecker-ci.org --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
     when:
       - event: tag
+
+  update-readme:
+    image: jnorwood/helm-docs:v1.11.0
+    commands:
+      - helm-docs -t README.md.gotmpl
+    when:
+      - event: tag
+
+  push-updated-readme:
+    image: appleboy/drone-git-push
+    settings:
+      remote: ssh://git@github.com/woodpecker-ci/helm.git
+      branch: main
+      commit: true
+      ssh_key:
+        from_secret: BOT_PRIVATE_KEY
+      commit_message: "[skip ci] Update README.md"
+    when:
+      - event: tag   
