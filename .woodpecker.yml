@@ -25,6 +25,14 @@ pipeline:
     commands:
       - helm lint --with-subcharts
 
+  update-readme:
+    image: jnorwood/helm-docs:v1.11.0
+    commands:
+      - helm-docs --dry-run
+    when:
+      - event: tag
+      - event: pull_request # TODO: remove
+
   release:
     image: quay.io/helmpack/chart-releaser:v1.5.0
     secrets:
