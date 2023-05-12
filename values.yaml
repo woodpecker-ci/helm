@@ -3,18 +3,24 @@
 # Declare variables to be passed into your templates.
 
 agent:
+  # -- Enable the agent component
   enabled: true
 
+  # -- The number of replicas for the deployment
   replicaCount: 2
 
   image:
+    # -- The image registry
     registry: docker.io
+    # -- The image repository
     repository: woodpeckerci/woodpecker-agent
+    # -- The pull policy for the image
     pullPolicy: Always
-    # Overrides the image tag whose default is the chart appVersion.
+    # -- Overrides the image tag whose default is the chart appVersion.
     tag: ""
 
   env:
+    # -- Add the environment variables for the agent component
     WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
     WOODPECKER_BACKEND: kubernetes
     WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
@@ -24,36 +30,43 @@ agent:
     WOODPECKER_BACKEND_K8S_POD_LABELS: ""
     WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
 
-  # Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
   dind:
+    # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
     enabled: false
+    # -- Specifies the image for Docker-in-Docker
     image: "docker:20.10.12-dind"
     env:
+      # -- Defines the docker driver for Docker-in-Docker
       DOCKER_DRIVER: "overlay2"
+    # -- Defines the resources for Docker-in-Docker
     resources: {}
 
+  # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
     - woodpecker-secret
 
+  # -- The image pull secrets
   imagePullSecrets: []
+  # -- Overrides the name of the chart of the agent component
   nameOverride: ""
+  # -- Overrides the full name of the chart of the agent component
   fullnameOverride: ""
 
   serviceAccount:
-    # Specifies whether a service account should be created (also see RBAC subsection)
+    # -- Specifies whether a service account should be created (also see RBAC subsection)
     create: true
-    # Annotations to add to the service account
+    # -- Annotations to add to the service account
     annotations: {}
-    # The name of the service account to use.
+    # -- The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
     name: ""
     rbac:
-      # If your cluster has RBAC enabled and you're using the Kubernetes agent-
+      # -- If your cluster has RBAC enabled and you're using the Kubernetes agent-
       # backend you'll need this. (this is true for almost all production clusters)
       # only change this if you have a non CNCF compliant cluster, missing the RBAC endpoints
       # the Role and RoleBinding are only created if serviceAccount.create is also true
       create: true
-      # additional annotations and labels in role and roleBinding are only needed, if you
+      # Additional annotations and labels in role and roleBinding are only needed, if you
       # are using additional tooling to manage / verify roles or roleBindings (OPA, etc.)
       role:
         annotations: {}
@@ -62,12 +75,15 @@ agent:
         annotations: {}
         labels: {}
 
+  # -- Add pod annotations for the agent component
   podAnnotations: {}
 
+  # -- Add pod security context
   podSecurityContext:
     {}
     # fsGroup: 2000
 
+  # -- Add security context
   securityContext:
     {}
     # capabilities:
@@ -77,6 +93,7 @@ agent:
     # runAsNonRoot: true
     # runAsUser: 1000
 
+  # -- Specifies the resources for the agent component
   resources:
     {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -90,18 +107,22 @@ agent:
     #   cpu: 100m
     #   memory: 128Mi
 
+  # -- Specifies the labels of the nodes that the agent component must be running
   nodeSelector: {}
 
+  # -- Specifies the tolerations
   tolerations: []
 
+  # -- Specifies the affinity
   affinity: {}
 
+  # -- Overrides the default DNS configuration
   dnsConfig: {}
 
-  ## Using topology spread constraints, you can ensure that there is at least one agent
-  ## pod for each topology zone, e.g. one per arch for multi-architecture clusters
-  ## or one for each region for geographically distributed cloud-hosted clusters.
-  ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+  # -- Using topology spread constraints, you can ensure that there is at least one agent
+  # pod for each topology zone, e.g. one per arch for multi-architecture clusters
+  # or one for each region for geographically distributed cloud-hosted clusters.
+  # Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
   topologySpreadConstraints: []
   # - maxSkew: 1
   #   topologyKey: "beta.kubernetes.io/arch"
@@ -111,63 +132,83 @@ agent:
   #       "app.kubernetes.io/name": woodpecker-agent
 
 server:
+  # -- Enable the server component
   enabled: true
 
   statefulSet:
+    # -- Add annotations to the StatefulSet
     annotations: {}
+    # -- Add labels to the StatefulSet
     labels: {}
+    # -- Defines the number of replicas
     replicaCount: 1
-    # The maximum number of revisions that will be maintained in the StatefulSet's revision history
+    # -- The maximum number of revisions that will be maintained in the StatefulSet's revision history
     # Default in 10.
     revisionHistoryLimit: 5
 
   updateStrategy:
+    # -- Defines the update strategy of the StatefulSet
     type: RollingUpdate
 
   image:
+    # -- The image registry
     registry: docker.io
+    # -- The image repository
     repository: woodpeckerci/woodpecker-server
+    # -- The image pull policy
     pullPolicy: Always
-    # Overrides the image tag whose default is the chart appVersion.
+    # -- Overrides the image tag whose default is the chart appVersion.
     tag: ""
 
+  # -- Add environment variables for the server component
   env:
     WOODPECKER_ADMIN: "woodpecker,admin"
     WOODPECKER_HOST: "https://xxxxxxx"
     # WOODPECKER_GITHUB: "true"
 
+  # -- Add extra environment variables from the secrets list
   extraSecretNamesForEnvFrom:
     # - woodpecker-github-client
     # - woodpecker-github-secret
     - woodpecker-secret
 
   persistentVolume:
+    # -- Enable the creation of the persistent volume
     enabled: true
+    # -- Defines the size of the persistent volume
     size: 10Gi
+    # -- Defines the path where the volume should be mounted
     mountPath: "/var/lib/woodpecker"
+    # -- Defines the storageClass of the persistent volume
     storageClass: ""
 
+  # -- The image pull secrets
   imagePullSecrets: []
+  # -- Overrides the name of the helm chart of the server component
   nameOverride: ""
+  # -- Overrides the full name of the helm chart of the server component
   fullnameOverride: ""
 
   serviceAccount:
-    # Specifies whether a service account should be created
+    # -- Specifies whether a service account should be created
     create: true
-    # Annotations to add to the service account
+    # -- Annotations to add to the service account
     annotations: {}
-    # The name of the service account to use.
+    # -- The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
     name: ""
 
+  # -- Add pod annotations
   podAnnotations:
     {}
     # prometheus.io/scrape: "true"
 
+  # -- Add pod security context
   podSecurityContext:
     {}
     # fsGroup: 2000
 
+  # -- Add security context
   securityContext:
     {}
     # capabilities:
@@ -178,11 +219,15 @@ server:
     # runAsUser: 1000
 
   service:
+    # -- The type of the service
     type: ClusterIP
+    # -- The port of the service
     port: &servicePort 80
 
   ingress:
+    # -- Enable the ingress for the server component
     enabled: false
+    # -- Add annotations to the ingress
     annotations:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
@@ -202,6 +247,7 @@ server:
     #    hosts:
     #      - chart-example.local
 
+  # -- Specifies the ressources for the server component
   resources:
     {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -215,10 +261,14 @@ server:
     #   cpu: 100m
     #   memory: 128Mi
 
+  # -- Defines the labels of the node where the server component must be running
   nodeSelector: {}
 
+  # -- Add tolerations rules
   tolerations: []
 
+  # -- Add affinity
   affinity: {}
 
+  # -- Overrides the default DNS configuration
   dnsConfig: {}

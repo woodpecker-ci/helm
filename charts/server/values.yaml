@@ -1,56 +1,75 @@
 statefulSet:
+  # -- Add annotations to the StatefulSet
   annotations: {}
+  # -- Add labels to the StatefulSet
   labels: {}
+  # -- Defines the number of replicas
   replicaCount: 1
-  # The maximum number of revisions that will be maintained in the StatefulSet's revision history
+  # -- The maximum number of revisions that will be maintained in the StatefulSet's revision history
   # Default in 10.
   revisionHistoryLimit: 5
 
 updateStrategy:
+  # -- Defines the update strategy of the StatefulSet
   type: RollingUpdate
 
 image:
+  # -- The image registry
   registry: docker.io
+  # -- The image repository
   repository: woodpeckerci/woodpecker-server
+  # -- The image pull policy
   pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
+  # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
+# -- Add environment variables for the server component
 env:
   WOODPECKER_ADMIN: "woodpecker,admin"
   WOODPECKER_HOST: "https://xxxxxxx"
   # WOODPECKER_GITHUB: "true"
 
+# -- Add extra environment variables from the secrets list
 extraSecretNamesForEnvFrom:
   # - woodpecker-github-client
   # - woodpecker-github-secret
   - woodpecker-secret
 
 persistentVolume:
+  # -- Enable the creation of the persistent volume
   enabled: true
+  # -- Defines the size of the persistent volume
   size: 10Gi
+  # -- Defines the path where the volume should be mounted
   mountPath: "/var/lib/woodpecker"
+  # -- Defines the storageClass of the persistent volume
   storageClass: ""
 
+# -- The image pull secrets
 imagePullSecrets: []
+# -- Overrides the name of the helm chart of the server component
 nameOverride: ""
+# -- Overrides the full name of the helm chart of the server component
 fullnameOverride: ""
 
 serviceAccount:
-  # Specifies whether a service account should be created
+  # -- Specifies whether a service account should be created
   create: true
-  # Annotations to add to the service account
+  # -- Annotations to add to the service account
   annotations: {}
-  # The name of the service account to use.
+  # -- The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
+# -- Add pod annotations
 podAnnotations: {}
   # prometheus.io/scrape: "true"
 
+# -- Add pod security context
 podSecurityContext: {}
   # fsGroup: 2000
 
+# -- Add security context
 securityContext: {}
   # capabilities:
   #   drop:
@@ -60,11 +79,15 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  # -- The type of the service
   type: ClusterIP
+  # -- The port of the service
   port: &servicePort 80
 
 ingress:
+  # -- Enable the ingress for the server component
   enabled: false
+  # -- Add annotations to the ingress
   annotations:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
@@ -84,6 +107,7 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+# -- Specifies the ressources for the server component
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -96,11 +120,15 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+# -- Defines the labels of the node where the server component must be running
 nodeSelector: {}
 
+# -- Add tolerations rules
 tolerations: []
 
+# -- Add affinity
 affinity: {}
 
+# -- Overrides the default DNS configuration
 dnsConfig: {}
 

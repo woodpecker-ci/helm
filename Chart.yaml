@@ -3,7 +3,7 @@ name: woodpecker
 description: A Helm chart for Woodpecker CI
 type: application
 version: 0.1.1
-appVersion: "0.15.9"
+appVersion: "v0.15.9"
 home: https://woodpecker-ci.org/
 icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
 
@@ -18,15 +18,16 @@ keywords:
   - continuous-integration
   - docker
   - go
+  - kubernetes
 
 sources:
-  - https://github.com/woodpecker-ci/woodpecker
-  - https://github.com/woodpecker-ci/helm
+  - https://github.com/woodpecker-ci/woodpecker.git
+  - https://github.com/woodpecker-ci/helm.git
 
 dependencies:
   - name: server
+    version: "0.1.1"
     condition: server.enabled
-    version: "0.1.0"
   - name: agent
+    version: "0.1.1"
     condition: agent.enabled
-    version: "0.1.0"
