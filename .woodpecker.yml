@@ -28,7 +28,9 @@ pipeline:
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
-      - helm-docs --dry-run
+      - echo "###start###"
+      - helm-docs -t README.md.gotmpl --dry-run
+      - echo "###end##"
     when:
       - event: tag
       - event: pull_request # TODO: remove
