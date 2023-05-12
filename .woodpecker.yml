@@ -34,6 +34,7 @@ pipeline:
     image: jnorwood/helm-docs:v1.11.0
     commands:
       - helm-docs -t README.md.gotmpl
+      - cat README.md
 
   push-updated-readme:
     image: appleboy/drone-git-push
