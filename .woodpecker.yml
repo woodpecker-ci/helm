@@ -43,4 +43,4 @@ pipeline:
         from_secret: BOT_PRIVATE_KEY
       commit_message: "[skip ci] Update README.md"
     when:
-      - event: tag   
+      - event: tag
