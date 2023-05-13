@@ -7,7 +7,7 @@ image:
   # -- image repository
   repository: woodpeckerci/woodpecker-agent
   # -- The pull policy for the image
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
