@@ -37,7 +37,7 @@ extraSecretNamesForEnvFrom:
 
 persistentVolume:
   # -- Enable the creation of the persistent volume
-  enabled: false
+  enabled: true
   # -- Defines the size of the persistent volume
   size: 10Gi
   # -- Defines the path where the volume should be mounted
@@ -54,7 +54,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # -- Specifies whether a service account should be created
-  create: true
+  create: false
   # -- Annotations to add to the service account
   annotations: {}
   # -- The name of the service account to use.
