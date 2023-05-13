@@ -37,7 +37,7 @@ extraSecretNamesForEnvFrom:
 
 persistentVolume:
   # -- Enable the creation of the persistent volume
-  enabled: true
+  enabled: false
   # -- Defines the size of the persistent volume
   size: 10Gi
   # -- Defines the path where the volume should be mounted
