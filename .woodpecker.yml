@@ -1,6 +1,3 @@
-variables:
-  - &helm_image alpine/helm:latest
-
 when:
   - event: tag
   - event: push
@@ -8,24 +5,18 @@ when:
   - event: pull_request
 
 pipeline:
-  set-version:
-    image: *helm_image
-    commands:
-      # use tag name or 0.0.0 if not running on a tag
-      - export CHART_VERSION="${CI_COMMIT_TAG##v}"
-      - export CHART_VERSION=$${CHART_VERSION:=0.0.0}
-      - echo "Version $CHART_VERSION"
-      - sed -i "s/<version>/$CHART_VERSION/g" charts/agent/Chart.yaml
-      - sed -i "s/<version>/$CHART_VERSION/g" charts/server/Chart.yaml
-      - cat charts/agent/Chart.yaml
-      - cat charts/server/Chart.yaml
-
   lint:
-    image: *helm_image
+    image: alpine/helm:latest
     commands:
-      - helm lint
+      - helm lint --with-subcharts
 
-  release:
+  pack-chart:
+    image: quay.io/helmpack/chart-releaser:v1.5.0
+    commands:
+      - mkdir -p .cr-index
+      - cr package .
+
+  release-chart:
     image: quay.io/helmpack/chart-releaser:v1.5.0
     secrets:
       - source: github_token
@@ -33,10 +24,26 @@ pipeline:
     commands:
       - git config --global user.email "woodpecker-bot@obermui.de"
       - git config --global user.name "woodpecker-bot"
-      - mkdir -p .cr-index
-      - cr package .
-      - cr upload --owner woodpecker-ci --git-repo woodpecker-ci.github.io --release-name-template "helm-{{ .Name }}-{{ .Version }}"
+      - cr upload --skip-existing --owner woodpecker-ci --git-repo woodpecker-ci.github.io --release-name-template "helm-{{ .Name }}-{{ .Version }}"
       - git clone https://github.com/woodpecker-ci/woodpecker-ci.github.io.git
       - cd woodpecker-ci.github.io/ && cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --charts-repo https://woodpecker-ci.org --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
     when:
-      event: tag
+      - event: tag
+
+  update-readme:
+    image: jnorwood/helm-docs:v1.11.0
+    commands:
+      - helm-docs -t README.md.gotmpl
+      - cat README.md
+
+  push-readme:
+    image: appleboy/drone-git-push
+    settings:
+      remote: ssh://git@github.com/woodpecker-ci/helm.git
+      branch: main
+      commit: true
+      ssh_key:
+        from_secret: BOT_PRIVATE_KEY
+      commit_message: "[skip ci] Update README.md"
+    when:
+      - event: tag
