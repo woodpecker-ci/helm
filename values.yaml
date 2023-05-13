@@ -189,6 +189,7 @@ server:
   # -- Overrides the full name of the helm chart of the server component
   fullnameOverride: ""
 
+  # -- Add extra containers to the server component
   extraContainers: []
   # Example from https://litestream.io/guides/kubernetes/#litestream-application-container
   # - name: litestream
@@ -215,6 +216,7 @@ server:
   #     - name: metrics
   #       containerPort: 9090
 
+  # -- Add extra initContainers to the server component
   initContainers: []
   # Example from https://litestream.io/guides/kubernetes/#automatic-recovery
   # - name: init-litestream
@@ -238,6 +240,7 @@ server:
   #           name: litestream
   #           key: LITESTREAM_SECRET_ACCESS_KEY
 
+  # -- Add extra volumes to the server component
   extraVolumes: []
   # - name: configmap
   #   configMap:
