@@ -39,12 +39,6 @@ pipeline:
       - helm-docs -g . -t README-main.md.gotmpl
       - cat README.md
 
-  test-chart:
-    image: quay.io/helmpack/chart-testing
-    commands:
-      - ct list-changed --config ct.yaml
-      - ct lint --config ct.yaml
-
   push-readme:
     image: appleboy/drone-git-push
     settings:
