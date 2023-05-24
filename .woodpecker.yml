@@ -11,7 +11,8 @@ pipeline:
       - helm lint --with-subcharts
 
   test-chart:
-    image: quay.io/helmpack/chart-testing
+    # image: quay.io/helmpack/chart-testing
+    image: anbraten/chart-testing
     commands:
       - git fetch origin main --unshallow --no-tags
       - git branch -u origin/main main
