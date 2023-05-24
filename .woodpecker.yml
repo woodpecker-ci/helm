@@ -19,6 +19,7 @@ pipeline:
       - git remote
       - git fetch origin main:main
       - git branch -a
+      - git merge-base origin/main HEAD
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
