@@ -35,7 +35,8 @@ pipeline:
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
-      - helm-docs -t README.md.gotmpl
+      - helm-docs
+      - helm-docs -g . -t README-main.md.gotmpl
       - cat README.md
 
   push-readme:
