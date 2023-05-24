@@ -8,7 +8,7 @@ pipeline:
   lint:
     image: alpine/helm:latest
     commands:
-      - helm lint charts --with-subcharts
+      - helm lint --with-subcharts
 
   test-chart:
     image: quay.io/helmpack/chart-testing
