@@ -11,9 +11,7 @@ pipeline:
       - helm lint --with-subcharts
 
   test-chart:
-    image: anbraten/chart-testing
-    pull: true
-    # image: quay.io/helmpack/chart-testing
+    image: quay.io/helmpack/chart-testing
     commands:
       - git fetch --unshallow --no-tags
       - git merge-base origin/main HEAD || true
