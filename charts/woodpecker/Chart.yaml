@@ -1,6 +1,6 @@
 apiVersion: v2
 name: woodpecker
-description: A Helm chart for Woodpecker CI
+description: A Helm chart for Woodpecker CI deploying a server & agent combination
 type: application
 version: 0.1.5
 appVersion: "v0.15.9"
