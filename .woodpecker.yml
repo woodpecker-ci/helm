@@ -15,7 +15,7 @@ pipeline:
     commands:
       - git config --global --add safe.directory /app
       - git remote
-      - ct list-changed --config ct.yaml
+      # - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
   pack-chart:
