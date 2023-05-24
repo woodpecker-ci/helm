@@ -1,0 +1,3 @@
+**/charts/*.tgz
+.cr-release-packages
+woodpecker-ci.github.io
