@@ -8,14 +8,14 @@ pipeline:
   lint:
     image: alpine/helm:latest
     commands:
-      - helm lint --with-subcharts
+      - helm lint --with-subcharts charts/*
 
   test-chart:
     image: quay.io/helmpack/chart-testing
     commands:
       - git fetch origin main --unshallow --no-tags
-      - ct list-changed --config ct.yaml
-      - ct lint --config ct.yaml
+      - ct list-changed --config ct.yaml --debug
+      - ct lint --config ct.yaml --debug
 
   pack-chart:
     image: quay.io/helmpack/chart-releaser:v1.5.0
