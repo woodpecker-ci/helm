@@ -3,6 +3,7 @@ remote: origin
 target-branch: main
 chart-dirs:
   - charts
+  - charts/woodpecker/charts
 # chart-repos:
 helm-extra-args: --timeout 600s
 validate-chart-schema: true
