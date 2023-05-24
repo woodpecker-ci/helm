@@ -15,10 +15,7 @@ pipeline:
     pull: true
     # image: quay.io/helmpack/chart-testing
     commands:
-      - git config --global --add safe.directory /app
-      - git remote
-      - git fetch origin main:main
-      - git branch -a
+      - git fetch --unshallow --no-tags
       - git merge-base origin/main HEAD || true
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
