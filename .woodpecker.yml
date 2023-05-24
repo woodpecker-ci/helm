@@ -13,6 +13,8 @@ pipeline:
   test-chart:
     image: quay.io/helmpack/chart-testing
     commands:
+      - git config --global --add safe.directory /app
+      - git remote
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
