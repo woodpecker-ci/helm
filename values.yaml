@@ -12,7 +12,7 @@ agent:
   enabled: true
 
   # -- The number of replicas for the deployment
-  replicaCount: 1
+  replicaCount: 2
 
   image:
     # -- The image registry
