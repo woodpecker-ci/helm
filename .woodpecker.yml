@@ -14,7 +14,7 @@ pipeline:
     image: quay.io/helmpack/chart-testing
     commands:
       - git fetch origin main --unshallow --no-tags
-      - ct list-changed --config ct.yaml --debug
+      - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml --debug
 
   pack-chart:
