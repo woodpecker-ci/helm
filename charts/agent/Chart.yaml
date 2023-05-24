@@ -14,7 +14,6 @@ keywords:
   - docker
   - go
   - kubernetes
-  - test
 
 sources:
   - https://github.com/woodpecker-ci/woodpecker.git
