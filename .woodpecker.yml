@@ -5,12 +5,6 @@ when:
   - event: pull_request
 
 pipeline:
-  clone-main:
-    image: woodpeckerci/plugin-git
-    settings:
-      depth: 50
-      branch: main
-
   lint:
     image: alpine/helm:latest
     commands:
@@ -21,6 +15,7 @@ pipeline:
     commands:
       - git config --global --add safe.directory /app
       - git remote
+      - git fetch origin/main
       # - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
