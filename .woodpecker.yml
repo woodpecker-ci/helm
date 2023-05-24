@@ -18,6 +18,7 @@ pipeline:
       - git config --global --add safe.directory /app
       - git remote
       - git fetch origin main:main
+      - git branch -a
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
