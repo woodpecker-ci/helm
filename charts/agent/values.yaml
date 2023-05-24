@@ -1,13 +1,18 @@
+# -- The number of replicas for the deployment
 replicaCount: 2
 
 image:
+  # -- The image registry
   registry: docker.io
+  # -- image repository
   repository: woodpeckerci/woodpecker-agent
-  pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
+  # -- The pull policy for the image
+  pullPolicy: IfNotPresent
+  # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 env:
+  # -- Add the environment variables for the agent component
   WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
   WOODPECKER_BACKEND: kubernetes
   WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
@@ -16,37 +21,45 @@ env:
   WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
   WOODPECKER_BACKEND_K8S_POD_LABELS: ""
   WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
+  WOODPECKER_CONNECT_RETRY_COUNT: "1"
 
-# Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
 dind:
+  # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
   enabled: false
+  # -- Specifies the image for Docker-in-Docker
   image: "docker:20.10.12-dind"
   env:
+    # -- Defines the docker driver for Docker-in-Docker
     DOCKER_DRIVER: "overlay2"
+  # -- Defines the resources for Docker-in-Docker
   resources: {}
 
+# -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom:
 - woodpecker-secret
 
+# -- The image pull secrets
 imagePullSecrets: []
+# -- Overrides the name of the chart of the agent component
 nameOverride: ""
+# -- Overrides the full name of the chart of the agent component
 fullnameOverride: ""
 
 serviceAccount:
-  # Specifies whether a service account should be created (also see RBAC subsection)
+  # -- Specifies whether a service account should be created (also see RBAC subsection)
   create: true
-  # Annotations to add to the service account
+  # -- Annotations to add to the service account
   annotations: {}
-  # The name of the service account to use.
+  # -- The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
   rbac:
-    # If your cluster has RBAC enabled and you're using the Kubernetes agent-
+    # -- If your cluster has RBAC enabled and you're using the Kubernetes agent-
     # backend you'll need this. (this is true for almost all production clusters)
     # only change this if you have a non CNCF compliant cluster, missing the RBAC endpoints
     # the Role and RoleBinding are only created if serviceAccount.create is also true
     create: true
-    # additional annotations and labels in role and roleBinding are only needed, if you
+    # Additional annotations and labels in role and roleBinding are only needed, if you
     # are using additional tooling to manage / verify roles or roleBindings (OPA, etc.)
     role:
       annotations: {}
@@ -55,11 +68,14 @@ serviceAccount:
       annotations: {}
       labels: {}
 
+# -- Add pod annotations for the agent component
 podAnnotations: {}
 
+# -- Add pod security context
 podSecurityContext: {}
   # fsGroup: 2000
 
+# -- Add security context
 securityContext: {}
   # capabilities:
   #   drop:
@@ -68,6 +84,7 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+# -- Specifies the resources for the agent component
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -80,18 +97,22 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+# -- Specifies the labels of the nodes that the agent component must be running
 nodeSelector: {}
 
+# -- Specifies the tolerations
 tolerations: []
 
+# -- Specifies the affinity
 affinity: {}
 
+# -- Overrides the default DNS configuration
 dnsConfig: {}
 
-## Using topology spread constraints, you can ensure that there is at least one agent
-## pod for each topology zone, e.g. one per arch for multi-architecture clusters
-## or one for each region for geographically distributed cloud-hosted clusters.
-## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+# -- Using topology spread constraints, you can ensure that there is at least one agent
+# pod for each topology zone, e.g. one per arch for multi-architecture clusters
+# or one for each region for geographically distributed cloud-hosted clusters.
+# Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
 topologySpreadConstraints: []
 # - maxSkew: 1
 #   topologyKey: "beta.kubernetes.io/arch"
