@@ -5,6 +5,11 @@ when:
   - event: pull_request
 
 pipeline:
+  clone-main:
+    image: woodpeckerci/plugin-git
+    commands:
+      - git fetch origin/main
+
   lint:
     image: alpine/helm:latest
     commands:
