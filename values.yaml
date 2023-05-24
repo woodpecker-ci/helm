@@ -34,6 +34,7 @@ agent:
     WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
     WOODPECKER_BACKEND_K8S_POD_LABELS: ""
     WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
+    WOODPECKER_CONNECT_RETRY_COUNT: "1"
 
   dind:
     # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
