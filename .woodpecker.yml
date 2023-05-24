@@ -11,7 +11,9 @@ pipeline:
       - helm lint --with-subcharts
 
   test-chart:
-    image: quay.io/helmpack/chart-testing
+    image: anbraten/chart-testing
+    pull: true
+    # image: quay.io/helmpack/chart-testing
     commands:
       - git config --global --add safe.directory /app
       - git remote
