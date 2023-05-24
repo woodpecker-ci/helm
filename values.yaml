@@ -2,6 +2,11 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# -- Overrides the name of the chart
+nameOverride: ""
+# -- Overrides the full name of the chart
+fullnameOverride: ""
+
 agent:
   # -- Enable the agent component
   enabled: true
@@ -15,7 +20,7 @@ agent:
     # -- The image repository
     repository: woodpeckerci/woodpecker-agent
     # -- The pull policy for the image
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
     # -- Overrides the image tag whose default is the chart appVersion.
     tag: ""
 
@@ -157,7 +162,7 @@ server:
     # -- The image repository
     repository: woodpeckerci/woodpecker-server
     # -- The image pull policy
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
     # -- Overrides the image tag whose default is the chart appVersion.
     tag: ""
 
@@ -192,7 +197,7 @@ server:
 
   serviceAccount:
     # -- Specifies whether a service account should be created
-    create: true
+    create: false
     # -- Annotations to add to the service account
     annotations: {}
     # -- The name of the service account to use.
