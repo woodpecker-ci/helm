@@ -10,6 +10,13 @@ pipeline:
     commands:
       - helm lint --with-subcharts
 
+  test-chart:
+    image: quay.io/helmpack/chart-testing
+    commands:
+      - git fetch origin main --unshallow --no-tags
+      - ct list-changed --config ct.yaml
+      - ct lint --config ct.yaml
+
   pack-chart:
     image: quay.io/helmpack/chart-releaser:v1.5.0
     commands:
@@ -35,7 +42,8 @@ pipeline:
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
-      - helm-docs -t README.md.gotmpl
+      - helm-docs
+      - helm-docs -g . -t README-main.md.gotmpl
       - cat README.md
 
   push-readme:
