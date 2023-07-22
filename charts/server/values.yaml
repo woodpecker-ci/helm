@@ -83,6 +83,10 @@ service:
   type: ClusterIP
   # -- The port of the service
   port: &servicePort 80
+  # -- The cluster IP of the service (optional)
+  clusterIP:
+  # -- The loadbalancer IP of the service (optional)
+  loadBalancerIP:
 
 ingress:
   # -- Enable the ingress for the server component
