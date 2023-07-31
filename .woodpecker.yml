@@ -4,7 +4,7 @@ when:
     branch: main
   - event: pull_request
 
-pipeline:
+steps:
   lint:
     image: alpine/helm:latest
     commands:
