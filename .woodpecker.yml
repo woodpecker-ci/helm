@@ -15,7 +15,7 @@ steps:
     commands:
       - git fetch origin main --unshallow --no-tags
       - git checkout -b main origin/main
-      - git branch main origin/main
+      - git branch main origin/main || true
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
