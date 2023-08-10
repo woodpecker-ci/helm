@@ -1,0 +1,19 @@
+when:
+  - event: tag
+  - event: push
+    branch: main
+  - event: pull_request
+
+steps:
+  lint:
+    image: alpine/helm:latest
+    commands:
+      - helm lint --with-subcharts
+
+  test-chart:
+    image: quay.io/helmpack/chart-testing
+    commands:
+      - git fetch origin main --unshallow --no-tags
+      - git branch main origin/main || true
+      - ct list-changed --config ct.yaml
+      - ct lint --config ct.yaml

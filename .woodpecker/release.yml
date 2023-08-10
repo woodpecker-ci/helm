@@ -1,3 +1,6 @@
+depends_on:
+  - test
+
 when:
   - event: tag
   - event: push
