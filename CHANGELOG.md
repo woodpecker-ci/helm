@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-14
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- no unshallow [[#56](https://github.com/woodpecker-ci/helm/pull/56)]
+
 ## [0.2.0](https://github.com/woodpecker-ci/helm/releases/tag/0.2.0) - 2023-08-12
 
 ### ❤️ Thanks to all contributors! ❤️
