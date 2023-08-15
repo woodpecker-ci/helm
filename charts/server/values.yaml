@@ -13,6 +13,9 @@ updateStrategy:
   # -- Defines the update strategy of the StatefulSet
   type: RollingUpdate
 
+# -- Defines a custom command to start the container
+command: []
+
 image:
   # -- The image registry
   registry: docker.io
@@ -62,15 +65,18 @@ serviceAccount:
   name: ""
 
 # -- Add pod annotations
-podAnnotations: {}
+podAnnotations:
+  {}
   # prometheus.io/scrape: "true"
 
 # -- Add pod security context
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
 # -- Add security context
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -98,17 +104,18 @@ ingress:
   hosts:
     - host: chart-example.local
       paths:
-      - path: /
-        backend:
-          serviceName: chart-example.local
-          servicePort: *servicePort
+        - path: /
+          backend:
+            serviceName: chart-example.local
+            servicePort: *servicePort
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
 
 # -- Specifies the ressources for the server component
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
