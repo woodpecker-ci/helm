@@ -1,10 +1,13 @@
+depends_on:
+  - test
+
 when:
   - event: tag
   - event: push
     branch: main
   - event: pull_request
 
-pipeline:
+steps:
   lint:
     image: alpine/helm:latest
     commands:
@@ -14,6 +17,7 @@ pipeline:
     image: quay.io/helmpack/chart-testing
     commands:
       - git fetch origin main --unshallow --no-tags
+      - git branch main origin/main || true
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
 
