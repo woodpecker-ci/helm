@@ -41,6 +41,10 @@ spec:
           command:
           {{- toYaml . | trim | nindent 12 }}
           {{- end }}
+          {{- with .Values.args }}
+          args:
+          {{- toYaml . | trim | nindent 12 }}
+          {{- end }}
           ports:
             - name: http
               containerPort: 3000

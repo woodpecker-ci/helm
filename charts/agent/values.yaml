@@ -14,6 +14,9 @@ image:
 # -- Defines a custom command to start the container
 command: []
 
+# -- Defines a custom args to start the container
+args: []
+
 env:
   # -- Add the environment variables for the agent component
   WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"

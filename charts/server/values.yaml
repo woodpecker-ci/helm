@@ -16,6 +16,9 @@ updateStrategy:
 # -- Defines a custom command to start the container
 command: []
 
+# -- Defines a custom args to start the container
+args: []
+
 image:
   # -- The image registry
   registry: docker.io
