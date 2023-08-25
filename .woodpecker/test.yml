@@ -6,15 +6,16 @@ when:
 
 steps:
   lint:
-    image: golang/alpine
+    image: golang:alpine
     commands:
       - apk add --no-cache git helm
       - helm lint --with-subcharts
       ### helm-docs
       # until v1.11.1 is released
       - git clone https://github.com/norwoodj/helm-docs.git --depth 1
-      - cd cmd/helm-docs && go build
+      - cd helm-docs/cmd/helm-docs && go build
       - mv helm-docs /usr/local/bin/
+      - cd ../../.. && rm -rf helm-docs
       - helm-docs -x
 
   test-chart:
