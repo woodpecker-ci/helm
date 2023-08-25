@@ -6,9 +6,16 @@ when:
 
 steps:
   lint:
-    image: alpine/helm:latest
+    image: go-alpine
     commands:
+      - apk add --no-cache git helm
       - helm lint --with-subcharts
+      ### helm-docs
+      # until v1.11.1 is released
+      - git clone https://github.com/norwoodj/helm-docs.git --depth 1
+      - cd cmd/helm-docs && go build
+      - mv helm-docs /usr/local/bin/
+      - helm-docs -x
 
   test-chart:
     image: quay.io/helmpack/chart-testing
