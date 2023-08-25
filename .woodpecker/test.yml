@@ -6,7 +6,7 @@ when:
 
 steps:
   lint:
-    image: go-alpine
+    image: golang/alpine
     commands:
       - apk add --no-cache git helm
       - helm lint --with-subcharts
