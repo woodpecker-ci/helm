@@ -19,15 +19,9 @@ helm install woodpecker-agent woodpecker/woodpecker
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
-## Maintainers
+### "Next" version
 
-| Name | Email | Url |
-| ---- | ------ | --- |
-| Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
-
-### Next version
-
-To install Woodpecker with native Kubernetes support from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
+To install Woodpecker from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
 
 ```yml
 # values.yml

@@ -46,8 +46,8 @@ steps:
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
-      - helm-docs
       - helm-docs -g . -t README-main.md.gotmpl
+      - helm-docs -t README-sub.md.gotmpl -g charts/agent,charts/server
       - cat README.md
 
   push-readme:
