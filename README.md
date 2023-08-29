@@ -40,10 +40,13 @@ to communicate when admins have to do manual migration steps and when they can j
 | agent.affinity | object | `{}` | Specifies the affinity |
 | agent.dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
 | agent.dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
+| agent.dind.extraVolumeMounts | object | `{}` | Defines where a volume defined with `extraVolumes` should be mounted |
 | agent.dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
 | agent.dind.resources | object | `{}` | Defines the resources for Docker-in-Docker |
 | agent.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | agent.enabled | bool | `true` | Enable the agent component |
+| agent.extraVolumes | object | `{}` | Defines a volume to mount with `extraVolumeMounts` |
+| agent.extraVolumeMounts | object | `{}` | Defines where a volume defined with `extraVolumes` should be mounted |
 | agent.env.WOODPECKER_BACKEND | string | `"kubernetes"` |  |
 | agent.env.WOODPECKER_BACKEND_K8S_NAMESPACE | string | `"woodpecker"` |  |
 | agent.env.WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS | string | `""` |  |
