@@ -11,6 +11,12 @@ image:
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
+# -- Defines a custom command to start the container
+command: []
+
+# -- Defines a custom args to start the container
+args: []
+
 env:
   # -- Add the environment variables for the agent component
   WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
@@ -36,7 +42,7 @@ dind:
 
 # -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom:
-- woodpecker-secret
+  - woodpecker-secret
 
 extraVolumes: []
   # - name: data-volume
@@ -82,11 +88,13 @@ serviceAccount:
 podAnnotations: {}
 
 # -- Add pod security context
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
 # -- Add security context
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -95,7 +103,8 @@ securityContext: {}
   # runAsUser: 1000
 
 # -- Specifies the resources for the agent component
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
