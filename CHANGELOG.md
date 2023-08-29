@@ -8,6 +8,7 @@
 
 ### Misc
 
+- Add extraVolumes and extraVolumeMounts [[#47](https://github.com/woodpecker-ci/helm/pull/47)]
 - Specify clusterIP or loadBalancerIP [[#48](https://github.com/woodpecker-ci/helm/pull/48)]
 - Fix test workflow for tags [[#61](https://github.com/woodpecker-ci/helm/pull/61)]
 
