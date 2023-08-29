@@ -38,6 +38,16 @@ dind:
 extraSecretNamesForEnvFrom:
 - woodpecker-secret
 
+extraVolumes: []
+  # - name: data-volume
+  #   persistentVolumeClaim:
+  #     claimName: example
+
+## Additional volumes that will be attached to the agent container
+extraVolumeMounts: []
+  # - name: ca-certs
+  #   mountPath: /etc/ssl/certs/ca-certificates.crt
+
 # -- The image pull secrets
 imagePullSecrets: []
 # -- Overrides the name of the chart of the agent component
