@@ -4,10 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@ymettier, @pat-s
 
 ### Misc
 
+- Specify clusterIP or loadBalancerIP [[#48](https://github.com/woodpecker-ci/helm/pull/48)]
 - Fix test workflow for tags [[#61](https://github.com/woodpecker-ci/helm/pull/61)]
 
 ## [0.2.0](https://github.com/woodpecker-ci/helm/releases/tag/0.2.0) - 2023-08-12
