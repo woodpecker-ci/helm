@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-15
+## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-29
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,8 +8,7 @@
 
 ### Misc
 
-- Set chart version with release-helper and don't require PRs to bump it [[#57](https://github.com/woodpecker-ci/helm/pull/57)]
-- no unshallow [[#56](https://github.com/woodpecker-ci/helm/pull/56)]
+- Fix test workflow for tags [[#61](https://github.com/woodpecker-ci/helm/pull/61)]
 
 ## [0.2.0](https://github.com/woodpecker-ci/helm/releases/tag/0.2.0) - 2023-08-12
 
