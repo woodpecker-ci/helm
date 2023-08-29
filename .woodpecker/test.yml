@@ -16,6 +16,6 @@ steps:
       # Needed for `ct` to check which chart was edited. See https://github.com/woodpecker-ci/helm/pull/56#issuecomment-1676343140
       - git fetch origin main --unshallow --no-tags || true
       - git fetch origin main --no-tags || true
-      - git branch main || true
+      - git branch main origin/main || true
       - ct list-changed --config ct.yaml
       - ct lint --config ct.yaml
