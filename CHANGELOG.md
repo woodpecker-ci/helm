@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-29
+## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-30
 
 ### ❤️ Thanks to all contributors! ❤️
 
