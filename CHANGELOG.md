@@ -1,19 +1,25 @@
 # Changelog
 
-## [0.2.1](https://github.com/woodpecker-ci/helm/releases/tag/0.2.1) - 2023-08-30
+## [0.3.0](https://github.com/woodpecker-ci/helm/releases/tag/0.3.0) - 2023-08-30
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @eliasscosta, @ymettier, @pat-s
 
-### Misc
+### ✨ Features
 
 - feature: add custom command [[#59](https://github.com/woodpecker-ci/helm/pull/59)]
 - Add extraVolumes and extraVolumeMounts [[#47](https://github.com/woodpecker-ci/helm/pull/47)]
 - Specify clusterIP or loadBalancerIP [[#48](https://github.com/woodpecker-ci/helm/pull/48)]
+
+### 🐛 Bug Fixes
+
 - Fix test workflow for tags [[#61](https://github.com/woodpecker-ci/helm/pull/61)]
-- Set chart version with release-helper and don't require PRs to bump it [[#57](https://github.com/woodpecker-ci/helm/pull/57)]
 - no unshallow [[#56](https://github.com/woodpecker-ci/helm/pull/56)]
+
+### 📈 Enhancement
+
+- Set chart version with release-helper and don't require PRs to bump it [[#57](https://github.com/woodpecker-ci/helm/pull/57)]
 
 ## [0.2.0](https://github.com/woodpecker-ci/helm/releases/tag/0.2.0) - 2023-08-12
 
