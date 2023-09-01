@@ -3,8 +3,6 @@ depends_on:
 
 when:
   - event: tag
-  - event: push
-    branch: main
   - event: pull_request
 
 steps:
