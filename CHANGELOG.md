@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.1](https://github.com/woodpecker-ci/helm/releases/tag/0.3.1) - 2023-09-01
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- Don't run release workflow twice [[#63](https://github.com/woodpecker-ci/helm/pull/63)]
+
 ## [0.3.0](https://github.com/woodpecker-ci/helm/releases/tag/0.3.0) - 2023-08-30
 
 ### ❤️ Thanks to all contributors! ❤️
