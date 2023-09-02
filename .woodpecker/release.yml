@@ -26,9 +26,7 @@ steps:
       - cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --charts-repo https://woodpecker-ci.org --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
       - cd ..
       - rm -rf woodpecker-ci.github.io/
-      - pwd && ls -la
-      - git status
-      # - git reset --hard
+      - git reset --hard
     when:
       - event: tag
 
