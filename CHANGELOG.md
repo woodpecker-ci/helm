@@ -6,7 +6,7 @@
 
 @anbraten, @pat-s
 
-### Misc
+### 🐛 Bug Fixes
 
 - Remove duplicated steps [[#67](https://github.com/woodpecker-ci/helm/pull/67)]
 - Don't run release workflow twice [[#63](https://github.com/woodpecker-ci/helm/pull/63)]
