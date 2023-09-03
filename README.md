@@ -147,5 +147,6 @@ to communicate when admins have to do manual migration steps and when they can j
 
 ## Contributing
 
-- To create the documentation after adding new parameters to the chart, use [`helm-docs`](https://github.com/norwoodj/helm-docs).
-- Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the `README.md.gotmpl` file.
+- The documentation in the README files are generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
+  To generate it, run `make docs` and **do not** run `helm-docs` directly (due to the differing templates for the individual charts)
+- Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.
