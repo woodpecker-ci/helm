@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
+
+### ❤️ Thanks to all contributors! ❤️
+
+@anbraten
+
+### Misc
+
+- Fix release [[#68](https://github.com/woodpecker-ci/helm/pull/68)]
+
 ## [0.3.1](https://github.com/woodpecker-ci/helm/releases/tag/0.3.1) - 2023-09-02
 
 ### ❤️ Thanks to all contributors! ❤️
