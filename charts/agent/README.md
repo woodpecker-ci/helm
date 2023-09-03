@@ -9,6 +9,8 @@ A Helm chart for the Woodpecker agent
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Specifies the affinity |
+| args | list | `[]` | Defines a custom args to start the container |
+| command | list | `[]` | Defines a custom command to start the container |
 | dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
 | dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
 | dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
@@ -24,6 +26,8 @@ A Helm chart for the Woodpecker agent
 | env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | env.WOODPECKER_SERVER | string | `"woodpecker-server.<namespace>.svc.cluster.local:9000"` | Add the environment variables for the agent component |
 | extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
+| extraVolumeMounts | list | `[]` |  |
+| extraVolumes | list | `[]` |  |
 | fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
 | image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the image |
 | image.registry | string | `"docker.io"` | The image registry |

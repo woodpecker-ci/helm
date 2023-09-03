@@ -37,16 +37,29 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- with .Values.command }}
+          command:
+          {{- toYaml . | trim | nindent 12 }}
+          {{- end }}
+          {{- with .Values.args }}
+          args:
+          {{- toYaml . | trim | nindent 12 }}
+          {{- end }}
           ports:
             - name: http
               containerPort: 3000
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.dind.enabled }}
+          {{- if (or .Values.dind.enabled .Values.extraVolumeMounts) }}
           volumeMounts:
+          {{- if .Values.extraVolumeMounts }}
+            {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
+          {{- end }}
+          {{- if .Values.dind.enabled }}
             - name: sock-dir
               mountPath: /var/run
+          {{- end }}
           {{- end }}
           env:
             {{- range $key, $value := .Values.env }}
@@ -73,6 +86,9 @@ spec:
           volumeMounts:
           - name: sock-dir
             mountPath: /var/run
+          {{- if .Values.dind.extraVolumeMounts }}
+            {{- toYaml .Values.dind.extraVolumeMounts | nindent 10 }}
+          {{- end }}
         {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
@@ -86,10 +102,15 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- if .Values.dind.enabled }}
+      {{- if (or .Values.dind.enabled .Values.extraVolumes) }}
       volumes:
+      {{- if .Values.extraVolumes }}
+        {{- toYaml .Values.extraVolumes | nindent 6 }}
+      {{- end }}
+      {{- if .Values.dind.enabled }}
       - name: sock-dir
         emptyDir: {}
+      {{- end }}
       {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:

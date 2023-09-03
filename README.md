@@ -2,7 +2,7 @@
 
 This repository contains the helm charts of the [Woodpecker](https://woodpecker-ci.org) project.
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.0](https://img.shields.io/badge/AppVersion-v1.0.0-informational?style=flat-square)
+![Version: 0.3.2](https://img.shields.io/badge/Version-0.3.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.0](https://img.shields.io/badge/AppVersion-v1.0.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -45,7 +45,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 0.2.0
+  version          = "0.3.2"
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -131,6 +131,8 @@ to communicate when admins have to do manual migration steps and when they can j
 | server.podSecurityContext | object | `{}` | Add pod security context |
 | server.resources | object | `{}` | Specifies the ressources for the server component |
 | server.securityContext | object | `{}` | Add security context |
+| server.service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
+| server.service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |
 | server.service.port | int | `80` | The port of the service |
 | server.service.type | string | `"ClusterIP"` | The type of the service |
 | server.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |

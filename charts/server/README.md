@@ -9,6 +9,8 @@ A Helm chart for the Woodpecker server
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Add affinity |
+| args | list | `[]` | Defines a custom args to start the container |
+| command | list | `[]` | Defines a custom command to start the container |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
 | extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra environment variables from the secrets list |
@@ -36,6 +38,8 @@ A Helm chart for the Woodpecker server
 | podSecurityContext | object | `{}` | Add pod security context |
 | resources | object | `{}` | Specifies the ressources for the server component |
 | securityContext | object | `{}` | Add security context |
+| service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
+| service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |
 | service.port | int | `80` | The port of the service |
 | service.type | string | `"ClusterIP"` | The type of the service |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
