@@ -1,6 +1,6 @@
 # agent
 
-![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.15.9](https://img.shields.io/badge/AppVersion-v0.15.9-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.0](https://img.shields.io/badge/AppVersion-v1.0.0-informational?style=flat-square)
 
 A Helm chart for the Woodpecker agent
 
@@ -21,6 +21,8 @@ A Helm chart for the Woodpecker agent
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Specifies the affinity |
+| args | list | `[]` | Defines a custom args to start the container |
+| command | list | `[]` | Defines a custom command to start the container |
 | dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
 | dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
 | dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
@@ -33,10 +35,13 @@ A Helm chart for the Woodpecker agent
 | env.WOODPECKER_BACKEND_K8S_STORAGE_CLASS | string | `""` |  |
 | env.WOODPECKER_BACKEND_K8S_STORAGE_RWX | bool | `true` |  |
 | env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
+| env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | env.WOODPECKER_SERVER | string | `"woodpecker-server.<namespace>.svc.cluster.local:9000"` | Add the environment variables for the agent component |
 | extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
+| extraVolumeMounts | list | `[]` |  |
+| extraVolumes | list | `[]` |  |
 | fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
-| image.pullPolicy | string | `"Always"` | The pull policy for the image |
+| image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the image |
 | image.registry | string | `"docker.io"` | The image registry |
 | image.repository | string | `"woodpeckerci/woodpecker-agent"` | image repository |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |

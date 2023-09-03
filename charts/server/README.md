@@ -1,6 +1,6 @@
 # server
 
-![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.15.9](https://img.shields.io/badge/AppVersion-v0.15.9-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.0](https://img.shields.io/badge/AppVersion-v1.0.0-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -21,11 +21,13 @@ A Helm chart for the Woodpecker server
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Add affinity |
+| args | list | `[]` | Defines a custom args to start the container |
+| command | list | `[]` | Defines a custom command to start the container |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
 | extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra environment variables from the secrets list |
 | fullnameOverride | string | `""` | Overrides the full name of the helm chart of the server component |
-| image.pullPolicy | string | `"Always"` | The image pull policy |
+| image.pullPolicy | string | `"IfNotPresent"` | The image pull policy |
 | image.registry | string | `"docker.io"` | The image registry |
 | image.repository | string | `"woodpeckerci/woodpecker-server"` | The image repository |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
@@ -48,10 +50,12 @@ A Helm chart for the Woodpecker server
 | podSecurityContext | object | `{}` | Add pod security context |
 | resources | object | `{}` | Specifies the ressources for the server component |
 | securityContext | object | `{}` | Add security context |
+| service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
+| service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |
 | service.port | int | `80` | The port of the service |
 | service.type | string | `"ClusterIP"` | The type of the service |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
-| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.create | bool | `false` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 | statefulSet.annotations | object | `{}` | Add annotations to the StatefulSet |
 | statefulSet.labels | object | `{}` | Add labels to the StatefulSet |
