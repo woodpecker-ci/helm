@@ -19,7 +19,7 @@ helm install woodpecker-agent woodpecker/woodpecker
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
-### "Next" version
+### `Next` version
 
 To install Woodpecker from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
 
@@ -45,7 +45,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = "0.3.2"
+  version          = 0.3.2
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
