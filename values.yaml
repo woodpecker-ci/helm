@@ -26,7 +26,7 @@ agent:
 
   env:
     # -- Add the environment variables for the agent component
-    WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
+    WOODPECKER_SERVER: "woodpecker-server:9000" # See https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
     WOODPECKER_BACKEND: kubernetes
     WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
     WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ""
