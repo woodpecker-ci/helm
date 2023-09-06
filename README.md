@@ -19,9 +19,9 @@ helm install woodpecker-agent woodpecker/woodpecker
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
-### Next version
+### `Next` version
 
-To install Woodpecker with native Kubernetes support from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
+To install Woodpecker from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
 
 ```yml
 # values.yml
@@ -45,7 +45,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = "0.1.5"
+  version          = 0.3.2
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -144,3 +144,9 @@ to communicate when admins have to do manual migration steps and when they can j
 | server.statefulSet.revisionHistoryLimit | int | `5` | The maximum number of revisions that will be maintained in the StatefulSet's revision history Default in 10. |
 | server.tolerations | list | `[]` | Add tolerations rules |
 | server.updateStrategy.type | string | `"RollingUpdate"` | Defines the update strategy of the StatefulSet |
+
+## Contributing
+
+- The documentation in the README files are generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
+  To generate it, run `make docs` and **do not** run `helm-docs` directly (as the main chart uses a custom template)
+- Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.

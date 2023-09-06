@@ -1,6 +1,7 @@
 when:
   event: push
-  branch: ${CI_REPO_DEFAULT_BRANCH}
+  branch: 
+    ${CI_REPO_DEFAULT_BRANCH}
 
 steps:
   release-helper:

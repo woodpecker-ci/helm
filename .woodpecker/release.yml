@@ -34,7 +34,7 @@ steps:
     image: jnorwood/helm-docs:v1.11.0
     commands:
       - helm-docs
-      - helm-docs -g . -t README-main.md.gotmpl
+      - helm-docs -t README-main.md.gotmpl -g .
       - cat README.md
 
   push-readme:
