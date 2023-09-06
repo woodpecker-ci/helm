@@ -148,5 +148,5 @@ to communicate when admins have to do manual migration steps and when they can j
 ## Contributing
 
 - The documentation in the README files are generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
-  To generate it, run `make docs` and **do not** run `helm-docs` directly (due to the differing templates for the individual charts)
+  To generate it, run `make docs` and **do not** run `helm-docs` directly (as the main chart uses a custom template)
 - Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.
