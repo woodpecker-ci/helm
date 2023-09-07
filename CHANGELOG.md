@@ -1,14 +1,18 @@
 # Changelog
 
-## [0.3.3](https://github.com/woodpecker-ci/helm/releases/tag/0.3.3) - 2023-09-06
+## [0.3.3](https://github.com/woodpecker-ci/helm/releases/tag/0.3.3) - 2023-09-07
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@ashtonian, @pat-s
 
 ### 📚 Documentation
 
 - Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
+
+### Misc
+
+- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
 
