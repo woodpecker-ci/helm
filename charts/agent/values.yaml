@@ -52,8 +52,11 @@ extraSecretNamesForEnvFrom:
 # -- Additional volumes that can be mounted in containers
 extraVolumes: []
   # - name: docker-config
-  #   mountPath: /etc/docker/daemon.json
-  #   subPath: daemon.json
+  #   configMap:
+  #     name: docker-config
+  # - name: data-volume
+  #   persistentVolumeClaim:
+  #     claimName: example
 
 # -- Additional volumes that will be attached to the agent container
 extraVolumeMounts: []
