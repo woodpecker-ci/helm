@@ -6,6 +6,10 @@
 
 @pat-s, @ashtonian
 
+### 🐛 Bug Fixes
+
+- Fix missing `image.registry` for agent [[#70](https://github.com/woodpecker-ci/helm/pull/70)]
+
 ### 📚 Documentation
 
 - Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
