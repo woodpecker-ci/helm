@@ -1,10 +1,10 @@
 # Changelog
 
-## [0.3.3](https://github.com/woodpecker-ci/helm/releases/tag/0.3.3) - 2023-09-07
+## [0.3.3](https://github.com/woodpecker-ci/helm/releases/tag/0.3.3) - 2023-09-13
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@ashtonian, @pat-s
+@pat-s, @ashtonian
 
 ### 📚 Documentation
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- release-helper: update `appVersion` to latest release [[#76](https://github.com/woodpecker-ci/helm/pull/76)]
 - fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
