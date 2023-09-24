@@ -13,13 +13,19 @@ updateStrategy:
   # -- Defines the update strategy of the StatefulSet
   type: RollingUpdate
 
+# -- Defines a custom command to start the container
+command: []
+
+# -- Defines a custom args to start the container
+args: []
+
 image:
   # -- The image registry
   registry: docker.io
   # -- The image repository
   repository: woodpeckerci/woodpecker-server
   # -- The image pull policy
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -54,7 +60,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # -- Specifies whether a service account should be created
-  create: true
+  create: false
   # -- Annotations to add to the service account
   annotations: {}
   # -- The name of the service account to use.
@@ -67,15 +73,19 @@ extraContainers: []
 # -- Add extra initContainers to the server component
 initContainers: []
 
-podAnnotations: {}
+# -- Add pod annotations
+podAnnotations:
+  {}
   # prometheus.io/scrape: "true"
 
 # -- Add pod security context
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
 # -- Add security context
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -88,6 +98,10 @@ service:
   type: ClusterIP
   # -- The port of the service
   port: &servicePort 80
+  # -- The cluster IP of the service (optional)
+  clusterIP:
+  # -- The loadbalancer IP of the service (optional)
+  loadBalancerIP:
 
 ingress:
   # -- Enable the ingress for the server component
@@ -103,17 +117,18 @@ ingress:
   hosts:
     - host: chart-example.local
       paths:
-      - path: /
-        backend:
-          serviceName: chart-example.local
-          servicePort: *servicePort
+        - path: /
+          backend:
+            serviceName: chart-example.local
+            servicePort: *servicePort
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
 
 # -- Specifies the ressources for the server component
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -137,3 +152,9 @@ affinity: {}
 # -- Overrides the default DNS configuration
 dnsConfig: {}
 
+# -- Enabled internal metrics endpoint.
+metrics:
+  enabled: false
+  port: 9001
+  interval: 60s
+  path: /metrics

@@ -4,16 +4,22 @@ replicaCount: 2
 image:
   # -- The image registry
   registry: docker.io
-  # -- image repository
+  # -- The image repository
   repository: woodpeckerci/woodpecker-agent
   # -- The pull policy for the image
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
+# -- Defines a custom command to start the container
+command: []
+
+# -- Defines a custom args to start the container
+args: []
+
 env:
   # -- Add the environment variables for the agent component
-  WOODPECKER_SERVER: "woodpecker-server.<namespace>.svc.cluster.local:9000"
+  WOODPECKER_SERVER: "woodpecker-server:9000"
   WOODPECKER_BACKEND: kubernetes
   WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
   WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ""
@@ -21,6 +27,7 @@ env:
   WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
   WOODPECKER_BACKEND_K8S_POD_LABELS: ""
   WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
+  WOODPECKER_CONNECT_RETRY_COUNT: "1"
 
 dind:
   # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
@@ -35,7 +42,17 @@ dind:
 
 # -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom:
-- woodpecker-secret
+  - woodpecker-secret
+
+extraVolumes: []
+  # - name: data-volume
+  #   persistentVolumeClaim:
+  #     claimName: example
+
+## Additional volumes that will be attached to the agent container
+extraVolumeMounts: []
+  # - name: ca-certs
+  #   mountPath: /etc/ssl/certs/ca-certificates.crt
 
 # -- The image pull secrets
 imagePullSecrets: []
@@ -71,11 +88,13 @@ serviceAccount:
 podAnnotations: {}
 
 # -- Add pod security context
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
 # -- Add security context
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -84,7 +103,8 @@ securityContext: {}
   # runAsUser: 1000
 
 # -- Specifies the resources for the agent component
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following

@@ -1,15 +1,11 @@
+depends_on:
+  - test
+
 when:
   - event: tag
-  - event: push
-    branch: main
   - event: pull_request
 
-pipeline:
-  lint:
-    image: alpine/helm:latest
-    commands:
-      - helm lint --with-subcharts
-
+steps:
   pack-chart:
     image: quay.io/helmpack/chart-releaser:v1.5.0
     commands:
@@ -26,14 +22,19 @@ pipeline:
       - git config --global user.name "woodpecker-bot"
       - cr upload --skip-existing --owner woodpecker-ci --git-repo woodpecker-ci.github.io --release-name-template "helm-{{ .Name }}-{{ .Version }}"
       - git clone https://github.com/woodpecker-ci/woodpecker-ci.github.io.git
-      - cd woodpecker-ci.github.io/ && cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --charts-repo https://woodpecker-ci.org --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
+      - cd woodpecker-ci.github.io/
+      - cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
+      - cd ..
+      - rm -rf woodpecker-ci.github.io/
+      - git reset --hard
     when:
       - event: tag
 
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
-      - helm-docs -t README.md.gotmpl
+      - helm-docs
+      - helm-docs -t README-main.md.gotmpl -g .
       - cat README.md
 
   push-readme:
