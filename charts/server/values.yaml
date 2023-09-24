@@ -145,3 +145,10 @@ affinity: {}
 
 # -- Overrides the default DNS configuration
 dnsConfig: {}
+
+# -- Enabled internal metrics endpoint.
+metrics:
+  enabled: false
+  port: 9001
+  interval: 60s
+  path: /metrics
