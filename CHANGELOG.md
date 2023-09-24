@@ -1,14 +1,18 @@
 # Changelog
 
-## [0.3.3](https://github.com/woodpecker-ci/helm/releases/tag/0.3.3) - 2023-09-13
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-09-24
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @ashtonian
+@eliasscosta, @pat-s, @ashtonian
 
 ### 🐛 Bug Fixes
 
 - Fix missing `image.registry` for agent [[#70](https://github.com/woodpecker-ci/helm/pull/70)]
+
+### 📈 Enhancement
+
+- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ### 📚 Documentation
 
@@ -16,8 +20,8 @@
 
 ### Misc
 
+- chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
 - release-helper: update `appVersion` to latest release [[#76](https://github.com/woodpecker-ci/helm/pull/76)]
-- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
 
