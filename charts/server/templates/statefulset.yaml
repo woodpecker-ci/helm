@@ -57,6 +57,11 @@ spec:
             - name: grpc
               containerPort: 9000
               protocol: TCP
+          {{- if .Values.metrics.enabled }}
+            - name: metrics
+              containerPort: {{ .Values.metrics.port }}
+              protocol: TCP
+          {{- end }}
           livenessProbe:
             httpGet:
               path: /healthz
@@ -76,6 +81,10 @@ spec:
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
+            {{- end }}
+            {{- if .Values.metrics.enabled }}
+            - name: WOODPECKER_METRICS_SERVER_ADDR
+              value: ":{{ .Values.metrics.port }}"
             {{- end }}
           envFrom:
             {{- range .Values.extraSecretNamesForEnvFrom }}
