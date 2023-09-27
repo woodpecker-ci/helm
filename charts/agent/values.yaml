@@ -4,7 +4,7 @@ replicaCount: 2
 image:
   # -- The image registry
   registry: docker.io
-  # -- image repository
+  # -- The image repository
   repository: woodpeckerci/woodpecker-agent
   # -- The pull policy for the image
   pullPolicy: IfNotPresent
