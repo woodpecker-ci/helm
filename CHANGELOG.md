@@ -1,10 +1,19 @@
 # Changelog
 
-## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-09-24
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-09-27
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@eliasscosta, @pat-s, @ashtonian
+@CrimsonFez, @eliasscosta, @pat-s, @ashtonian
+
+### ✨ Features
+
+- chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
+
+### 📚 Documentation
+
+- add documentation for extra volume mounts in agent [[#78](https://github.com/woodpecker-ci/helm/pull/78)]
+- Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
 
 ### 🐛 Bug Fixes
 
@@ -14,13 +23,8 @@
 
 - fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
-### 📚 Documentation
-
-- Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
-
 ### Misc
 
-- chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
 - release-helper: update `appVersion` to latest release [[#76](https://github.com/woodpecker-ci/helm/pull/76)]
 
 ## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
