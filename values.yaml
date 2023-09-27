@@ -46,10 +46,29 @@ agent:
       DOCKER_DRIVER: "overlay2"
     # -- Defines the resources for Docker-in-Docker
     resources: {}
+      # -- Defines extra volumes to mount in the Docker-in-Docker container
+    extraVolumeMounts: []
+    # - name: docker-config
+    #   mountPath: /etc/docker/daemon.json
+    #   subPath: daemon.json
 
   # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
     - woodpecker-secret
+
+  # -- Additional volumes that can be mounted in containers
+  extraVolumes: []
+    # - name: docker-config
+    #   configMap:
+    #     name: docker-config
+    # - name: data-volume
+    #   persistentVolumeClaim:
+    #     claimName: example
+
+  # -- Additional volumes that will be attached to the agent container
+  extraVolumeMounts: []
+    # - name: ca-certs
+    #   mountPath: /etc/ssl/certs/ca-certificates.crt
 
   # -- The image pull secrets
   imagePullSecrets: []
