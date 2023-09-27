@@ -5,8 +5,8 @@ statefulSet:
   labels: {}
   # -- Defines the number of replicas
   replicaCount: 1
-  # -- The maximum number of revisions that will be maintained in the StatefulSet's revision history
-  # Default in 10.
+  # -- The maximum number of revisions that will be maintained in the StatefulSet's revision history.
+  # Default is 10.
   revisionHistoryLimit: 5
 
 updateStrategy:
@@ -66,6 +66,12 @@ serviceAccount:
   # -- The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
+
+# -- Add extra containers to the server component
+extraContainers: []
+
+# -- Add extra initContainers to the server component
+initContainers: []
 
 # -- Add pod annotations
 podAnnotations:
