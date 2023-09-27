@@ -11,8 +11,16 @@ agent:
   # -- Enable the agent component
   enabled: true
 
-  # -- The number of replicas for the deployment
-  replicaCount: 2
+  deployment:
+    # -- Add annotations to the deployment
+    annotations: {}
+    # -- Add labels to the deployment
+    labels: {}
+    # -- The number of replicas for the deployment
+    replicaCount: 2
+    # -- The maximum number of revisions that will be maintained for the replicaset.
+    # Default is 10
+    revisionHistoryLimit: 5
 
   image:
     # -- The image registry
