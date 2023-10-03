@@ -30,6 +30,17 @@ steps:
     when:
       - event: tag
 
+  release-oci:
+    image: alpine/helm:3.13.0
+    secrets: [gh_token_packages]
+    commands:
+      - helm package charts/otf-agent --version ${CI_COMMIT_TAG}
+      - echo ${GH_TOKEN_PACKAGES} | helm registry login -u woodpeckerci ghcr.io --password-stdin
+      - helm push otf-agent-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpeckerci/helm
+      - helm registry logout ghcr.io
+    when:
+      - event: tag
+
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
@@ -38,7 +49,7 @@ steps:
       - cat README.md
 
   push-readme:
-    image: appleboy/drone-git-push
+    image: appleboy/drone-git-push:1.0.5
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main
