@@ -49,7 +49,7 @@ steps:
       - cat README.md
 
   push-readme:
-    image: appleboy/drone-git-push:1.0.5
+    image: appleboy/drone-git-push
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main
