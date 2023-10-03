@@ -34,9 +34,9 @@ steps:
     image: alpine/helm:3.13.0
     secrets: [gh_token_packages]
     commands:
-      - helm package charts/otf-agent --version ${CI_COMMIT_TAG}
+      - helm package . --version ${CI_COMMIT_TAG}
       - echo ${GH_TOKEN_PACKAGES} | helm registry login -u woodpeckerci ghcr.io --password-stdin
-      - helm push otf-agent-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpeckerci/helm
+      - helm push woodpecker-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpeckerci/helm
       - helm registry logout ghcr.io
     when:
       - event: tag
