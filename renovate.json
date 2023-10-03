@@ -4,12 +4,8 @@
   "prConcurrentLimit": 5,
   "packageRules": [
     {
-      "matchManagers": ["dockerfile"],
-      "labels": ["dependencies"]
-    },
-    {
-      "matchManagers": ["woodpecker"],
-      "labels": ["build"]
+      "matchManagers": ["dockerfile", "woodpecker"],
+      "labels": ["chore 🧰"]
     }
   ]
 }
