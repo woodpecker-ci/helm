@@ -1,11 +1,11 @@
 when:
   event: push
-  branch: 
+  branch:
     ${CI_REPO_DEFAULT_BRANCH}
 
 steps:
   release-helper:
-    image: woodpeckerci/plugin-ready-release-go
+    image: woodpeckerci/plugin-ready-release-go:0.6.1
     pull: true
     settings:
       release_branch: ${CI_REPO_DEFAULT_BRANCH}

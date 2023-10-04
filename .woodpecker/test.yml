@@ -6,12 +6,12 @@ when:
 
 steps:
   lint:
-    image: alpine/helm:latest
+    image: alpine/helm:3.13.0
     commands:
       - helm lint --with-subcharts
 
   test-chart:
-    image: quay.io/helmpack/chart-testing
+    image: quay.io/helmpack/chart-testing:v3.9.0
     commands:
       # Needed for `ct` to check which chart was edited. See https://github.com/woodpecker-ci/helm/pull/56#issuecomment-1676343140
       - git fetch origin main --unshallow --no-tags || true
