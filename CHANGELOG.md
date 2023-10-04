@@ -10,6 +10,11 @@
 
 - chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
 
+### 📈 Enhancement
+
+- Publish chart to OCI registry (alongside gh-pages) [[#83](https://github.com/woodpecker-ci/helm/pull/83)]
+- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
+
 ### 📚 Documentation
 
 - add documentation for extra volume mounts in agent [[#78](https://github.com/woodpecker-ci/helm/pull/78)]
@@ -18,10 +23,6 @@
 ### 🐛 Bug Fixes
 
 - Fix missing `image.registry` for agent [[#70](https://github.com/woodpecker-ci/helm/pull/70)]
-
-### 📈 Enhancement
-
-- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ### Misc
 
