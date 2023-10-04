@@ -30,6 +30,17 @@ steps:
     when:
       - event: tag
 
+  release-oci:
+    image: alpine/helm:3.13.0
+    secrets: [dockerhub_token]
+    commands:
+      - helm package . --version ${CI_COMMIT_TAG}
+      - echo ${DOCKERHUB_TOKEN} | helm registry login -u woodpeckerci registry-1.docker.io --password-stdin
+      - helm push woodpecker-${CI_COMMIT_TAG}.tgz oci://registry-1.docker.io/woodpeckerci/helm
+      - helm registry logout registry-1.docker.io
+    when:
+      - event: tag
+
   update-readme:
     image: jnorwood/helm-docs:v1.11.0
     commands:
