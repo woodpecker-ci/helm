@@ -15,7 +15,7 @@ helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 
 # alternatively via OCI
-helm repo add woodpecker oci://ghcr.io/woodpeckerci/woodpecker
+helm repo add woodpecker oci://registry-1.docker.io/woodpeckerci/woodpecker
 helm install woodpecker woodpecker/woodpecker
 ```
 

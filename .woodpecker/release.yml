@@ -32,12 +32,12 @@ steps:
 
   release-oci:
     image: alpine/helm:3.13.0
-    secrets: [gh_token_packages]
+    secrets: [dockerhub_token]
     commands:
       - helm package . --version ${CI_COMMIT_TAG}
-      - echo ${GH_TOKEN_PACKAGES} | helm registry login -u woodpeckerci ghcr.io --password-stdin
-      - helm push woodpecker-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpeckerci/helm
-      - helm registry logout ghcr.io
+      - echo ${DOCKERHUB_TOKEN} | helm registry login -u woodpeckerci registry-1.docker.io --password-stdin
+      - helm push woodpecker-${CI_COMMIT_TAG}.tgz oci://registry-1.docker.io/woodpeckerci/helm
+      - helm registry logout registry-1.docker.io
     when:
       - event: tag
 
