@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @pat-s, @CrimsonFez, @eliasscosta, @ashtonian
+@pat-s, @renovate[bot], @CrimsonFez, @eliasscosta, @ashtonian
 
 ### ✨ Features
 
@@ -26,6 +26,7 @@
 
 ### Misc
 
+- ignore and remove `index.yaml` [[#80](https://github.com/woodpecker-ci/helm/pull/80)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.11.2 [[#85](https://github.com/woodpecker-ci/helm/pull/85)]
 - chore(deps): update docker docker tag to v20.10.24 [[#84](https://github.com/woodpecker-ci/helm/pull/84)]
 - Add renovate config and set image versions in workflows [[#82](https://github.com/woodpecker-ci/helm/pull/82)]
