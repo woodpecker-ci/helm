@@ -1,10 +1,10 @@
 # Changelog
 
-## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-04
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-05
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @CrimsonFez, @eliasscosta, @ashtonian
+@renovate[bot], @pat-s, @CrimsonFez, @eliasscosta, @ashtonian
 
 ### ✨ Features
 
@@ -26,6 +26,7 @@
 
 ### Misc
 
+- chore(deps): update docker docker tag to v20.10.24 [[#84](https://github.com/woodpecker-ci/helm/pull/84)]
 - Add renovate config and set image versions in workflows [[#82](https://github.com/woodpecker-ci/helm/pull/82)]
 - release-helper: update `appVersion` to latest release [[#76](https://github.com/woodpecker-ci/helm/pull/76)]
 
