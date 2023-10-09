@@ -41,6 +41,22 @@ extraSecretNamesForEnvFrom:
   # - woodpecker-github-secret
   - woodpecker-secret
 
+# -- Additional volumes that can be mounted in containers
+extraVolumes:
+  []
+  # - name: docker-config
+  #   configMap:
+  #     name: docker-config
+  # - name: data-volume
+  #   persistentVolumeClaim:
+  #     claimName: example
+
+# -- Additional volumes that will be attached to the agent container
+extraVolumeMounts:
+  []
+  # - name: ca-certs
+  #   mountPath: /etc/ssl/certs/ca-certificates.crt
+
 persistentVolume:
   # -- Enable the creation of the persistent volume
   enabled: true

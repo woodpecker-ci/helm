@@ -66,6 +66,7 @@ to communicate when admins have to do manual migration steps and when they can j
 | agent.affinity | object | `{}` | Specifies the affinity |
 | agent.dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
 | agent.dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
+| agent.dind.extraVolumeMounts | list | `[]` | Defines extra volumes to mount in the Docker-in-Docker container |
 | agent.dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
 | agent.dind.resources | object | `{}` | Defines the resources for Docker-in-Docker |
 | agent.dnsConfig | object | `{}` | Overrides the default DNS configuration |
@@ -78,8 +79,10 @@ to communicate when admins have to do manual migration steps and when they can j
 | agent.env.WOODPECKER_BACKEND_K8S_STORAGE_RWX | bool | `true` |  |
 | agent.env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
 | agent.env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
-| agent.env.WOODPECKER_SERVER | string | `"woodpecker-server.<namespace>.svc.cluster.local:9000"` | Add the environment variables for the agent component |
+| agent.env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
 | agent.extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
+| agent.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
+| agent.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | agent.fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
 | agent.image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the image |
 | agent.image.registry | string | `"docker.io"` | The image registry |
@@ -110,6 +113,8 @@ to communicate when admins have to do manual migration steps and when they can j
 | server.enabled | bool | `true` | Enable the server component |
 | server.env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
 | server.extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra environment variables from the secrets list |
+| server.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
+| server.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | server.fullnameOverride | string | `""` | Overrides the full name of the helm chart of the server component |
 | server.image.pullPolicy | string | `"IfNotPresent"` | The image pull policy |
 | server.image.registry | string | `"docker.io"` | The image registry |
@@ -150,6 +155,6 @@ to communicate when admins have to do manual migration steps and when they can j
 
 ## Contributing
 
-- The documentation in the README files are generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
+- The README is generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
   To generate it, run `make docs` and **do not** run `helm-docs` directly (as the main chart uses a custom template)
 - Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.
