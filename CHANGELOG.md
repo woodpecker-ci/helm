@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-05
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-09
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -26,6 +26,7 @@
 
 ### Misc
 
+- add `extraVolumes` and `extraVolumesMounts` to server chart [[#81](https://github.com/woodpecker-ci/helm/pull/81)]
 - ignore and remove `index.yaml` [[#80](https://github.com/woodpecker-ci/helm/pull/80)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.11.2 [[#85](https://github.com/woodpecker-ci/helm/pull/85)]
 - chore(deps): update docker docker tag to v20.10.24 [[#84](https://github.com/woodpecker-ci/helm/pull/84)]
