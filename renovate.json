@@ -6,6 +6,11 @@
     {
       "matchManagers": ["dockerfile", "woodpecker"],
       "labels": ["chore 🧰"]
+    },
+    {
+      "description": "Automerge renovate updates",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true
     }
   ]
 }
