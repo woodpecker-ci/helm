@@ -36,23 +36,6 @@ agent:
     WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
     WOODPECKER_CONNECT_RETRY_COUNT: "1"
 
-  dind:
-    # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
-    enabled: false
-    # -- Specifies the image for Docker-in-Docker
-    image: "docker:20.10.24-dind"
-    env:
-      # -- Defines the docker driver for Docker-in-Docker
-      DOCKER_DRIVER: "overlay2"
-    # -- Defines the resources for Docker-in-Docker
-    resources:
-      {}
-      # -- Defines extra volumes to mount in the Docker-in-Docker container
-    extraVolumeMounts: []
-    # - name: docker-config
-    #   mountPath: /etc/docker/daemon.json
-    #   subPath: daemon.json
-
   # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
     - woodpecker-secret

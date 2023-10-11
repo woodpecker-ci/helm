@@ -23,11 +23,6 @@ A Helm chart for the Woodpecker agent
 | affinity | object | `{}` | Specifies the affinity |
 | args | list | `[]` | Defines a custom args to start the container |
 | command | list | `[]` | Defines a custom command to start the container |
-| dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
-| dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
-| dind.extraVolumeMounts | list | `[]` | Defines extra volumes to mount in the Docker-in-Docker container |
-| dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
-| dind.resources | object | `{}` | Defines the resources for Docker-in-Docker |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env.WOODPECKER_BACKEND | string | `"kubernetes"` |  |
 | env.WOODPECKER_BACKEND_K8S_NAMESPACE | string | `"woodpecker"` |  |
