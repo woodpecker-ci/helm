@@ -40,7 +40,7 @@ agent:
     # -- Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes
     enabled: false
     # -- Specifies the image for Docker-in-Docker
-    image: "docker:20.10.24-dind"
+    image: "docker:24.0.6-dind"
     env:
       # -- Defines the docker driver for Docker-in-Docker
       DOCKER_DRIVER: "overlay2"
