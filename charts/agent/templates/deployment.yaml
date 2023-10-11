@@ -85,7 +85,6 @@ spec:
         {{- toYaml .Values.extraVolumes | nindent 6 }}
       {{- end }}
       {{- end }}
-      {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:
         {{- toYaml . | nindent 8 }}
