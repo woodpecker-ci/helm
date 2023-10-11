@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @renovate[bot], @CrimsonFez, @eliasscosta, @ashtonian
+@renovate[bot], @pat-s, @CrimsonFez, @eliasscosta, @ashtonian
 
 ### ✨ Features
 
@@ -27,6 +27,7 @@
 
 ### Misc
 
+- chore(deps): update jnorwood/helm-docs docker tag to v1.11.3 [[#89](https://github.com/woodpecker-ci/helm/pull/89)]
 - Automerge renovate updates (excluding major ones) [[#92](https://github.com/woodpecker-ci/helm/pull/92)]
 - ignore and remove `index.yaml` [[#80](https://github.com/woodpecker-ci/helm/pull/80)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.11.2 [[#85](https://github.com/woodpecker-ci/helm/pull/85)]
