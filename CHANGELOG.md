@@ -28,7 +28,6 @@
 
 ### Misc
 
-- fix README [[#93](https://github.com/woodpecker-ci/helm/pull/93)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.11.3 [[#89](https://github.com/woodpecker-ci/helm/pull/89)]
 - Automerge renovate updates (excluding major ones) [[#92](https://github.com/woodpecker-ci/helm/pull/92)]
 - ignore and remove `index.yaml` [[#80](https://github.com/woodpecker-ci/helm/pull/80)]
