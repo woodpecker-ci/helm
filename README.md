@@ -15,8 +15,7 @@ helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 
 # alternatively via OCI
-helm repo add woodpecker oci://registry-1.docker.io/woodpeckerci/woodpecker
-helm install woodpecker woodpecker/woodpecker
+helm install woodpecker oci://registry-1.docker.io/woodpeckerci/woodpecker
 ```
 
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
@@ -67,7 +66,7 @@ to communicate when admins have to do manual migration steps and when they can j
 | agent.dind.enabled | bool | `false` | Docker-in-Docker is normally not needed as Woodpecker natively supports Kubernetes |
 | agent.dind.env.DOCKER_DRIVER | string | `"overlay2"` | Defines the docker driver for Docker-in-Docker |
 | agent.dind.extraVolumeMounts | list | `[]` | Defines extra volumes to mount in the Docker-in-Docker container |
-| agent.dind.image | string | `"docker:20.10.12-dind"` | Specifies the image for Docker-in-Docker |
+| agent.dind.image | string | `"docker:20.10.24-dind"` | Specifies the image for Docker-in-Docker |
 | agent.dind.resources | object | `{}` | Defines the resources for Docker-in-Docker |
 | agent.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | agent.enabled | bool | `true` | Enable the agent component |
