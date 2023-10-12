@@ -2,8 +2,8 @@ apiVersion: v2
 name: woodpecker
 description: A Helm chart for Woodpecker CI
 type: application
-version: 0.3.2
-appVersion: "v1.0.0"
+version: 0.4.0
+appVersion: 1.0.2
 home: https://woodpecker-ci.org/
 icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
 

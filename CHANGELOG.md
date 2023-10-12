@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-12
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s, @renovate[bot], @CrimsonFez, @eliasscosta, @ashtonian
+
+### ✨ Features
+
+- add `extraVolumes` and `extraVolumesMounts` to server chart [[#81](https://github.com/woodpecker-ci/helm/pull/81)]
+- chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
+
+### 📚 Documentation
+
+- Align README template with current state [[#91](https://github.com/woodpecker-ci/helm/pull/91)]
+- add documentation for extra volume mounts in agent [[#78](https://github.com/woodpecker-ci/helm/pull/78)]
+- Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
+
+### 📈 Enhancement
+
+- Publish chart to OCI registry (alongside gh-pages) [[#83](https://github.com/woodpecker-ci/helm/pull/83)]
+- fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
+
+### 🐛 Bug Fixes
+
+- Fix missing `image.registry` for agent [[#70](https://github.com/woodpecker-ci/helm/pull/70)]
+
+### Misc
+
+- chore(deps): update jnorwood/helm-docs docker tag to v1.11.3 [[#89](https://github.com/woodpecker-ci/helm/pull/89)]
+- Automerge renovate updates (excluding major ones) [[#92](https://github.com/woodpecker-ci/helm/pull/92)]
+- ignore and remove `index.yaml` [[#80](https://github.com/woodpecker-ci/helm/pull/80)]
+- chore(deps): update jnorwood/helm-docs docker tag to v1.11.2 [[#85](https://github.com/woodpecker-ci/helm/pull/85)]
+- chore(deps): update docker docker tag to v20.10.24 [[#84](https://github.com/woodpecker-ci/helm/pull/84)]
+- Add renovate config and set image versions in workflows [[#82](https://github.com/woodpecker-ci/helm/pull/82)]
+- release-helper: update `appVersion` to latest release [[#76](https://github.com/woodpecker-ci/helm/pull/76)]
+
 ## [0.3.2](https://github.com/woodpecker-ci/helm/releases/tag/0.3.2) - 2023-09-03
 
 ### ❤️ Thanks to all contributors! ❤️
