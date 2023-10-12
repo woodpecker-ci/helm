@@ -1,25 +1,26 @@
 # Changelog
 
-## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-11
+## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-12
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @pat-s, @CrimsonFez, @eliasscosta, @ashtonian
+@pat-s, @renovate[bot], @CrimsonFez, @eliasscosta, @ashtonian
 
 ### ✨ Features
 
 - add `extraVolumes` and `extraVolumesMounts` to server chart [[#81](https://github.com/woodpecker-ci/helm/pull/81)]
 - chore: enabled metrics with pod-monitor for statefulset [[#77](https://github.com/woodpecker-ci/helm/pull/77)]
 
+### 📚 Documentation
+
+- Align README template with current state [[#91](https://github.com/woodpecker-ci/helm/pull/91)]
+- add documentation for extra volume mounts in agent [[#78](https://github.com/woodpecker-ci/helm/pull/78)]
+- Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
+
 ### 📈 Enhancement
 
 - Publish chart to OCI registry (alongside gh-pages) [[#83](https://github.com/woodpecker-ci/helm/pull/83)]
 - fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
-
-### 📚 Documentation
-
-- add documentation for extra volume mounts in agent [[#78](https://github.com/woodpecker-ci/helm/pull/78)]
-- Improve `helm-docs` invocation and clean templates [[#60](https://github.com/woodpecker-ci/helm/pull/60)]
 
 ### 🐛 Bug Fixes
 
