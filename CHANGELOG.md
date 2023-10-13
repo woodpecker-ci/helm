@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
+
+### ❤️ Thanks to all contributors! ❤️
+
+@anbraten
+
+### 🐛 Bug Fixes
+
+- Correct username for docker login [[#95](https://github.com/woodpecker-ci/helm/pull/95)]
+
 ## [0.4.0](https://github.com/woodpecker-ci/helm/releases/tag/0.4.0) - 2023-10-12
 
 ### ❤️ Thanks to all contributors! ❤️
