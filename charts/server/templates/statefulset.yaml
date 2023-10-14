@@ -72,7 +72,7 @@ spec:
               port: 8000
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.persistentVolume.enabled }}
+          {{- if or (.Values.persistentVolume.enabled) (.Values.extraVolumeMounts.enabled) }}
           volumeMounts:
           - name: data
             mountPath: {{ .Values.persistentVolume.mountPath }}
