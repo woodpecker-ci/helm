@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-10-14
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### 💥 Breaking changes
+
+- Remove dind [[#90](https://github.com/woodpecker-ci/helm/pull/90)]
+
 ## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
 
 ### ❤️ Thanks to all contributors! ❤️
