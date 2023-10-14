@@ -10,6 +10,10 @@
 
 - Remove dind [[#90](https://github.com/woodpecker-ci/helm/pull/90)]
 
+### 🐛 Bug Fixes
+
+- Correctly condition `volumeMounts` [[#98](https://github.com/woodpecker-ci/helm/pull/98)]
+
 ## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
 
 ### ❤️ Thanks to all contributors! ❤️
