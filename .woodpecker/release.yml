@@ -45,8 +45,7 @@ steps:
     image: jnorwood/helm-docs:v1.11.3
     commands:
       - helm-docs
-      - helm-docs -t README-main.md.gotmpl -g .
-      - cat README.md
+      - cat charts/woodpecker/README.md
 
   push-readme:
     image: appleboy/drone-git-push:1.0.5
