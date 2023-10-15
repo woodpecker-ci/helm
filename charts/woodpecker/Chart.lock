@@ -1,0 +1,9 @@
+dependencies:
+- name: woodpecker-server
+  repository: ""
+  version: 0.2.0
+- name: woodpecker-agent
+  repository: ""
+  version: 0.2.0
+digest: sha256:df0f543767cb6d7c1e65dbba1030115e079a4d4d8967b3fa3d1c996a37c360dd
+generated: "2023-10-15T18:31:38.400498+02:00"
