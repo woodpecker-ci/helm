@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-10-14
+## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-10-15
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@renovate[bot], @pat-s
 
 ### 💥 Breaking changes
 
@@ -13,6 +13,10 @@
 ### 🐛 Bug Fixes
 
 - Correctly condition `volumeMounts` [[#98](https://github.com/woodpecker-ci/helm/pull/98)]
+
+### Misc
+
+- chore(deps): update alpine/helm docker tag to v3.13.1 [[#100](https://github.com/woodpecker-ci/helm/pull/100)]
 
 ## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
 
