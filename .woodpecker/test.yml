@@ -8,7 +8,7 @@ steps:
   lint:
     image: alpine/helm:3.13.1
     commands:
-      - helm lint --with-subcharts
+      - helm lint --with-subcharts charts/*
 
   test-chart:
     image: quay.io/helmpack/chart-testing:v3.9.0
