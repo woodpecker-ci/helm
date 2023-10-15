@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @pat-s
+@pat-s, @renovate[bot]
 
 ### 💥 Breaking changes
 
@@ -16,6 +16,7 @@
 
 ### Misc
 
+- Update docs and remove OCI WF [[#102](https://github.com/woodpecker-ci/helm/pull/102)]
 - chore(deps): update alpine/helm docker tag to v3.13.1 [[#100](https://github.com/woodpecker-ci/helm/pull/100)]
 
 ## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
