@@ -41,6 +41,35 @@ extraSecretNamesForEnvFrom:
   # - woodpecker-github-secret
   - woodpecker-secret
 
+
+prometheus:
+  podmonitor:
+    # -- deploy podmonitor
+    enabled: false
+    # -- scrape interval in prometheus for this podmonitor
+    interval:
+    # -- add labels to podmonitor (to be selected by prometheus-operator)
+    labels: {}
+  rules:
+    # -- deploy prometheus-rules
+    enabled: false
+    # -- add labels to prometheus-rules (to be selected by prometheus-operator)
+    labels: {}
+    # -- add labels to the prometheus-rule (inside of prometheus / in the alert)
+    alertLabels: {}
+    # -- add own prometheus-rules
+    additionalRules: []
+
+grafana:
+  dashboards:
+    # -- deploy configmap with grafana dashboard (current helm-chart has no dashboards)
+    enabled: false
+    # -- add labels to configmap (to be selected by grafana default sidecar)
+    labels:
+      grafana_dashboard: "1"
+    # -- add annotations to configmap (to give config on grafana-sidecar e.g. put in folder)
+    annotations: {}
+
 # -- Additional volumes that can be mounted in containers
 extraVolumes:
   []
@@ -107,7 +136,7 @@ service:
   # -- The type of the service
   type: ClusterIP
   # -- The port of the service
-  port: &servicePort 80
+  port: 80
   # -- The cluster IP of the service (optional)
   clusterIP:
   # -- The loadbalancer IP of the service (optional)
@@ -128,9 +157,6 @@ ingress:
     - host: chart-example.local
       paths:
         - path: /
-          backend:
-            serviceName: chart-example.local
-            servicePort: *servicePort
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -164,7 +190,6 @@ dnsConfig: {}
 
 # -- Enabled internal metrics endpoint.
 metrics:
+  # -- enable metrics in woodpecker
   enabled: false
   port: 9001
-  interval: 60s
-  path: /metrics

@@ -1,9 +1,9 @@
 dependencies:
 - name: server
   repository: ""
-  version: 0.2.0
+  version: 1.0.0
 - name: agent
   repository: ""
   version: 0.2.0
-digest: sha256:72cb4556b6013e912b2a13d0cdc626bca47998f17a87378a170e639de3b48dbd
-generated: "2023-07-31T10:23:04.935837+02:00"
+digest: sha256:289a2b8d226478642d244f6581215feb7bb142c608d5ceedb3a2aa8b58166688
+generated: "2023-10-16T17:29:54.577011353+02:00"

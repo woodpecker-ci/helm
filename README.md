@@ -53,6 +53,17 @@ resource "helm_release" "woodpecker" {
   timeout          = 90 # optional
 ```
 
+## Upgrading
+
+<details>
+
+<summary>To 1.0.0</summary>
+
+* split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
+* move `metrics.interval` to `prometheus.podmonitor.interval`
+
+</details>
+
 ## Versioning
 
 We use [Semantic Versioning](https://semver.org/) to be able,
