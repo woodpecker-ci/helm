@@ -24,6 +24,17 @@ A Helm chart for Woodpecker CI
 |  | woodpecker-agent | 0.2.0 |
 |  | woodpecker-server | 0.2.0 |
 
+## Upgrading
+
+<details>
+
+<summary>To 1.0.0</summary>
+
+* split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
+* move `metrics.interval` to `prometheus.podmonitor.interval`
+
+</details>
+
 ## Values
 
 | Key | Type | Default | Description |

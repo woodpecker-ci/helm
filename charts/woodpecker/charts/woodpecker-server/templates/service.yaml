@@ -16,10 +16,17 @@ spec:
     - protocol: TCP
       name: http
       port: {{ .Values.service.port }}
-      targetPort: 8000
+      targetPort: http
     - protocol: TCP
       name: grpc
       port: 9000
-      targetPort: 9000
+      targetPort: grpc
+    {{- if .Values.metrics.enabled }}
+    - protocol: TCP
+      name: metrics
+      port: {{ .Values.metrics.port }}
+      targetPort: metrics
+    {{- end }}
+
   selector:
     {{- include "woodpecker-server.selectorLabels" . | nindent 4 }}
