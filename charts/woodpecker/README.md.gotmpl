@@ -23,22 +23,6 @@ helm install woodpecker oci://registry-1.docker.io/woodpeckerci/helm
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
-### `Next` version
-
-To install Woodpecker from the latest commit of the `main` branch ([Which version of Woodpecker should I use?](https://woodpecker-ci.org/faq#which-version-of-woodpecker-should-i-use)) use the following values:
-
-```yml
-# values.yml
-
-agent:
-  image:
-    tag: "next"
-
-server:
-  image:
-    tag: "next"
-```
-
 ### Terraform
 
 If you're using the `helm-release` terraform module, the following definition can be used:
@@ -61,20 +45,7 @@ resource "helm_release" "woodpecker" {
 
 <summary>To 1.0.0</summary>
 
-* split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
-* move `metrics.interval` to `prometheus.podmonitor.interval`
+- split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
+- move `metrics.interval` to `prometheus.podmonitor.interval`
 
 </details>
-
-## Versioning
-
-We use [Semantic Versioning](https://semver.org/) to be able,
-to communicate when admins have to do manual migration steps and when they can just bump versions up.
-
-{{ template "chart.valuesSection" . }}
-
-## Contributing
-
-- The README is generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
-  To generate it, run `make docs` and **do not** run `helm-docs` directly (as the main chart uses a custom template)
-- Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.
