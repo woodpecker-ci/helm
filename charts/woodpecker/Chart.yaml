@@ -25,7 +25,7 @@ sources:
   - https://github.com/woodpecker-ci/helm.git
 
 dependencies:
-  - name: server
+  - name: woodpecker-server
     version: 1.0.0
     condition: server.enabled
   - name: woodpecker-agent
