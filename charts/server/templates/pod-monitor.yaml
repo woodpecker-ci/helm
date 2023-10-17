@@ -1,0 +1,21 @@
+{{- if and .Values.metrics.enabled .Values.prometheus.podmonitor.enabled ( .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" ) }}
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: {{ include "woodpecker-server.fullname" . }}
+  labels:
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
+    {{- with .Values.prometheus.podmonitor.labels }}
+    {{- toYaml . | nindent 4}}
+    {{- end }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "woodpecker-server.selectorLabels" . | nindent 6 }}
+  podMetricsEndpoints:
+    - port: metrics
+      {{- with .Values.prometheus.podmonitor.interval }}
+      interval: {{ . }}
+      {{- end }}
+      path: /metrics
+{{- end }}
