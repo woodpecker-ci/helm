@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "woodpecker-server.fullname" . }}-headless
+  name: {{ include "server.fullname" . }}-headless
   labels:
-    {{- include "woodpecker-server.labels" . | nindent 4 }}
+    {{- include "server.labels" . | nindent 4 }}
 spec:
   clusterIP: None
   ports:
@@ -22,4 +22,4 @@ spec:
       targetPort: metrics
     {{- end }}
   selector:
-    {{- include "woodpecker-server.selectorLabels" . | nindent 4 }}
+    {{- include "server.selectorLabels" . | nindent 4 }}

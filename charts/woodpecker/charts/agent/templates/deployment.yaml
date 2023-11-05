@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "woodpecker-agent.fullname" . }}
+  name: {{ include "agent.fullname" . }}
   labels:
-    {{- include "woodpecker-agent.labels" . | nindent 4 }}
+    {{- include "agent.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "woodpecker-agent.selectorLabels" . | nindent 6 }}
+      {{- include "agent.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "woodpecker-agent.selectorLabels" . | nindent 8 }}
+        {{- include "agent.selectorLabels" . | nindent 8 }}
     spec:
       {{- if and (semverCompare ">=1.19-0" .Capabilities.KubeVersion.GitVersion) (.Values.topologySpreadConstraints) }}
       {{- with .Values.topologySpreadConstraints }}
@@ -28,7 +28,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "woodpecker-agent.serviceAccountName" . }}
+      serviceAccountName: {{ include "agent.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

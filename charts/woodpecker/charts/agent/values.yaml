@@ -5,7 +5,7 @@ image:
   # -- The image registry
   registry: docker.io
   # -- The image repository
-  repository: woodpeckerci/woodpecker-agent
+  repository: woodpeckerci/agent
   # -- The pull policy for the image
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
@@ -19,7 +19,7 @@ args: []
 
 env:
   # -- Add the environment variables for the agent component
-  WOODPECKER_SERVER: "woodpecker-server:9000"
+  WOODPECKER_SERVER: "server:9000"
   WOODPECKER_BACKEND: kubernetes
   WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
   WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ""
@@ -131,4 +131,4 @@ topologySpreadConstraints: []
 #   whenUnsatisfiable: "DoNotSchedule"
 #   labelSelector:
 #     matchLabels:
-#       "app.kubernetes.io/name": woodpecker-agent
+#       "app.kubernetes.io/name": agent

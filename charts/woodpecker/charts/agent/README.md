@@ -1,4 +1,4 @@
-# woodpecker-agent
+# agent
 
 ![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.2](https://img.shields.io/badge/AppVersion-1.0.2-informational?style=flat-square)
 
@@ -32,14 +32,14 @@ A Helm chart for the Woodpecker agent
 | env.WOODPECKER_BACKEND_K8S_STORAGE_RWX | bool | `true` |  |
 | env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
 | env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
-| env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
+| env.WOODPECKER_SERVER | string | `"server:9000"` | Add the environment variables for the agent component |
 | extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
 | extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
 | image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the image |
 | image.registry | string | `"docker.io"` | The image registry |
-| image.repository | string | `"woodpeckerci/woodpecker-agent"` | The image repository |
+| image.repository | string | `"woodpeckerci/agent"` | The image repository |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` | The image pull secrets |
 | nameOverride | string | `""` | Overrides the name of the chart of the agent component |

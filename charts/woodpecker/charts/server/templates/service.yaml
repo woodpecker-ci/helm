@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "woodpecker-server.fullname" . }}
+  name: {{ include "server.fullname" . }}
   labels:
-    {{- include "woodpecker-server.labels" . | nindent 4 }}
+    {{- include "server.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   {{- with .Values.service.clusterIP }}
@@ -29,4 +29,4 @@ spec:
     {{- end }}
 
   selector:
-    {{- include "woodpecker-server.selectorLabels" . | nindent 4 }}
+    {{- include "server.selectorLabels" . | nindent 4 }}
