@@ -6,7 +6,7 @@ when:
 
 steps:
   lint:
-    image: alpine/helm:3.13.1
+    image: alpine/helm:3.13.2
     commands:
       - helm lint --with-subcharts
 
