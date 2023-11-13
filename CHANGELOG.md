@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-13
+
+### ❤️ Thanks to all contributors! ❤️
+
+@renovate[bot], @genofire, @pat-s
+
+### 💥 Breaking changes
+
+- Remove dind [[#90](https://github.com/woodpecker-ci/helm/pull/90)]
+
+### ✨ Features
+
+- feat(woodpecker-server)!: add monitoring resources and other improvements [[#94](https://github.com/woodpecker-ci/helm/pull/94)]
+
+### 🐛 Bug Fixes
+
+- Correctly condition `volumeMounts` [[#98](https://github.com/woodpecker-ci/helm/pull/98)]
+
+### Misc
+
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1 [[#114](https://github.com/woodpecker-ci/helm/pull/114)]
+- chore(deps): update alpine/helm docker tag to v3.13.2 [[#115](https://github.com/woodpecker-ci/helm/pull/115)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v0.7.0 [[#112](https://github.com/woodpecker-ci/helm/pull/112)]
+- chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.10.1 [[#111](https://github.com/woodpecker-ci/helm/pull/111)]
+- chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.10.0 [[#109](https://github.com/woodpecker-ci/helm/pull/109)]
+- chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.6.1 [[#108](https://github.com/woodpecker-ci/helm/pull/108)]
+- chore(deps): update appleboy/drone-git-push docker tag to v1.0.6 [[#106](https://github.com/woodpecker-ci/helm/pull/106)]
+- Update docs and remove OCI WF [[#102](https://github.com/woodpecker-ci/helm/pull/102)]
+- chore(deps): update alpine/helm docker tag to v3.13.1 [[#100](https://github.com/woodpecker-ci/helm/pull/100)]
+
 ## [0.4.2](https://github.com/woodpecker-ci/helm/releases/tag/0.4.2) - 2023-10-13
 
 ### ❤️ Thanks to all contributors! ❤️
