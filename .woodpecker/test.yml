@@ -11,9 +11,14 @@ steps:
       - helm lint --with-subcharts
 
   unittest:
-    image: helmunittest/helm-unittest:3.13.1-0.3.6
+    image: alpine/helm:3.13.2
+    environment:
+      # NB: we can't use the official helmunittest/helm-unittest image as it's rootless and WP does not support that
+      # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
+      - HELM_UNITTEST_VERSION=v0.3.6
     commands:
-      - --strict -f 'unittests/**/*.yaml' ./charts/server/
+      - helm plugin install --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest
+      - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/server/
 
   test-chart:
     image: quay.io/helmpack/chart-testing:v3.10.1
