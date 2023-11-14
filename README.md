@@ -14,6 +14,11 @@ Please see the README's of the sub-charts for their configuration options:
 - [(server)](./charts/woodpecker/charts/server/README.md)
 - [(agent)](./charts/woodpecker/charts/agent/README.md)
 
+> [!NOTE]
+> You only need the `woodpecker` chart if you want to install a functional instance of Woodpecker.
+> The `server` and `agent` charts are used as sub-charts by the `woodpecker` umbrella chart.
+> They can be used independently but this is usually not needed.
+
 ## Contributing
 
 - The README is generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
