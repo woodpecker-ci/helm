@@ -28,7 +28,7 @@ tests:
             - mountPath: /var/lib/woodpecker
               name: data
             - mountPath: /etc/docker
-              name: docker-config2
+              name: docker-config
       - equal:
           path: spec.template.spec.volumes
           value:

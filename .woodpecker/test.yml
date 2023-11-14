@@ -17,7 +17,7 @@ steps:
       # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
       - HELM_UNITTEST_VERSION=v0.3.6
     commands:
-      - helm plugin install --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest
+      - helm plugin install --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest > /dev/null
       - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/server/
 
   test-chart:
