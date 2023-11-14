@@ -60,3 +60,9 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+Set the default image tag with the 'v' prefix
+*/}}
+{{- define "woodpecker-agent.defaultImageTag" -}}
+{{- printf "v%s" (default .Chart.AppVersion) }}
+{{- end -}}
