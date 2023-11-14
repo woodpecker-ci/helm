@@ -12,5 +12,14 @@
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true
     }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [".woodpecker/.+\\.ya?ml$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[a-z-0-9]+?))?\\s.*_VERSION=(?<currentValue>.*)\\s"
+      ]
+    }
   ]
 }
