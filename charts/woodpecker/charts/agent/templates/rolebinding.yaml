@@ -2,9 +2,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ include "agent.serviceAccountName" . }}
+  name: {{ include "woodpecker-agent.serviceAccountName" . }}
   labels:
-    {{- include "agent.labels" . | nindent 4 }}
+    {{- include "woodpecker-agent.labels" . | nindent 4 }}
     {{- with .Values.serviceAccount.rbac.roleBinding.labels }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -14,10 +14,10 @@ metadata:
   {{- end }}
 subjects:
   - kind: ServiceAccount
-    name: {{ include "agent.serviceAccountName" . }}
+    name: {{ include "woodpecker-agent.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
 roleRef:
   kind: Role
-  name: {{ include "agent.serviceAccountName" . }}
+  name: {{ include "woodpecker-agent.serviceAccountName" . }}
   apiGroup: rbac.authorization.k8s.io
 {{- end }}

@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ include "server.fullname" . }}
+  name: {{ include "woodpecker-server.fullname" . }}
   {{- with .Values.statefulSet.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
   labels:
-    {{- include "server.labels" . | nindent 4 }}
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
     {{- with .Values.statefulSet.labels }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
 spec:
-  serviceName: {{ include "server.fullname" . }}-headless
+  serviceName: {{ include "woodpecker-server.fullname" . }}-headless
   revisionHistoryLimit: {{ .Values.statefulSet.revisionHistoryLimit }}
   replicas: {{ .Values.statefulSet.replicaCount }}
   updateStrategy:
     {{- toYaml .Values.updateStrategy | nindent 4 }}
   selector:
     matchLabels:
-      {{- include "server.selectorLabels" . | nindent 6 }}
+      {{- include "woodpecker-server.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -27,13 +27,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "server.selectorLabels" . | nindent 8 }}
+        {{- include "woodpecker-server.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "server.serviceAccountName" . }}
+      serviceAccountName: {{ include "woodpecker-server.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

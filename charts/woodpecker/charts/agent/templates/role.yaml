@@ -2,9 +2,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: {{ include "agent.serviceAccountName" . }}
+  name: {{ include "woodpecker-agent.serviceAccountName" . }}
   labels:
-    {{- include "agent.labels" . | nindent 4 }}
+    {{- include "woodpecker-agent.labels" . | nindent 4 }}
     {{- with .Values.serviceAccount.rbac.role.labels }}
     {{- toYaml . | nindent 4 }}
     {{- end }}

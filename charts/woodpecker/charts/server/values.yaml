@@ -23,7 +23,7 @@ image:
   # -- The image registry
   registry: docker.io
   # -- The image repository
-  repository: woodpeckerci/server
+  repository: woodpeckerci/woodpecker-server
   # -- The image pull policy
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.

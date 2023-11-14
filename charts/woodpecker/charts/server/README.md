@@ -45,7 +45,7 @@ A Helm chart for the Woodpecker server
 | grafana.dashboards.labels | object | `{"grafana_dashboard":"1"}` | add labels to configmap (to be selected by grafana default sidecar) |
 | image.pullPolicy | string | `"IfNotPresent"` | The image pull policy |
 | image.registry | string | `"docker.io"` | The image registry |
-| image.repository | string | `"woodpeckerci/server"` | The image repository |
+| image.repository | string | `"woodpeckerci/woodpecker-server"` | The image repository |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` | The image pull secrets |
 | ingress.annotations | string | `nil` | Add annotations to the ingress |

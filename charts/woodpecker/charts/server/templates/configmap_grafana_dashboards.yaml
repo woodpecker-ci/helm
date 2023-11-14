@@ -4,9 +4,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "server.fullname" $ }}-grafana-dashboards-{{ base $path }}
+  name: {{ include "woodpecker-server.fullname" $ }}-grafana-dashboards-{{ base $path }}
   labels:
-    {{- include "server.labels" $ | nindent 4 }}
+    {{- include "woodpecker-server.labels" $ | nindent 4 }}
     {{- with $.Values.grafana.dashboards.labels }}
     {{- toYaml . | nindent 4 }}
     {{- end }}

@@ -2,9 +2,9 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
-  name: {{ include "server.fullname" . }}
+  name: {{ include "woodpecker-server.fullname" . }}
   labels:
-    {{- include "server.labels" . | nindent 4 }}
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
     {{- with .Values.prometheus.rules.labels }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -24,7 +24,7 @@ spec:
         description: "Woodpecker Instance {{ $labels.instance }} has no worker"
       `}}
     {{- if .Values.prometheus.rules.additionalRules }}
-    - name: {{ template "server.fullname" . }}-Additional
+    - name: {{ template "woodpecker-server.fullname" . }}-Additional
       rules:
         {{- toYaml .Values.prometheus.rules.additionalRules | nindent 4 }}
     {{- end }}

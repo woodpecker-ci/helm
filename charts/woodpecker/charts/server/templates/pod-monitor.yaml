@@ -2,16 +2,16 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PodMonitor
 metadata:
-  name: {{ include "server.fullname" . }}
+  name: {{ include "woodpecker-server.fullname" . }}
   labels:
-    {{- include "server.labels" . | nindent 4 }}
+    {{- include "woodpecker-server.labels" . | nindent 4 }}
     {{- with .Values.prometheus.podmonitor.labels }}
     {{- toYaml . | nindent 4}}
     {{- end }}
 spec:
   selector:
     matchLabels:
-      {{- include "server.selectorLabels" . | nindent 6 }}
+      {{- include "woodpecker-server.selectorLabels" . | nindent 6 }}
   podMetricsEndpoints:
     - port: metrics
       {{- with .Values.prometheus.podmonitor.interval }}
