@@ -21,6 +21,10 @@ helm install woodpecker oci://registry-1.docker.io/woodpeckerci/helm
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
+### Backend Configuration
+
+The Kubernetes backend configuration is documented in greater detail in the Woodpecker [documentation](https://woodpecker-ci.org/docs/next/administration/backends/kubernetes).
+
 ### Terraform
 
 If you're using the `helm-release` terraform module, the following definition can be used:
