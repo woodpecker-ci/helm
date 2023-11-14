@@ -10,6 +10,11 @@ steps:
     commands:
       - helm lint --with-subcharts
 
+  unittest:
+    image: helmunittest/helm-unittest:3.13.1-0.3.6
+    commands:
+      - --strict -f 'unittests/**/*.yaml' ./charts/server/
+
   test-chart:
     image: quay.io/helmpack/chart-testing:v3.10.1
     commands:
