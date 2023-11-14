@@ -47,3 +47,5 @@ resource "helm_release" "woodpecker" {
 - move `metrics.interval` to `prometheus.podmonitor.interval`
 
 </details>
+
+{{ template "chart.valuesSection" . }}
