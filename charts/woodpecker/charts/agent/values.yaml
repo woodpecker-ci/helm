@@ -131,4 +131,4 @@ topologySpreadConstraints: []
 #   whenUnsatisfiable: "DoNotSchedule"
 #   labelSelector:
 #     matchLabels:
-#       "app.kubernetes.io/name": agent
+#       "app.kubernetes.io/name": woodpecker-agent
