@@ -48,4 +48,6 @@ resource "helm_release" "woodpecker" {
 
 </details>
 
+{{ template "chart.requirementsSection" . }}
+
 {{ template "chart.valuesSection" . }}
