@@ -8,7 +8,7 @@ steps:
   lint:
     image: alpine/helm:3.13.2
     commands:
-      - helm lint --with-subcharts
+      - helm lint --with-subcharts charts/*
 
   unittest:
     image: alpine/helm:3.13.2
