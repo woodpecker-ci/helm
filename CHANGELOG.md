@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @renovate[bot], @genofire
+@genofire, @pat-s, @renovate[bot]
 
 ### 💥 Breaking changes
 
@@ -20,6 +20,7 @@
 
 ### Misc
 
+- fix: image with v version prefix [[#122](https://github.com/woodpecker-ci/helm/pull/122)]
 - Prepend 'v' to appVersion [[#117](https://github.com/woodpecker-ci/helm/pull/117)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1 [[#114](https://github.com/woodpecker-ci/helm/pull/114)]
 - chore(deps): update alpine/helm docker tag to v3.13.2 [[#115](https://github.com/woodpecker-ci/helm/pull/115)]
