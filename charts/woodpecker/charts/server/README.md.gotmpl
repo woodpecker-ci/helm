@@ -1,0 +1,27 @@
+{{ template "chart.header" . }}
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.badgesSection" . }}
+
+{{ template "chart.description" . }}
+
+{{ template "chart.homepageLine" . }}
+
+{{ template "chart.maintainersSection" . }}
+
+{{ template "chart.sourcesSection" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+## Upgrading
+
+<details>
+
+<summary>To 1.0.0</summary>
+
+- split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
+- move `metrics.interval` to `prometheus.podmonitor.interval`
+
+</details>
+
+{{ template "chart.valuesSection" . }}
