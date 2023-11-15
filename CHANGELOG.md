@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-13
+## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-15
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @genofire, @pat-s
+@pat-s, @renovate[bot], @genofire
 
 ### 💥 Breaking changes
 
@@ -20,6 +20,7 @@
 
 ### Misc
 
+- Prepend 'v' to appVersion [[#117](https://github.com/woodpecker-ci/helm/pull/117)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1 [[#114](https://github.com/woodpecker-ci/helm/pull/114)]
 - chore(deps): update alpine/helm docker tag to v3.13.2 [[#115](https://github.com/woodpecker-ci/helm/pull/115)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v0.7.0 [[#112](https://github.com/woodpecker-ci/helm/pull/112)]
