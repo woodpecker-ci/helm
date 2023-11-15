@@ -4,6 +4,14 @@
 
 A Helm chart for the Woodpecker server
 
+**Homepage:** <https://woodpecker-ci.org/>
+
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
+
 ## Upgrading
 
 <details>
@@ -14,14 +22,6 @@ A Helm chart for the Woodpecker server
 - move `metrics.interval` to `prometheus.podmonitor.interval`
 
 </details>
-
-**Homepage:** <https://woodpecker-ci.org/>
-
-## Maintainers
-
-| Name | Email | Url |
-| ---- | ------ | --- |
-| Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
 
 ## Values
 
