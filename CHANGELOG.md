@@ -4,10 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@genofire, @pat-s, @renovate[bot]
+@pat-s, @genofire, @renovate[bot]
 
 ### 💥 Breaking changes
 
+- Move charts to sub-folder [[#101](https://github.com/woodpecker-ci/helm/pull/101)]
 - Remove dind [[#90](https://github.com/woodpecker-ci/helm/pull/90)]
 
 ### ✨ Features
