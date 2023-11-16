@@ -7,4 +7,4 @@ docs:
 test: test-server
 
 test-server:
-	helm unittest --strict -f 'unittests/**/*.yaml' ./charts/server/
+	helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/
