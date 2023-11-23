@@ -12,10 +12,6 @@ A Helm chart for the Woodpecker server
 | ---- | ------ | --- |
 | Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
 
-## Source Code
-
-* <https://github.com/woodpecker-ci/woodpecker.git>
-
 ## Upgrading
 
 <details>
