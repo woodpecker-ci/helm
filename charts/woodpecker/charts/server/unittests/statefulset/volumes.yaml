@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/helm-unittest/helm-unittest/main/schema/helm-testsuite.json
+suite: extraVolumes and extraVolumeMounts template (basic)
+release:
+  name: woodpecker-unittests
+  namespace: testing
+templates:
+  - templates/statefulset.yaml
+tests:
+  - it: renders valid extraVolumes and extraVolumeMounts
+    set:
+      extraVolumes:
+        - name: docker-config
+          configMap:
+            name: docker-config
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: example
+      claimName: example
+      extraVolumeMounts:
+        - name: docker-config
+          mountPath: /etc/docker
+    asserts:
+      - hasDocuments:
+          count: 1
+      - equal:
+          path: spec.template.spec.containers[0].volumeMounts
+          value:
+            - mountPath: /var/lib/woodpecker
+              name: data
+            - mountPath: /etc/docker
+              name: docker-config
+      - equal:
+          path: spec.template.spec.volumes
+          value:
+            - configMap:
+                name: docker-config
+              name: docker-config
+            - name: data-volume
+              persistentVolumeClaim:
+                claimName: example

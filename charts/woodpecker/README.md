@@ -98,7 +98,7 @@ resource "helm_release" "woodpecker" {
 | agent.serviceAccount.rbac.roleBinding.annotations | object | `{}` |  |
 | agent.serviceAccount.rbac.roleBinding.labels | object | `{}` |  |
 | agent.tolerations | list | `[]` | Specifies the tolerations |
-| agent.topologySpreadConstraints | list | `[]` | Using topology spread constraints, you can ensure that there is at least one agent pod for each topology zone, e.g. one per arch for multi-architecture clusters or one for each region for geographically distributed cloud-hosted clusters. Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/ |
+| agent.topologySpreadConstraints | list | `[]` | Using topology spread constraints, you can ensure that there is at least one agent pod for each topology zone, e.g. one per arch for multi-architecture clusters or one for each region for geographically distributed cloud-hosted clusters. Ref: <https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/> |
 | fullnameOverride | string | `""` | Overrides the full name of the chart |
 | nameOverride | string | `""` | Overrides the name of the chart |
 | server.affinity | object | `{}` | Add affinity |
