@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-15
+## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-24
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @genofire, @renovate[bot]
+@pat-s, @renovate[bot], @genofire
 
 ### 💥 Breaking changes
 
@@ -21,6 +21,10 @@
 
 ### Misc
 
+- Add `helm-unittests` skeleton and assert `extraVolumes` and `extraVolumeMounts` [[#121](https://github.com/woodpecker-ci/helm/pull/121)]
+- Add precommit and apply fixes [[#120](https://github.com/woodpecker-ci/helm/pull/120)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.0.3 [[#124](https://github.com/woodpecker-ci/helm/pull/124)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.0.2 [[#123](https://github.com/woodpecker-ci/helm/pull/123)]
 - fix: image with v version prefix [[#122](https://github.com/woodpecker-ci/helm/pull/122)]
 - Prepend 'v' to appVersion [[#117](https://github.com/woodpecker-ci/helm/pull/117)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1 [[#114](https://github.com/woodpecker-ci/helm/pull/114)]
