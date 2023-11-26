@@ -23,7 +23,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["charts/woodpecker/Chart.yaml"],
+      "fileMatch": ["charts/.*Chart.yaml"],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\sappVersion: (?<currentValue>.*)\\s"
       ],
