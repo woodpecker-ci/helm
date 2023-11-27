@@ -21,6 +21,7 @@
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2 [[#127](https://github.com/woodpecker-ci/helm/pull/127)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v1.0.5 [[#126](https://github.com/woodpecker-ci/helm/pull/126)]
 - Add `helm-unittests` skeleton and assert `extraVolumes` and `extraVolumeMounts` [[#121](https://github.com/woodpecker-ci/helm/pull/121)]
 - Add precommit and apply fixes [[#120](https://github.com/woodpecker-ci/helm/pull/120)]
