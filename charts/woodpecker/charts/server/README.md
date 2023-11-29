@@ -1,7 +1,6 @@
 # server
 
-<img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwoodpecker-ci%2Fhelm%2Fmain%2Fcharts%2Fwoodpecker%2Fcharts%2Fserver%2FChart.yaml&query=%24.version&logo=helm&label=Chart%20Version">
-<img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwoodpecker-ci%2Fhelm%2Fmain%2Fcharts%2Fwoodpecker%2Fcharts%2Fserver%2FChart.yaml&query=%24.appVersion&label=appVersion&link=https%3A%2F%2Fgithub.com%2Fwoodpecker-ci%2Fwoodpecker">
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.0.0](https://img.shields.io/badge/AppVersion-2.0.0-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
