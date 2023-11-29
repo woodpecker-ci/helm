@@ -1,8 +1,9 @@
 # Woodpecker Helm Charts
 
-This repository contains the helm charts of the [Woodpecker](https://woodpecker-ci.org) project.
+<img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwoodpecker-ci%2Fhelm%2Fmain%2Fcharts%2Fwoodpecker%2FChart.yaml&query=%24.version&logo=helm&label=Chart%20Version">
+<img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwoodpecker-ci%2Fhelm%2Fmain%2Fcharts%2Fwoodpecker%2FChart.yaml&query=%24.appVersion&label=appVersion&link=https%3A%2F%2Fgithub.com%2Fwoodpecker-ci%2Fwoodpecker">
 
-![Version: 0.4.2](https://img.shields.io/badge/Version-0.4.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.2](https://img.shields.io/badge/AppVersion-1.0.2-informational?style=flat-square)
+This repository contains the helm charts of the [Woodpecker](https://woodpecker-ci.org) project.
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 

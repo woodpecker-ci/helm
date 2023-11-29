@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.1](https://github.com/woodpecker-ci/helm/releases/tag/1.0.1) - 2023-11-29
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### 📚 Documentation
+
+- Use dynamic badges [[#128](https://github.com/woodpecker-ci/helm/pull/128)]
+
+### Misc
+
+- Update to main branch for release [[#129](https://github.com/woodpecker-ci/helm/pull/129)]
+
 ## [1.0.0](https://github.com/woodpecker-ci/helm/releases/tag/1.0.0) - 2023-11-27
 
 ### ❤️ Thanks to all contributors! ❤️
