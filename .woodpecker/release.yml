@@ -23,7 +23,7 @@ steps:
       - cr upload --skip-existing --owner woodpecker-ci --git-repo woodpecker-ci.github.io --release-name-template "helm-{{ .Name }}-{{ .Version }}"
       - git clone https://github.com/woodpecker-ci/woodpecker-ci.github.io.git
       - cd woodpecker-ci.github.io/
-      - cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch master --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
+      - cr index --owner woodpecker-ci --git-repo woodpecker-ci.github.io --pages-branch main --package-path ../.cr-release-packages --index-path ../.cr-index/index.yaml --push --release-name-template "helm-{{ .Name }}-{{ .Version }}"
       - cd ..
       - rm -rf woodpecker-ci.github.io/
       - git reset --hard
