@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.2](https://github.com/woodpecker-ci/helm/releases/tag/1.0.2) - 2023-11-29
+
+### ❤️ Thanks to all contributors! ❤️
+
+@genofire
+
+### Misc
+
+- chore: speedup make docs (add README.md.gotmpl to charts/agent) [[#103](https://github.com/woodpecker-ci/helm/pull/103)]
+
 ## [1.0.1](https://github.com/woodpecker-ci/helm/releases/tag/1.0.1) - 2023-11-29
 
 ### ❤️ Thanks to all contributors! ❤️
