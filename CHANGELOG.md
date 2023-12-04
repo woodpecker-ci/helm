@@ -1,13 +1,14 @@
 # Changelog
 
-## [1.0.2](https://github.com/woodpecker-ci/helm/releases/tag/1.0.2) - 2023-11-29
+## [1.0.2](https://github.com/woodpecker-ci/helm/releases/tag/1.0.2) - 2023-12-04
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@genofire
+@pre-commit-ci[bot], @genofire
 
 ### Misc
 
+- [pre-commit.ci] pre-commit autoupdate [[#133](https://github.com/woodpecker-ci/helm/pull/133)]
 - chore: speedup make docs (add README.md.gotmpl to charts/agent) [[#103](https://github.com/woodpecker-ci/helm/pull/103)]
 
 ## [1.0.1](https://github.com/woodpecker-ci/helm/releases/tag/1.0.1) - 2023-11-29
