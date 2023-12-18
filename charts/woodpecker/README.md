@@ -11,9 +11,6 @@ To install the latest release of the chart:
 ```sh
 helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
-
-# alternatively via OCI
-helm install woodpecker oci://registry-1.docker.io/woodpeckerci/helm
 ```
 
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.

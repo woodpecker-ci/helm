@@ -82,7 +82,6 @@
 
 ### 📈 Enhancement
 
-- Publish chart to OCI registry (alongside gh-pages) [[#83](https://github.com/woodpecker-ci/helm/pull/83)]
 - fix woodpecker_server to work out of the box [[#75](https://github.com/woodpecker-ci/helm/pull/75)]
 
 ### 🐛 Bug Fixes
