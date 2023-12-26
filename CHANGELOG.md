@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.2](https://github.com/woodpecker-ci/helm/releases/tag/1.0.2) - 2023-12-21
+## [1.0.2](https://github.com/woodpecker-ci/helm/releases/tag/1.0.2) - 2023-12-26
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.1.0 [[#138](https://github.com/woodpecker-ci/helm/pull/138)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.12.0 [[#137](https://github.com/woodpecker-ci/helm/pull/137)]
 - chore(deps): update alpine/helm docker tag to v3.13.3 [[#134](https://github.com/woodpecker-ci/helm/pull/134)]
 - [pre-commit.ci] pre-commit autoupdate [[#133](https://github.com/woodpecker-ci/helm/pull/133)]
