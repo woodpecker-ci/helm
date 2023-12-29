@@ -1,6 +1,5 @@
 export default {
   commentOnReleasedPullRequests: false,
-  releasePrefix: "Changelog for version",
   beforePrepare: async ({ exec, nextVersion }) => {
     await exec(`apk add --no-cache helm curl`);
     await exec(`sed -i "s/^version:.*$/version: ${nextVersion}/g" charts/woodpecker/Chart.yaml`);
