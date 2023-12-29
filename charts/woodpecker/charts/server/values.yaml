@@ -193,3 +193,18 @@ metrics:
   # -- enable metrics in woodpecker
   enabled: false
   port: 9001
+
+# Enable and configure postgresql database subchart under this key.
+# If enabled, the app's db envs will be set for you.
+# [[ref]](https://github.com/bitnami/charts/tree/main/bitnami/postgresql)
+# @default -- See [values.yaml](./values.yaml)
+postgresql:
+  # -- provision an instance of the postgresql sub-chart
+  enabled: true
+  auth:
+    # -- define database schema name that should be available
+    database: woodpecker
+    # -- username to connect to the database
+    username: woodpecker
+    # -- password to connect to the database
+    password: changeme

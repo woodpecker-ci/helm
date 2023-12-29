@@ -2,7 +2,7 @@ apiVersion: v2
 name: server
 description: A Helm chart for the Woodpecker server
 type: application
-version: 1.0.0
+version: 1.1.0
 # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker extractVersion=^v(?<version>.*)$
 appVersion: 2.1.1
 home: https://woodpecker-ci.org/
@@ -23,3 +23,9 @@ maintainers:
   - name: Woodpecker Maintainers
     email: owner@woodpecker-ci.org
     url: https://github.com/woodpecker-ci
+
+dependencies:
+  - name: postgresql
+    version: ~13.2.24
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
