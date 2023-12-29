@@ -89,6 +89,12 @@ spec:
             - name: WOODPECKER_METRICS_SERVER_ADDR
               value: ":{{ .Values.metrics.port }}"
             {{- end }}
+            {{- if .Values.postgresql.enabled }}
+            - name: WOODPECKER_DATABASE_DRIVER
+              value: "postgres"
+            - name: WOODPECKER_DATABASE_DATASOURCE
+              value: "postgres://{{ .Values.postgresql.auth.username }}:{{ .Values.postgresql.auth.password }}@{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}?sslmode=disable"
+            {{- end }}
           envFrom:
             {{- range .Values.extraSecretNamesForEnvFrom }}
             - secretRef:

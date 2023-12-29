@@ -23,3 +23,9 @@ maintainers:
   - name: Woodpecker Maintainers
     email: owner@woodpecker-ci.org
     url: https://github.com/woodpecker-ci
+
+dependencies:
+  - name: postgresql
+    version: ~13.2.24
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
