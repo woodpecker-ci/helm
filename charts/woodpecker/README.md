@@ -128,6 +128,7 @@ resource "helm_release" "woodpecker" {
 | server.podAnnotations | object | `{}` | Add pod annotations |
 | server.podSecurityContext | object | `{}` | Add pod security context |
 | server.resources | object | `{}` | Specifies the ressources for the server component |
+| server.secrets | list | `[{"name":"woodpecker-secret"}]` | Create a generic secret to store things in, e.g. env values |
 | server.securityContext | object | `{}` | Add security context |
 | server.service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
 | server.service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |

@@ -68,6 +68,7 @@ A Helm chart for the Woodpecker server
 | prometheus.rules.enabled | bool | `false` | deploy prometheus-rules |
 | prometheus.rules.labels | object | `{}` | add labels to prometheus-rules (to be selected by prometheus-operator) |
 | resources | object | `{}` | Specifies the ressources for the server component |
+| secrets | list | `[{"name":"woodpecker-secret"}]` | Create a generic secret to store things in, e.g. env values |
 | securityContext | object | `{}` | Add security context |
 | service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
 | service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |
