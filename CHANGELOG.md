@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.4](https://github.com/woodpecker-ci/helm/releases/tag/1.0.4) - 2024-01-03
+## [1.0.4](https://github.com/woodpecker-ci/helm/releases/tag/1.0.4) - 2024-01-10
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.4.1 [[#147](https://github.com/woodpecker-ci/helm/pull/147)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.0 [[#145](https://github.com/woodpecker-ci/helm/pull/145)]
 
 ## [1.0.3](https://github.com/woodpecker-ci/helm/releases/tag/1.0.3) - 2023-12-27
