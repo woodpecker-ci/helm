@@ -44,6 +44,7 @@ A Helm chart for the Woodpecker agent
 | podSecurityContext | object | `{}` | Add pod security context |
 | replicaCount | int | `2` | The number of replicas for the deployment |
 | resources | object | `{}` | Specifies the resources for the agent component |
+| secrets | object | `{}` | Create an agent secret |
 | securityContext | object | `{}` | Add security context |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created (also see RBAC subsection) |
