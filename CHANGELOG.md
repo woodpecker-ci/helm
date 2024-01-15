@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.0.4](https://github.com/woodpecker-ci/helm/releases/tag/1.0.4) - 2024-01-10
+## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-15
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot]
+@Temikus, @renovate[bot]
+
+### 📈 Enhancement
+
+- Allow/improve automatic secret creation [[#144](https://github.com/woodpecker-ci/helm/pull/144)]
 
 ### Misc
 
