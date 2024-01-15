@@ -183,6 +183,10 @@ server:
     # - woodpecker-github-secret
     - woodpecker-secret
 
+  # -- Create a generic secret to store things in, e.g. env values
+  secrets:
+    - name: woodpecker-secret
+
   # -- Additional volumes that can be mounted in containers
   extraVolumes:
     []

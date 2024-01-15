@@ -33,6 +33,12 @@ env:
 extraSecretNamesForEnvFrom:
   - woodpecker-secret
 
+# -- Create an agent secret
+secrets: {}
+#  - name: woodpecker-secret
+#    data:
+#      WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
+
 # -- Additional volumes that can be mounted in containers
 extraVolumes: []
   # - name: docker-config

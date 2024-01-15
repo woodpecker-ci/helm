@@ -10,7 +10,7 @@ This repository contains the helm charts of the [Woodpecker](https://woodpecker-
 
 Please see the README's of the sub-charts for their configuration options:
 
-- [woodpecker](./charts/woodpecker/charts/woodpecker/README.md)
+- [woodpecker](./charts/woodpecker/README.md)
 - [(server)](./charts/woodpecker/charts/server/README.md)
 - [(agent)](./charts/woodpecker/charts/agent/README.md)
 
