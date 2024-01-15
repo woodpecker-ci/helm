@@ -53,6 +53,9 @@ extraVolumeMounts: []
   # - name: ca-certs
   #   mountPath: /etc/ssl/certs/ca-certificates.crt
 
+# -- Add additional init containers to the pod (evaluated as a template)
+initContainers: []
+
 # -- The image pull secrets
 imagePullSecrets: []
 # -- Overrides the name of the chart of the agent component

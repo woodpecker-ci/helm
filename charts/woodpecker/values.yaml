@@ -3,9 +3,9 @@
 # Declare variables to be passed into your templates.
 
 # -- Overrides the name of the chart
-nameOverride: ""
+nameOverride: ''
 # -- Overrides the full name of the chart
-fullnameOverride: ""
+fullnameOverride: ''
 
 agent:
   # -- Enable the agent component
@@ -22,19 +22,19 @@ agent:
     # -- The pull policy for the image
     pullPolicy: IfNotPresent
     # -- Overrides the image tag whose default is the chart appVersion.
-    tag: ""
+    tag: ''
 
   env:
     # -- Add the environment variables for the agent component
-    WOODPECKER_SERVER: "woodpecker-server:9000"
+    WOODPECKER_SERVER: 'woodpecker-server:9000'
     WOODPECKER_BACKEND: kubernetes
     WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
-    WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ""
+    WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ''
     WOODPECKER_BACKEND_K8S_VOLUME_SIZE: 10G
     WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
-    WOODPECKER_BACKEND_K8S_POD_LABELS: ""
-    WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
-    WOODPECKER_CONNECT_RETRY_COUNT: "1"
+    WOODPECKER_BACKEND_K8S_POD_LABELS: ''
+    WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ''
+    WOODPECKER_CONNECT_RETRY_COUNT: '1'
 
   # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
@@ -59,9 +59,9 @@ agent:
   # -- The image pull secrets
   imagePullSecrets: []
   # -- Overrides the name of the chart of the agent component
-  nameOverride: ""
+  nameOverride: ''
   # -- Overrides the full name of the chart of the agent component
-  fullnameOverride: ""
+  fullnameOverride: ''
 
   serviceAccount:
     # -- Specifies whether a service account should be created (also see RBAC subsection)
@@ -70,7 +70,7 @@ agent:
     annotations: {}
     # -- The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
-    name: ""
+    name: ''
     rbac:
       # -- If your cluster has RBAC enabled and you're using the Kubernetes agent-
       # backend you'll need this. (this is true for almost all production clusters)
@@ -169,12 +169,12 @@ server:
     # -- The image pull policy
     pullPolicy: IfNotPresent
     # -- Overrides the image tag whose default is the chart appVersion.
-    tag: ""
+    tag: ''
 
   # -- Add environment variables for the server component
   env:
-    WOODPECKER_ADMIN: "woodpecker,admin"
-    WOODPECKER_HOST: "https://xxxxxxx"
+    WOODPECKER_ADMIN: 'woodpecker,admin'
+    WOODPECKER_HOST: 'https://xxxxxxx'
     # WOODPECKER_GITHUB: "true"
 
   # -- Add extra environment variables from the secrets list
@@ -203,22 +203,25 @@ server:
     # - name: ca-certs
     #   mountPath: /etc/ssl/certs/ca-certificates.crt
 
+  # -- Add additional init containers to the pod (evaluated as a template)
+  initContainers: []
+
   persistentVolume:
     # -- Enable the creation of the persistent volume
     enabled: true
     # -- Defines the size of the persistent volume
     size: 10Gi
     # -- Defines the path where the volume should be mounted
-    mountPath: "/var/lib/woodpecker"
+    mountPath: '/var/lib/woodpecker'
     # -- Defines the storageClass of the persistent volume
-    storageClass: ""
+    storageClass: ''
 
   # -- The image pull secrets
   imagePullSecrets: []
   # -- Overrides the name of the helm chart of the server component
-  nameOverride: ""
+  nameOverride: ''
   # -- Overrides the full name of the helm chart of the server component
-  fullnameOverride: ""
+  fullnameOverride: ''
 
   serviceAccount:
     # -- Specifies whether a service account should be created
@@ -227,7 +230,7 @@ server:
     annotations: {}
     # -- The name of the service account to use.
     # If not set and create is true, a name is generated using the fullname template
-    name: ""
+    name: ''
 
   # -- Add pod annotations
   podAnnotations:
@@ -268,7 +271,7 @@ server:
       # kubernetes.io/tls-acme: "true"
 
     # -- Defines which ingress controller will implement the resource
-    ingressClassName: ""
+    ingressClassName: ''
 
     hosts:
       - host: chart-example.local

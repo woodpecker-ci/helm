@@ -36,6 +36,10 @@ spec:
       serviceAccountName: {{ include "woodpecker-server.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        {{- if .Values.initContainers }}
+        {{- tpl (toYaml .Values.initContainers) $ | nindent 8 }}
+        {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
