@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-15
+## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-16
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@Temikus, @renovate[bot]
+@pat-s, @Temikus, @renovate[bot]
 
 ### 📈 Enhancement
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- add `initContainers` and tests [[#149](https://github.com/woodpecker-ci/helm/pull/149)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.1 [[#147](https://github.com/woodpecker-ci/helm/pull/147)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.0 [[#145](https://github.com/woodpecker-ci/helm/pull/145)]
 
