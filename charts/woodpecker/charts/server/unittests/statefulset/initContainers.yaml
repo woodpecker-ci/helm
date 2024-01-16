@@ -1,0 +1,22 @@
+suite: test statefulset
+templates:
+  - statefulset.yaml
+tests:
+  - it: should have initContainers when .Values.initContainers is set
+    set:
+      initContainers:
+        - name: my-init-container
+          image: my-image:tag
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: StatefulSet
+      - isNotEmpty:
+          path: spec.template.spec.initContainers
+      - equal:
+          path: spec.template.spec.initContainers[0].name
+          value: my-init-container
+      - equal:
+          path: spec.template.spec.initContainers[0].image
+          value: my-image:tag
