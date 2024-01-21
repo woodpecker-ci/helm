@@ -12,6 +12,7 @@
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.2.2 [[#152](https://github.com/woodpecker-ci/helm/pull/152)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.2.0 [[#151](https://github.com/woodpecker-ci/helm/pull/151)]
 - chore(deps): update alpine/helm docker tag to v3.14.0 [[#150](https://github.com/woodpecker-ci/helm/pull/150)]
 - add `initContainers` and tests [[#149](https://github.com/woodpecker-ci/helm/pull/149)]
