@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-21
+## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-22
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @renovate[bot], @pat-s, @Temikus
+
+### ✨ Features
+
+- add `initContainers` and tests [[#149](https://github.com/woodpecker-ci/helm/pull/149)]
 
 ### 📈 Enhancement
 
@@ -15,7 +19,6 @@
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.2.2 [[#152](https://github.com/woodpecker-ci/helm/pull/152)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.2.0 [[#151](https://github.com/woodpecker-ci/helm/pull/151)]
 - chore(deps): update alpine/helm docker tag to v3.14.0 [[#150](https://github.com/woodpecker-ci/helm/pull/150)]
-- add `initContainers` and tests [[#149](https://github.com/woodpecker-ci/helm/pull/149)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.1 [[#147](https://github.com/woodpecker-ci/helm/pull/147)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.0 [[#145](https://github.com/woodpecker-ci/helm/pull/145)]
 
