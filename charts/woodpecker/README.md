@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 1.0.3](https://img.shields.io/badge/Version-1.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.1](https://img.shields.io/badge/AppVersion-2.1.1-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.2.2](https://img.shields.io/badge/AppVersion-2.2.2-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -30,7 +30,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 1.0.3
+  version          = 1.1.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -119,6 +119,7 @@ resource "helm_release" "woodpecker" {
 | server.ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | server.ingress.ingressClassName | string | `""` | Defines which ingress controller will implement the resource |
 | server.ingress.tls | list | `[]` |  |
+| server.initContainers | list | `[]` | Add additional init containers to the pod (evaluated as a template) |
 | server.nameOverride | string | `""` | Overrides the name of the helm chart of the server component |
 | server.nodeSelector | object | `{}` | Defines the labels of the node where the server component must be running |
 | server.persistentVolume.enabled | bool | `true` | Enable the creation of the persistent volume |

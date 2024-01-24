@@ -1,6 +1,6 @@
 # agent
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.1](https://img.shields.io/badge/AppVersion-2.1.1-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.2.2](https://img.shields.io/badge/AppVersion-2.2.2-informational?style=flat-square)
 
 A Helm chart for the Woodpecker agent
 
@@ -38,6 +38,7 @@ A Helm chart for the Woodpecker agent
 | image.repository | string | `"woodpeckerci/woodpecker-agent"` | The image repository |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` | The image pull secrets |
+| initContainers | list | `[]` | Add additional init containers to the pod (evaluated as a template) |
 | nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | podAnnotations | object | `{}` | Add pod annotations for the agent component |

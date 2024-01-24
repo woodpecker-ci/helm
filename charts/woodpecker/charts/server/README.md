@@ -1,6 +1,6 @@
 # server
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.1](https://img.shields.io/badge/AppVersion-2.1.1-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.2.2](https://img.shields.io/badge/AppVersion-2.2.2-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -50,6 +50,7 @@ A Helm chart for the Woodpecker server
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.ingressClassName | string | `""` | Defines which ingress controller will implement the resource |
 | ingress.tls | list | `[]` |  |
+| initContainers | list | `[]` | Add additional init containers to the pod (evaluated as a template) |
 | metrics | object | `{"enabled":false,"port":9001}` | Enabled internal metrics endpoint. |
 | metrics.enabled | bool | `false` | enable metrics in woodpecker |
 | nameOverride | string | `""` | Overrides the name of the helm chart of the server component |
