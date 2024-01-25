@@ -16,6 +16,13 @@ helm install woodpecker woodpecker/woodpecker
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
+### Secrets
+
+Since version 1.1.0 the chart bootstrap a secret for `WOODPECKER_AGENT_TOKEN` which is required for the communication between agent and server.
+You might want to add additional secrets for other sensitive settings like the client secret of your respective forge provider or `WOODPECKER_DATABASE_DATASOURCE`.
+
+If you want to make use of an external secret provider you likely want to disable the internal secret generation entirely by setting `secrets: {}`.
+
 ### Backend Configuration
 
 The Kubernetes backend configuration is documented in greater detail in the Woodpecker [documentation](https://woodpecker-ci.org/docs/next/administration/backends/kubernetes).
