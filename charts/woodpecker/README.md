@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.2.2](https://img.shields.io/badge/AppVersion-2.2.2-informational?style=flat-square)
+![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.3.0](https://img.shields.io/badge/AppVersion-2.3.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -16,13 +16,6 @@ helm install woodpecker woodpecker/woodpecker
 **Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
 If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
-### Secrets
-
-Since version 1.1.0 the chart bootstrap a secret for `WOODPECKER_AGENT_TOKEN` which is required for the communication between agent and server.
-You might want to add additional secrets for other sensitive settings like the client secret of your respective forge provider or `WOODPECKER_DATABASE_DATASOURCE`.
-
-If you want to make use of an external secret provider you likely want to disable the internal secret generation entirely by setting `server.secrets: {}`.
-
 ### Backend Configuration
 
 The Kubernetes backend configuration is documented in greater detail in the Woodpecker [documentation](https://woodpecker-ci.org/docs/next/administration/backends/kubernetes).
@@ -37,7 +30,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 1.1.0
+  version          = 1.1.1
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
