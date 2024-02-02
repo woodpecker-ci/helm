@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.1](https://github.com/woodpecker-ci/helm/releases/tag/1.1.1) - 2024-02-02
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### 📚 Documentation
+
+- Add documentation for secret generation/handling [[#155](https://github.com/woodpecker-ci/helm/pull/155)]
+
+### Misc
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.3.0 [[#157](https://github.com/woodpecker-ci/helm/pull/157)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.0 [[#156](https://github.com/woodpecker-ci/helm/pull/156)]
+
 ## [1.1.0](https://github.com/woodpecker-ci/helm/releases/tag/1.1.0) - 2024-01-22
 
 ### ❤️ Thanks to all contributors! ❤️
