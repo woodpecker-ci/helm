@@ -55,13 +55,16 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.extraVolumeMounts }}
+          {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
           volumeMounts:
-            {{- if .Values.persistence.enabled }}
             - name: agent-config
               mountPath: {{ .Values.persistence.mountPath }}
-            {{- end }}
+              {{- if .Values.persistence.subPath }}
+              subPath: {{ .Values.persistence.subPath }}
+              {{- end }}
+            {{- if .Values.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
+            {{- end }}
           {{- end }}
           env:
             {{- range $key, $value := .Values.env }}
@@ -85,14 +88,14 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.extraVolumes }}
+      {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
       volumes:
-      {{- if .Values.persistence.enabled }}
-       - name: agent-config
+        - name: agent-config
           configMap:
             name: {{ include "woodpecker-agent.fullname" . }}-agent-config
-      {{- end }}
-        {{- toYaml . | nindent 6 }}
+        {{- if .Values.extraVolumes }}
+          {{- toYaml . | nindent 6 }}
+        {{- end }}
       {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:
