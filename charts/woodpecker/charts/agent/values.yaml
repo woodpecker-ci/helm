@@ -59,6 +59,8 @@ initContainers: []
 persistence:
   # -- Enable the creation of the persistent volume
   enabled: true
+  # -- Whether to let the chart create the PV
+  create: true
   # -- Defines an existing claim to use
   claimName: agent-config
   # -- Defines the size of the persistent volume

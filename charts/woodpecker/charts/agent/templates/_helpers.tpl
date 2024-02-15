@@ -60,3 +60,13 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Storage Class
+*/}}
+{{- define "persistence.storageClass" -}}
+{{- $storageClass := .Values.persistence.storageClass }}
+{{- if $storageClass }}
+storageClassName: {{ $storageClass | quote }}
+{{- end }}
+{{- end -}}
