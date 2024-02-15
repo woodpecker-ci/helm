@@ -122,10 +122,6 @@ resource "helm_release" "woodpecker" {
 | server.initContainers | list | `[]` | Add additional init containers to the pod (evaluated as a template) |
 | server.nameOverride | string | `""` | Overrides the name of the helm chart of the server component |
 | server.nodeSelector | object | `{}` | Defines the labels of the node where the server component must be running |
-| server.persistentVolume.enabled | bool | `true` | Enable the creation of the persistent volume |
-| server.persistentVolume.mountPath | string | `"/var/lib/woodpecker"` | Defines the path where the volume should be mounted |
-| server.persistentVolume.size | string | `"10Gi"` | Defines the size of the persistent volume |
-| server.persistentVolume.storageClass | string | `""` | Defines the storageClass of the persistent volume |
 | server.podAnnotations | object | `{}` | Add pod annotations |
 | server.podSecurityContext | object | `{}` | Add pod security context |
 | server.resources | object | `{}` | Specifies the ressources for the server component |
