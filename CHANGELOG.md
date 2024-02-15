@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.2](https://github.com/woodpecker-ci/helm/releases/tag/1.1.2) - 2024-02-15
+
+### ❤️ Thanks to all contributors! ❤️
+
+@andrexus
+
+### 🐛 Bug Fixes
+
+- fix volumeMounts if persistentVolume is not enabled [[#160](https://github.com/woodpecker-ci/helm/pull/160)]
+
 ## [1.1.1](https://github.com/woodpecker-ci/helm/releases/tag/1.1.1) - 2024-02-02
 
 ### ❤️ Thanks to all contributors! ❤️
