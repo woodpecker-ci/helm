@@ -55,10 +55,6 @@ A Helm chart for the Woodpecker server
 | metrics.enabled | bool | `false` | enable metrics in woodpecker |
 | nameOverride | string | `""` | Overrides the name of the helm chart of the server component |
 | nodeSelector | object | `{}` | Defines the labels of the node where the server component must be running |
-| persistentVolume.enabled | bool | `true` | Enable the creation of the persistent volume |
-| persistentVolume.mountPath | string | `"/var/lib/woodpecker"` | Defines the path where the volume should be mounted |
-| persistentVolume.size | string | `"10Gi"` | Defines the size of the persistent volume |
-| persistentVolume.storageClass | string | `""` | Defines the storageClass of the persistent volume |
 | podAnnotations | object | `{}` | Add pod annotations |
 | podSecurityContext | object | `{}` | Add pod security context |
 | prometheus.podmonitor.enabled | bool | `false` | deploy podmonitor |

@@ -94,16 +94,6 @@ extraVolumeMounts:
 # -- Add additional init containers to the pod (evaluated as a template)
 initContainers: []
 
-persistentVolume:
-  # -- Enable the creation of the persistent volume
-  enabled: true
-  # -- Defines the size of the persistent volume
-  size: 10Gi
-  # -- Defines the path where the volume should be mounted
-  mountPath: '/var/lib/woodpecker'
-  # -- Defines the storageClass of the persistent volume
-  storageClass: ''
-
 # -- The image pull secrets
 imagePullSecrets: []
 # -- Overrides the name of the helm chart of the server component

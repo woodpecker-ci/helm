@@ -77,10 +77,6 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            {{- if .Values.persistentVolume.enabled }}
-            - name: data
-              mountPath: {{ .Values.persistentVolume.mountPath }}
-            {{- end }}
             {{- with .Values.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
@@ -118,20 +114,3 @@ spec:
       dnsConfig:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-  {{- if .Values.persistentVolume.enabled }}
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-    {{- if .Values.persistentVolume.storageClass }}
-    {{- if (eq "-" .Values.persistentVolume.storageClass) }}
-      storageClassName: ""
-    {{- else }}
-      storageClassName: {{ .Values.persistentVolume.storageClass }}
-    {{- end }}
-    {{- end }}
-      resources:
-        requests:
-          storage: {{ .Values.persistentVolume.size }}
-  {{- end }}
