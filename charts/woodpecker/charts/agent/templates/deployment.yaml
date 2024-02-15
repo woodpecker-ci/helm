@@ -57,11 +57,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
           volumeMounts:
+            {{- if .Values.persistence.enabled }}
             - name: agent-config
               mountPath: {{ .Values.persistence.mountPath }}
               {{- if .Values.persistence.subPath }}
               subPath: {{ .Values.persistence.subPath }}
               {{- end }}
+            {{- end }}
             {{- if .Values.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
@@ -90,9 +92,11 @@ spec:
       {{- end }}
       {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
       volumes:
+        {{- if .Values.persistence.enabled }}
         - name: agent-config
-          configMap:
-            name: {{ include "woodpecker-agent.fullname" . }}-agent-config
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.claimName }}
+        {{- end }}
         {{- if .Values.extraVolumes }}
           {{- toYaml . | nindent 6 }}
         {{- end }}
