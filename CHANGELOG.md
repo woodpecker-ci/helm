@@ -10,6 +10,10 @@
 
 - fix volumeMounts if persistentVolume is not enabled [[#160](https://github.com/woodpecker-ci/helm/pull/160)]
 
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#159](https://github.com/woodpecker-ci/helm/pull/159)]
+
 ## [1.1.1](https://github.com/woodpecker-ci/helm/releases/tag/1.1.1) - 2024-02-02
 
 ### ❤️ Thanks to all contributors! ❤️
