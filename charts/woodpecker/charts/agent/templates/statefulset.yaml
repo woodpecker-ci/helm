@@ -111,7 +111,7 @@ spec:
   volumeClaimTemplates:
     - metadata:
         name: agent-config
-        namespace: {{ $.Release.Namespace }}
+        namespace: {{ $.namespace }}
         annotations:
         {{- range $key, $value := .Values.persistence.annotations }}
           {{ $key }}: {{ $value }}
