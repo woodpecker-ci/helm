@@ -58,8 +58,6 @@ resource "helm_release" "woodpecker" {
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| agent.affinity | object | `{}` | Specifies the affinity |
-| agent.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | agent.enabled | bool | `true` | Enable the agent component |
 | agent.env.WOODPECKER_BACKEND | string | `"kubernetes"` |  |
 | agent.env.WOODPECKER_BACKEND_K8S_NAMESPACE | string | `"woodpecker"` |  |
@@ -71,33 +69,44 @@ resource "helm_release" "woodpecker" {
 | agent.env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | agent.env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
 | agent.extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
-| agent.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
-| agent.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
-| agent.fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
 | agent.image.pullPolicy | string | `"IfNotPresent"` | The pull policy for the image |
 | agent.image.registry | string | `"docker.io"` | The image registry |
 | agent.image.repository | string | `"woodpeckerci/woodpecker-agent"` | The image repository |
 | agent.image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
-| agent.imagePullSecrets | list | `[]` | The image pull secrets |
-| agent.nameOverride | string | `""` | Overrides the name of the chart of the agent component |
-| agent.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
-| agent.podAnnotations | object | `{}` | Add pod annotations for the agent component |
-| agent.podSecurityContext | object | `{}` | Add pod security context |
 | agent.replicaCount | int | `2` | The number of replicas for the deployment |
-| agent.resources | object | `{}` | Specifies the resources for the agent component |
-| agent.securityContext | object | `{}` | Add security context |
-| agent.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
-| agent.serviceAccount.create | bool | `true` | Specifies whether a service account should be created (also see RBAC subsection) |
-| agent.serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
-| agent.serviceAccount.rbac.create | bool | `true` | If your cluster has RBAC enabled and you're using the Kubernetes agent- backend you'll need this. (this is true for almost all production clusters) only change this if you have a non CNCF compliant cluster, missing the RBAC endpoints the Role and RoleBinding are only created if serviceAccount.create is also true |
-| agent.serviceAccount.rbac.role.annotations | object | `{}` |  |
-| agent.serviceAccount.rbac.role.labels | object | `{}` |  |
-| agent.serviceAccount.rbac.roleBinding.annotations | object | `{}` |  |
-| agent.serviceAccount.rbac.roleBinding.labels | object | `{}` |  |
-| agent.tolerations | list | `[]` | Specifies the tolerations |
-| agent.topologySpreadConstraints | list | `[]` | Using topology spread constraints, you can ensure that there is at least one agent pod for each topology zone, e.g. one per arch for multi-architecture clusters or one for each region for geographically distributed cloud-hosted clusters. Ref: <https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/> |
 | fullnameOverride | string | `""` | Overrides the full name of the chart |
 | nameOverride | string | `""` | Overrides the name of the chart |
+| persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
+| persistence.affinity | object | `{}` | Specifies the affinity |
+| persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
+| persistence.claimName | string | `"agent-config"` | Defines an existing claim to use |
+| persistence.dnsConfig | object | `{}` | Overrides the default DNS configuration |
+| persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
+| persistence.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
+| persistence.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
+| persistence.fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
+| persistence.imagePullSecrets | list | `[]` | The image pull secrets |
+| persistence.labels | object | `{}` | Defines volume labels of the persistent volume |
+| persistence.mountPath | string | `"/etc/woodpecker/"` | Defines the path where the volume should be mounted |
+| persistence.nameOverride | string | `""` | Overrides the name of the chart of the agent component |
+| persistence.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
+| persistence.podAnnotations | object | `{}` | Add pod annotations for the agent component |
+| persistence.podSecurityContext | object | `{}` | Add pod security context |
+| persistence.resources | object | `{}` | Specifies the resources for the agent component |
+| persistence.securityContext | object | `{}` | Add security context |
+| persistence.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| persistence.serviceAccount.create | bool | `true` | Specifies whether a service account should be created (also see RBAC subsection) |
+| persistence.serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
+| persistence.serviceAccount.rbac.create | bool | `true` | If your cluster has RBAC enabled and you're using the Kubernetes agent- backend you'll need this. (this is true for almost all production clusters) only change this if you have a non CNCF compliant cluster, missing the RBAC endpoints the Role and RoleBinding are only created if serviceAccount.create is also true |
+| persistence.serviceAccount.rbac.role.annotations | object | `{}` |  |
+| persistence.serviceAccount.rbac.role.labels | object | `{}` |  |
+| persistence.serviceAccount.rbac.roleBinding.annotations | object | `{}` |  |
+| persistence.serviceAccount.rbac.roleBinding.labels | object | `{}` |  |
+| persistence.size | string | `"100Mi"` | Defines the size of the persistent volume |
+| persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
+| persistence.tolerations | list | `[]` | Specifies the tolerations |
+| persistence.topologySpreadConstraints | list | `[]` | Using topology spread constraints, you can ensure that there is at least one agent pod for each topology zone, e.g. one per arch for multi-architecture clusters or one for each region for geographically distributed cloud-hosted clusters. Ref: <https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/> |
+| persistence.volumeName | string | `""` | Defines the name of the persistent volume |
 | server.affinity | object | `{}` | Add affinity |
 | server.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | server.enabled | bool | `true` | Enable the server component |

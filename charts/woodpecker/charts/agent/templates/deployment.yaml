@@ -57,6 +57,10 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraVolumeMounts }}
           volumeMounts:
+            {{- if .Values.persistence.enabled }}
+            - name: agent-config
+              mountPath: {{ .Values.persistence.mountPath }}
+            {{- end }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
