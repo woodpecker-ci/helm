@@ -83,15 +83,10 @@ resource "helm_release" "woodpecker" {
 | agent.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | agent.persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
 | agent.persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
-| agent.persistence.claimName | string | `"agent-config"` | Defines an existing claim to use |
-| agent.persistence.create | bool | `true` | Whether to let the chart create the PV |
 | agent.persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
-| agent.persistence.labels | object | `{}` | Defines volume labels of the persistent volume |
-| agent.persistence.mountPath | string | `"/etc/woodpecker/agent.config"` | Defines the path where the volume should be mounted |
+| agent.persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
 | agent.persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
 | agent.persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
-| agent.persistence.subPath | string | `"agent.config"` | Defines the subPath of the persistent volume |
-| agent.persistence.volumeName | string | `""` | Defines the name of the persistent volume |
 | agent.podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | agent.podSecurityContext | object | `{}` | Add pod security context |
 | agent.replicaCount | int | `2` | The number of replicas for the deployment |

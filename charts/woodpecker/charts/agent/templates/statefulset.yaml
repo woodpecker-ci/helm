@@ -61,9 +61,6 @@ spec:
             {{- if .Values.persistence.enabled }}
             - name: agent-config
               mountPath: {{ .Values.persistence.mountPath }}
-              {{- if .Values.persistence.subPath }}
-              subPath: {{ .Values.persistence.subPath }}
-              {{- end }}
             {{- end }}
             {{- if .Values.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
@@ -94,9 +91,11 @@ spec:
       {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
       volumes:
         {{- if .Values.persistence.enabled }}
+        {{- if .Values.persistence.enabled }}
         - name: agent-config
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.claimName }}
+            claimName: {{ .Values.persistence.existingClaim }}
+        {{- end }}
         {{- end }}
         {{- if .Values.extraVolumes }}
           {{- toYaml . | nindent 6 }}
