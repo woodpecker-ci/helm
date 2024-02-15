@@ -87,6 +87,11 @@ spec:
       {{- end }}
       {{- with .Values.extraVolumes }}
       volumes:
+      {{- if .Values.persistence.enabled }}
+       - name: agent-config
+          configMap:
+            name: {{ include "woodpecker-agent.fullname" . }}-agent-config
+      {{- end }}
         {{- toYaml . | nindent 6 }}
       {{- end }}
       {{- with .Values.dnsConfig }}
