@@ -9,7 +9,7 @@ image:
   # -- The pull policy for the image
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: ''
 
 # -- Defines a custom command to start the container
 command: []
@@ -19,15 +19,15 @@ args: []
 
 env:
   # -- Add the environment variables for the agent component
-  WOODPECKER_SERVER: "woodpecker-server:9000"
+  WOODPECKER_SERVER: 'woodpecker-server:9000'
   WOODPECKER_BACKEND: kubernetes
   WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
-  WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ""
+  WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ''
   WOODPECKER_BACKEND_K8S_VOLUME_SIZE: 10G
   WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
-  WOODPECKER_BACKEND_K8S_POD_LABELS: ""
-  WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ""
-  WOODPECKER_CONNECT_RETRY_COUNT: "1"
+  WOODPECKER_BACKEND_K8S_POD_LABELS: ''
+  WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ''
+  WOODPECKER_CONNECT_RETRY_COUNT: '1'
 
 # -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom:
@@ -40,7 +40,8 @@ secrets: {}
 #      WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
 
 # -- Additional volumes that can be mounted in containers
-extraVolumes: []
+extraVolumes:
+  []
   # - name: docker-config
   #   configMap:
   #     name: docker-config
@@ -49,7 +50,8 @@ extraVolumes: []
   #     claimName: example
 
 # -- Additional volumes that will be attached to the agent container
-extraVolumeMounts: []
+extraVolumeMounts:
+  []
   # - name: ca-certs
   #   mountPath: /etc/ssl/certs/ca-certificates.crt
 
@@ -59,34 +61,28 @@ initContainers: []
 persistence:
   # -- Enable the creation of the persistent volume
   enabled: true
-  # -- Whether to let the chart create the PV
-  create: true
   # -- Defines an existing claim to use
-  claimName: agent-config
+  # existingClaim:
   # -- Defines the size of the persistent volume
   size: 1Mi
   mountPath: '/etc/woodpecker/agent.config'
   # -- Defines the subPath of the persistent volume
   subPath: agent.config
   # -- Defines the storageClass of the persistent volume
-  storageClass: ''
+  storageClass: ""
   # -- Defines the access mode of the persistent volume
   accessModes:
     - ReadWriteOnce
   # -- Defines annotations of the persistent volume
   annotations:
     helm.sh/resource-policy: keep
-  # -- Defines volume labels of the persistent volume
-  labels: {}
-  # -- Defines the name of the persistent volume
-  volumeName: ""
 
 # -- The image pull secrets
 imagePullSecrets: []
 # -- Overrides the name of the chart of the agent component
-nameOverride: ""
+nameOverride: ''
 # -- Overrides the full name of the chart of the agent component
-fullnameOverride: ""
+fullnameOverride: ''
 
 serviceAccount:
   # -- Specifies whether a service account should be created (also see RBAC subsection)
@@ -95,7 +91,7 @@ serviceAccount:
   annotations: {}
   # -- The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: ''
   rbac:
     # -- If your cluster has RBAC enabled and you're using the Kubernetes agent-
     # backend you'll need this. (this is true for almost all production clusters)
