@@ -62,20 +62,16 @@ persistence:
   # -- Enable the creation of the persistent volume
   enabled: true
   # -- Defines an existing claim to use
-  # existingClaim:
+  existingClaim:
   # -- Defines the size of the persistent volume
-  size: 1Mi
+  size: 1Gi
+  # -- Defines the path where the volume should be mounted
   mountPath: '/etc/woodpecker'
-  # -- Defines the subPath of the persistent volume
-  subPath:
   # -- Defines the storageClass of the persistent volume
   storageClass: ""
   # -- Defines the access mode of the persistent volume
   accessModes:
     - ReadWriteOnce
-  # -- Defines annotations of the persistent volume
-  annotations:
-    helm.sh/resource-policy: keep
 
 # -- The image pull secrets
 imagePullSecrets: []

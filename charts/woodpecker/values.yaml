@@ -44,7 +44,7 @@ agent:
     # -- Enable the creation of the persistent volume
     enabled: true
     # -- Defines an existing claim to use
-    # existingClaim:
+    existingClaim:
     # -- Defines the size of the persistent volume
     size: 1Mi
     # -- Defines the path where the volume should be mounted
@@ -54,9 +54,6 @@ agent:
     # -- Defines the access mode of the persistent volume
     accessModes:
       - ReadWriteOnce
-    # -- Defines annotations of the persistent volume
-    annotations:
-      helm.sh/resource-policy: keep
 
   # -- Additional volumes that can be mounted in containers
   extraVolumes:
