@@ -44,11 +44,13 @@ A Helm chart for the Woodpecker agent
 | persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
 | persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
 | persistence.claimName | string | `"agent-config"` | Defines an existing claim to use |
+| persistence.create | bool | `true` | Whether to let the chart create the PV |
 | persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
 | persistence.labels | object | `{}` | Defines volume labels of the persistent volume |
-| persistence.mountPath | string | `"/etc/woodpecker/"` | Defines the path where the volume should be mounted |
-| persistence.size | string | `"100Mi"` | Defines the size of the persistent volume |
+| persistence.mountPath | string | `"/etc/woodpecker/agent.config"` |  |
+| persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
 | persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
+| persistence.subPath | string | `"agent.config"` | Defines the subPath of the persistent volume |
 | persistence.volumeName | string | `""` | Defines the name of the persistent volume |
 | podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | podSecurityContext | object | `{}` | Add pod security context |

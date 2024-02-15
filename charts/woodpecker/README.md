@@ -80,6 +80,7 @@ resource "helm_release" "woodpecker" {
 | persistence.affinity | object | `{}` | Specifies the affinity |
 | persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
 | persistence.claimName | string | `"agent-config"` | Defines an existing claim to use |
+| persistence.create | bool | `true` | Whether to let the chart create the PV |
 | persistence.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
 | persistence.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
@@ -87,7 +88,7 @@ resource "helm_release" "woodpecker" {
 | persistence.fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
 | persistence.imagePullSecrets | list | `[]` | The image pull secrets |
 | persistence.labels | object | `{}` | Defines volume labels of the persistent volume |
-| persistence.mountPath | string | `"/etc/woodpecker/"` | Defines the path where the volume should be mounted |
+| persistence.mountPath | string | `"/etc/woodpecker/agent.config"` | Defines the path where the volume should be mounted |
 | persistence.nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | persistence.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | persistence.podAnnotations | object | `{}` | Add pod annotations for the agent component |
@@ -102,8 +103,9 @@ resource "helm_release" "woodpecker" {
 | persistence.serviceAccount.rbac.role.labels | object | `{}` |  |
 | persistence.serviceAccount.rbac.roleBinding.annotations | object | `{}` |  |
 | persistence.serviceAccount.rbac.roleBinding.labels | object | `{}` |  |
-| persistence.size | string | `"100Mi"` | Defines the size of the persistent volume |
+| persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
 | persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
+| persistence.subPath | string | `"agent.config"` | Defines the subPath of the persistent volume |
 | persistence.tolerations | list | `[]` | Specifies the tolerations |
 | persistence.topologySpreadConstraints | list | `[]` | Using topology spread constraints, you can ensure that there is at least one agent pod for each topology zone, e.g. one per arch for multi-architecture clusters or one for each region for geographically distributed cloud-hosted clusters. Ref: <https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/> |
 | persistence.volumeName | string | `""` | Defines the name of the persistent volume |
