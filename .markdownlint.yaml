@@ -70,10 +70,8 @@ MD022:
   # Blank lines below heading
   lines_below: 1
 
-# MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
-MD024:
-  # Only check sibling headings
-  allow_different_nesting: true
+# MD024/no-duplicate-heading : Multiple headings with the same content : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md024.md
+MD024: false
 
 # MD025/single-title/single-h1 - Multiple top-level headings in the same document
 MD025:
