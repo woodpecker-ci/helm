@@ -47,9 +47,9 @@ agent:
     # existingClaim:
     # -- Defines the size of the persistent volume
     size: 1Mi
-    mountPath: '/etc/woodpecker/agent.conf'
+    mountPath: '/etc/woodpecker'
     # -- Defines the subPath of the persistent volume
-    subPath: agent.conf
+    subPath:
     # -- Defines the storageClass of the persistent volume
     storageClass: ""
     # -- Defines the access mode of the persistent volume
