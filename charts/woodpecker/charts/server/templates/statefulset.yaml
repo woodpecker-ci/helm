@@ -77,7 +77,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            {{- if .Values.persistentVolume }}
+            {{- if .Values.persistentVolume.enabled }}
             - name: data
               mountPath: {{ .Values.persistentVolume.mountPath }}
             {{- end }}
