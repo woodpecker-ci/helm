@@ -91,7 +91,7 @@ spec:
       {{- if or (.Values.persistence.enabled) (.Values.extraVolumeMounts) }}
       volumes:
         {{- if .Values.persistence.enabled }}
-        {{- if .Values.persistence.enabled }}
+        {{- if .Values.persistence.existingClaim }}
         - name: agent-config
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim }}
@@ -106,7 +106,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 
-{{- if and (not .Values.persistence.existingClaim)  .Values.persistence.enabled }}
+{{- if and (not .Values.persistence.existingClaim) .Values.persistence.enabled }}
   volumeClaimTemplates:
     - metadata:
         name: agent-config
