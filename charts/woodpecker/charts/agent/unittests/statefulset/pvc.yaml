@@ -9,7 +9,11 @@ tests:
     asserts:
       - equal:
           path: spec.volumeClaimTemplates[0].spec.accessModes[0]
-          value: "ReadWriteOnce"
+          value: 'ReadWriteOnce'
+      # this should only exist with existingClaim and is otherwise taken care of automatically
+      - equal:
+          path: spec.template.spec.volumes
+          value: null
   - it: persistence with existingClaim
     set:
       persistence:
