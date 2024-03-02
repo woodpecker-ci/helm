@@ -31,7 +31,7 @@ steps:
       - event: tag
 
   update-readme:
-    image: jnorwood/helm-docs:v1.13.0
+    image: jnorwood/helm-docs:v1.13.1
     commands:
       - helm-docs
       - cat charts/woodpecker/README.md
