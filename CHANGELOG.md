@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.2](https://github.com/woodpecker-ci/helm/releases/tag/1.1.2) - 2024-02-25
+## [1.1.2](https://github.com/woodpecker-ci/helm/releases/tag/1.1.2) - 2024-03-02
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- chore(deps): update jnorwood/helm-docs docker tag to v1.13.1 [[#168](https://github.com/woodpecker-ci/helm/pull/168)]
 - chore(deps): update alpine/helm docker tag to v3.14.2 [[#167](https://github.com/woodpecker-ci/helm/pull/167)]
 - chore(deps): update jnorwood/helm-docs docker tag to v1.13.0 [[#166](https://github.com/woodpecker-ci/helm/pull/166)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.2 [[#165](https://github.com/woodpecker-ci/helm/pull/165)]
