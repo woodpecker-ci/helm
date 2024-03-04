@@ -21,6 +21,12 @@ repos:
     hooks:
       - id: helmlint
 
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.33.0
+    hooks:
+      - id: yamllint
+        args: [--strict, -c=.yamllint.yaml]
+
 ci:
   autofix_commit_msg: |
     [pre-commit.ci] auto fixes from pre-commit.com hooks [CI SKIP]

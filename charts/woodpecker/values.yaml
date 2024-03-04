@@ -50,7 +50,7 @@ agent:
     # -- Defines the path where the volume should be mounted
     mountPath: '/etc/woodpecker'
     # -- Defines the storageClass of the persistent volume
-    storageClass: ""
+    storageClass: ''
     # -- Defines the access mode of the persistent volume
     accessModes:
       - ReadWriteOnce
