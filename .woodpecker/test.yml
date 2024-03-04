@@ -18,7 +18,7 @@ steps:
       - HELM_UNITTEST_VERSION=v0.4.2
     commands:
       - helm plugin install --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest > /dev/null
-      - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/
+      - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/ ./charts/woodpecker/charts/agent
 
   test-chart:
     image: quay.io/helmpack/chart-testing:v3.10.1

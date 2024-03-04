@@ -44,8 +44,8 @@ extraSecretNamesForEnvFrom:
 # -- Create a generic secret to store things in, e.g. env values
 secrets:
   - name: woodpecker-secret
-    #  data:
-    #    WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
+  #  data:
+  #    WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
 
 prometheus:
   podmonitor:
@@ -155,8 +155,8 @@ ingress:
   enabled: false
   # -- Add annotations to the ingress
   annotations:
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
 
   # -- Defines which ingress controller will implement the resource
   ingressClassName: ''

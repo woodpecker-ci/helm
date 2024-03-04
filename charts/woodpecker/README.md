@@ -51,7 +51,7 @@ resource "helm_release" "woodpecker" {
 
 | Repository | Name | Version |
 |------------|------|---------|
-|  | agent | 0.2.0 |
+|  | agent | 0.3.0 |
 |  | server | 1.0.0 |
 
 ## Values
@@ -81,6 +81,12 @@ resource "helm_release" "woodpecker" {
 | agent.imagePullSecrets | list | `[]` | The image pull secrets |
 | agent.nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | agent.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
+| agent.persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
+| agent.persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
+| agent.persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
+| agent.persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
+| agent.persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
+| agent.persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
 | agent.podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | agent.podSecurityContext | object | `{}` | Add pod security context |
 | agent.replicaCount | int | `2` | The number of replicas for the deployment |
