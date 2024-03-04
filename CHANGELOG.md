@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.1.2](https://github.com/woodpecker-ci/helm/releases/tag/1.1.2) - 2024-03-02
+## [1.2.0](https://github.com/woodpecker-ci/helm/releases/tag/1.2.0) - 2024-03-04
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@andrexus
+@andrexus, @pat-s
+
+### ✨ Features
+
+- Add PVC for agent [[#163](https://github.com/woodpecker-ci/helm/pull/163)]
 
 ### 🐛 Bug Fixes
 
