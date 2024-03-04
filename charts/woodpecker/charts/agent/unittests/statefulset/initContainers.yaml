@@ -1,6 +1,6 @@
 suite: test deployment
 templates:
-  - deployment.yaml
+  - templates/statefulset.yaml
 tests:
   - it: should have initContainers when .Values.initContainers is set
     set:
@@ -11,7 +11,7 @@ tests:
       - hasDocuments:
           count: 1
       - isKind:
-          of: Deployment
+          of: StatefulSet
       - isNotEmpty:
           path: spec.template.spec.initContainers
       - equal:

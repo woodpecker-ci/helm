@@ -40,6 +40,21 @@ agent:
   extraSecretNamesForEnvFrom:
     - woodpecker-secret
 
+  persistence:
+    # -- Enable the creation of the persistent volume
+    enabled: true
+    # -- Defines an existing claim to use
+    existingClaim:
+    # -- Defines the size of the persistent volume
+    size: 1Mi
+    # -- Defines the path where the volume should be mounted
+    mountPath: '/etc/woodpecker'
+    # -- Defines the storageClass of the persistent volume
+    storageClass: ''
+    # -- Defines the access mode of the persistent volume
+    accessModes:
+      - ReadWriteOnce
+
   # -- Additional volumes that can be mounted in containers
   extraVolumes:
     []
@@ -267,8 +282,8 @@ server:
     enabled: false
     # -- Add annotations to the ingress
     annotations:
-      # kubernetes.io/ingress.class: nginx
-      # kubernetes.io/tls-acme: "true"
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
 
     # -- Defines which ingress controller will implement the resource
     ingressClassName: ''
