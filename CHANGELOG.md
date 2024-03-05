@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.2.0](https://github.com/woodpecker-ci/helm/releases/tag/1.2.0) - 2024-03-04
+
+### ❤️ Thanks to all contributors! ❤️
+
+@andrexus, @pat-s
+
+### ✨ Features
+
+- Add PVC for agent [[#163](https://github.com/woodpecker-ci/helm/pull/163)]
+
+### 🐛 Bug Fixes
+
+- fix volumeMounts if persistentVolume is not enabled [[#160](https://github.com/woodpecker-ci/helm/pull/160)]
+
+### Misc
+
+- chore(deps): update jnorwood/helm-docs docker tag to v1.13.1 [[#168](https://github.com/woodpecker-ci/helm/pull/168)]
+- chore(deps): update alpine/helm docker tag to v3.14.2 [[#167](https://github.com/woodpecker-ci/helm/pull/167)]
+- chore(deps): update jnorwood/helm-docs docker tag to v1.13.0 [[#166](https://github.com/woodpecker-ci/helm/pull/166)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.4.2 [[#165](https://github.com/woodpecker-ci/helm/pull/165)]
+- chore(deps): update alpine/helm docker tag to v3.14.1 [[#164](https://github.com/woodpecker-ci/helm/pull/164)]
+- [pre-commit.ci] pre-commit autoupdate [[#159](https://github.com/woodpecker-ci/helm/pull/159)]
+
 ## [1.1.1](https://github.com/woodpecker-ci/helm/releases/tag/1.1.1) - 2024-02-02
 
 ### ❤️ Thanks to all contributors! ❤️
