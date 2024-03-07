@@ -42,12 +42,11 @@ A Helm chart for the Woodpecker agent
 | nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
-| persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
 | persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
-| persistence.mountPath | string | `"/etc/woodpecker"` |  |
-| persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
+| persistence.existingClaim | string | `nil` | Defines an existing claim to use |
+| persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
+| persistence.size | string | `"1Gi"` | Defines the size of the persistent volume |
 | persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
-| persistence.subPath | string | `nil` | Defines the subPath of the persistent volume |
 | podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | podSecurityContext | object | `{}` | Add pod security context |
 | replicaCount | int | `2` | The number of replicas for the deployment |

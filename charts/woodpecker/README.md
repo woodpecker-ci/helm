@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.3.0](https://img.shields.io/badge/AppVersion-2.3.0-informational?style=flat-square)
+![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.3.0](https://img.shields.io/badge/AppVersion-2.3.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -30,7 +30,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 1.1.1
+  version          = 1.2.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -82,8 +82,8 @@ resource "helm_release" "woodpecker" {
 | agent.nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | agent.nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | agent.persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
-| agent.persistence.annotations | object | `{"helm.sh/resource-policy":"keep"}` | Defines annotations of the persistent volume |
 | agent.persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
+| agent.persistence.existingClaim | string | `nil` | Defines an existing claim to use |
 | agent.persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
 | agent.persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
 | agent.persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
