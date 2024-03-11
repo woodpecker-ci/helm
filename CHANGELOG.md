@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.1](https://github.com/woodpecker-ci/helm/releases/tag/1.2.1) - 2024-03-11
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- Set pv size to 1Gb [[#169](https://github.com/woodpecker-ci/helm/pull/169)]
+
 ## [1.2.0](https://github.com/woodpecker-ci/helm/releases/tag/1.2.0) - 2024-03-04
 
 ### ❤️ Thanks to all contributors! ❤️
