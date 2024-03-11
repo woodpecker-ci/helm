@@ -85,7 +85,7 @@ resource "helm_release" "woodpecker" {
 | agent.persistence.enabled | bool | `true` | Enable the creation of the persistent volume |
 | agent.persistence.existingClaim | string | `nil` | Defines an existing claim to use |
 | agent.persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
-| agent.persistence.size | string | `"1Mi"` | Defines the size of the persistent volume |
+| agent.persistence.size | string | `"1Gi"` | Defines the size of the persistent volume |
 | agent.persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
 | agent.podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | agent.podSecurityContext | object | `{}` | Add pod security context |
