@@ -46,7 +46,7 @@ agent:
     # -- Defines an existing claim to use
     existingClaim:
     # -- Defines the size of the persistent volume
-    size: 1Mi
+    size: 1Gi
     # -- Defines the path where the volume should be mounted
     mountPath: '/etc/woodpecker'
     # -- Defines the storageClass of the persistent volume
