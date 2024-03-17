@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.2](https://github.com/woodpecker-ci/helm/releases/tag/1.2.2) - 2024-03-17
+
+### ❤️ Thanks to all contributors! ❤️
+
+
+
+### Misc
+
+- chore(deps): update alpine/helm docker tag to v3.14.3 [[#172](https://github.com/woodpecker-ci/helm/pull/172)]
+
 ## [1.2.1](https://github.com/woodpecker-ci/helm/releases/tag/1.2.1) - 2024-03-11
 
 ### ❤️ Thanks to all contributors! ❤️
