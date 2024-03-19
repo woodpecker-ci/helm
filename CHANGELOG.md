@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.4.0 [[#175](https://github.com/woodpecker-ci/helm/pull/175)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.3 [[#174](https://github.com/woodpecker-ci/helm/pull/174)]
 - chore(deps): update alpine/helm docker tag to v3.14.3 [[#172](https://github.com/woodpecker-ci/helm/pull/172)]
 
