@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.2.3](https://github.com/woodpecker-ci/helm/releases/tag/1.2.3) - 2024-03-20
+
+### ❤️ Thanks to all contributors! ❤️
+
+
+
+### Misc
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.4.1 [[#178](https://github.com/woodpecker-ci/helm/pull/178)]
+
+## [1.2.2](https://github.com/woodpecker-ci/helm/releases/tag/1.2.2) - 2024-03-19
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- Fix unittest after plugin update [[#176](https://github.com/woodpecker-ci/helm/pull/176)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.4.0 [[#175](https://github.com/woodpecker-ci/helm/pull/175)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.4.3 [[#174](https://github.com/woodpecker-ci/helm/pull/174)]
+- chore(deps): update alpine/helm docker tag to v3.14.3 [[#172](https://github.com/woodpecker-ci/helm/pull/172)]
+
 ## [1.2.1](https://github.com/woodpecker-ci/helm/releases/tag/1.2.1) - 2024-03-11
 
 ### ❤️ Thanks to all contributors! ❤️
