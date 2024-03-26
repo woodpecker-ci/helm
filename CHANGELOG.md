@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-03-24
+## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-03-26
 
 ### ❤️ Thanks to all contributors! ❤️
 
+@antaanimosity
 
+### 🐛 Bug Fixes
+
+- Correctly apply extraVolumes and extraVolumeMounts [[#183](https://github.com/woodpecker-ci/helm/pull/183)]
 
 ### Misc
 
