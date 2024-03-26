@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-03-26
+
+### ❤️ Thanks to all contributors! ❤️
+
+@antaanimosity
+
+### 🐛 Bug Fixes
+
+- Correctly apply extraVolumes and extraVolumeMounts [[#183](https://github.com/woodpecker-ci/helm/pull/183)]
+
+### Misc
+
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.4.4 [[#180](https://github.com/woodpecker-ci/helm/pull/180)]
+
 ## [1.2.3](https://github.com/woodpecker-ci/helm/releases/tag/1.2.3) - 2024-03-20
 
 ### ❤️ Thanks to all contributors! ❤️
