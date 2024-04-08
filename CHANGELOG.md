@@ -1,8 +1,6 @@
-<!-- markdownlint-disable MD012 -->
-
 # Changelog
 
-## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-03-26
+## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-04-08
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -14,6 +12,7 @@
 
 ### Misc
 
+- [pre-commit.ci] pre-commit autoupdate [[#184](https://github.com/woodpecker-ci/helm/pull/184)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.4 [[#180](https://github.com/woodpecker-ci/helm/pull/180)]
 
 ## [1.2.3](https://github.com/woodpecker-ci/helm/releases/tag/1.2.3) - 2024-03-20
