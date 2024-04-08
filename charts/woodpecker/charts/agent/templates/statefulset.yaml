@@ -63,7 +63,7 @@ spec:
               mountPath: {{ .Values.persistence.mountPath }}
             {{- end }}
             {{- if .Values.extraVolumeMounts }}
-            {{- toYaml . | nindent 12 }}
+            {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
             {{- end }}
           {{- end }}
           env:
@@ -98,7 +98,7 @@ spec:
         {{- end }}
         {{- end }}
         {{- if .Values.extraVolumes }}
-          {{- toYaml . | nindent 6 }}
+          {{- toYaml .Values.extraVolumes | nindent 6 }}
         {{- end }}
       {{- end }}
       {{- with .Values.dnsConfig }}
