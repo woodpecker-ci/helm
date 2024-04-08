@@ -1,10 +1,10 @@
+<!-- markdownlint-disable MD012 -->
+
 # Changelog
 
 ## [1.2.3](https://github.com/woodpecker-ci/helm/releases/tag/1.2.3) - 2024-03-20
 
 ### ❤️ Thanks to all contributors! ❤️
-
-
 
 ### Misc
 
