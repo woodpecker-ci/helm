@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-04-09
+## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-04-14
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- chore(deps): update alpine/helm docker tag to v3.14.4 [[#187](https://github.com/woodpecker-ci/helm/pull/187)]
 - Add CODEOWNERS [[#186](https://github.com/woodpecker-ci/helm/pull/186)]
 - [pre-commit.ci] pre-commit autoupdate [[#184](https://github.com/woodpecker-ci/helm/pull/184)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.4.4 [[#180](https://github.com/woodpecker-ci/helm/pull/180)]
