@@ -34,7 +34,10 @@ tests:
           value:
             - name: data
               emptyDir: {}
-      - notExists:
+      - equal:
           path: spec.template.spec.containers[0].volumeMounts
+          value:
+            - mountPath: /data
+              name: data
       - notExists:
           path: spec.volumeClaimTemplates
