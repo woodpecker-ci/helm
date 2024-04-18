@@ -1,6 +1,27 @@
-<!-- markdownlint-disable MD012 -->
-
 # Changelog
+
+## [1.3.0](https://github.com/woodpecker-ci/helm/releases/tag/1.3.0) - 2024-04-18
+
+### ❤️ Thanks to all contributors! ❤️
+
+@antaanimosity, @pat-s
+
+### 📈 Enhancement
+
+- Improve agent sts pvc tests [[#185](https://github.com/woodpecker-ci/helm/pull/185)]
+
+### 🐛 Bug Fixes
+
+- Correctly apply extraVolumes and extraVolumeMounts [[#183](https://github.com/woodpecker-ci/helm/pull/183)]
+
+### Misc
+
+- Fix wp syntax in workflow file [[#177](https://github.com/woodpecker-ci/helm/pull/177)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.1 [[#188](https://github.com/woodpecker-ci/helm/pull/188)]
+- chore(deps): update alpine/helm docker tag to v3.14.4 [[#187](https://github.com/woodpecker-ci/helm/pull/187)]
+- Add CODEOWNERS [[#186](https://github.com/woodpecker-ci/helm/pull/186)]
+- [pre-commit.ci] pre-commit autoupdate [[#184](https://github.com/woodpecker-ci/helm/pull/184)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.4.4 [[#180](https://github.com/woodpecker-ci/helm/pull/180)]
 
 ## [1.2.3](https://github.com/woodpecker-ci/helm/releases/tag/1.2.3) - 2024-03-20
 
