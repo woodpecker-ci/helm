@@ -14,9 +14,9 @@ steps:
 
   release-chart:
     image: quay.io/helmpack/chart-releaser:v1.6.1
-    secrets:
-      - source: github_token
-        target: CR_TOKEN
+    environment:
+      CR_TOKEN:
+        from_secret: github_token
     commands:
       - git config --global user.email "woodpecker-bot@obermui.de"
       - git config --global user.name "woodpecker-bot"
@@ -44,6 +44,6 @@ steps:
       commit: true
       ssh_key:
         from_secret: BOT_PRIVATE_KEY
-      commit_message: "[skip ci] Update README.md"
+      commit_message: '[skip ci] Update README.md'
     when:
       - event: tag
