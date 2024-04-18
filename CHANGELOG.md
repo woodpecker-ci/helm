@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-04-15
+## [1.2.4](https://github.com/woodpecker-ci/helm/releases/tag/1.2.4) - 2024-04-18
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- Improve agent sts pvc tests [[#185](https://github.com/woodpecker-ci/helm/pull/185)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.1 [[#188](https://github.com/woodpecker-ci/helm/pull/188)]
 - chore(deps): update alpine/helm docker tag to v3.14.4 [[#187](https://github.com/woodpecker-ci/helm/pull/187)]
 - Add CODEOWNERS [[#186](https://github.com/woodpecker-ci/helm/pull/186)]
