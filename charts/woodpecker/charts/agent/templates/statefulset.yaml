@@ -65,10 +65,6 @@ spec:
             {{- if .Values.extraVolumeMounts }}
             {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
             {{- end }}
-          {{- else }}
-          volumeMounts:
-            - name: data
-              mountPath: /data
           {{- end }}
           env:
             {{- range $key, $value := .Values.env }}
@@ -104,10 +100,6 @@ spec:
         {{- if .Values.extraVolumes }}
           {{- toYaml .Values.extraVolumes | nindent 6 }}
         {{- end }}
-      {{- else }}
-      volumes:
-        - name: data
-          emptyDir: {}
       {{- end }}
       {{- with .Values.dnsConfig }}
       dnsConfig:

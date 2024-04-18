@@ -29,12 +29,9 @@ tests:
       persistence:
         enabled: false
     asserts:
-      - equal:
+      - notExists:
           path: spec.template.spec.volumes
-          value:
-            - name: data
-              emptyDir: {}
-      - equal:
+      - notExists:
           path: spec.template.spec.containers[0].volumeMounts
           value:
             - mountPath: /data
