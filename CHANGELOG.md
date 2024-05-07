@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-04-29
+## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-05-07
 
 ### Misc
 
+- [pre-commit.ci] pre-commit autoupdate [[#192](https://github.com/woodpecker-ci/helm/pull/192)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.5.0 [[#191](https://github.com/woodpecker-ci/helm/pull/191)]
 - chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.11.0 [[#189](https://github.com/woodpecker-ci/helm/pull/189)]
 
