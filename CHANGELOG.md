@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-05-11
+## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-05-18
 
 ### Misc
 
+- chore(deps): update appleboy/drone-git-push docker tag to v1.1.0 [[#194](https://github.com/woodpecker-ci/helm/pull/194)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.5.1 [[#193](https://github.com/woodpecker-ci/helm/pull/193)]
 - [pre-commit.ci] pre-commit autoupdate [[#192](https://github.com/woodpecker-ci/helm/pull/192)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.5.0 [[#191](https://github.com/woodpecker-ci/helm/pull/191)]
