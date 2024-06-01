@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-05-26
+## [1.3.1](https://github.com/woodpecker-ci/helm/releases/tag/1.3.1) - 2024-06-01
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.5.0 [[#197](https://github.com/woodpecker-ci/helm/pull/197)]
 - chore(deps): update alpine/helm docker tag to v3.15.1 [[#196](https://github.com/woodpecker-ci/helm/pull/196)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.2 [[#195](https://github.com/woodpecker-ci/helm/pull/195)]
 - chore(deps): update appleboy/drone-git-push docker tag to v1.1.0 [[#194](https://github.com/woodpecker-ci/helm/pull/194)]
