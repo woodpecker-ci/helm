@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.0](https://github.com/woodpecker-ci/helm/releases/tag/1.4.0) - 2024-06-01
+
+### ✨ Features
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.5.0 [[#197](https://github.com/woodpecker-ci/helm/pull/197)]
+
+### Misc
+
+- chore(deps): update alpine/helm docker tag to v3.15.1 [[#196](https://github.com/woodpecker-ci/helm/pull/196)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.2 [[#195](https://github.com/woodpecker-ci/helm/pull/195)]
+- chore(deps): update appleboy/drone-git-push docker tag to v1.1.0 [[#194](https://github.com/woodpecker-ci/helm/pull/194)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.5.1 [[#193](https://github.com/woodpecker-ci/helm/pull/193)]
+- [pre-commit.ci] pre-commit autoupdate [[#192](https://github.com/woodpecker-ci/helm/pull/192)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.5.0 [[#191](https://github.com/woodpecker-ci/helm/pull/191)]
+- chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.11.0 [[#189](https://github.com/woodpecker-ci/helm/pull/189)]
+
 ## [1.3.0](https://github.com/woodpecker-ci/helm/releases/tag/1.3.0) - 2024-04-18
 
 ### ❤️ Thanks to all contributors! ❤️
