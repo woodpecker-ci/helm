@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.4.1](https://github.com/woodpecker-ci/helm/releases/tag/1.4.1) - 2024-06-13
+## [1.5.0](https://github.com/woodpecker-ci/helm/releases/tag/1.5.0) - 2024-06-13
 
-### Misc
+### ✨ Features
 
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.6.0 [[#198](https://github.com/woodpecker-ci/helm/pull/198)]
 
