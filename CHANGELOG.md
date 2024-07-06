@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.5.1](https://github.com/woodpecker-ci/helm/releases/tag/1.5.1) - 2024-06-18
+## [1.5.1](https://github.com/woodpecker-ci/helm/releases/tag/1.5.1) - 2024-07-06
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update jnorwood/helm-docs docker tag to v1.14.0 [[#204](https://github.com/woodpecker-ci/helm/pull/204)]
 - Adjust "before prepare" hook [[#200](https://github.com/woodpecker-ci/helm/pull/200)]
 
 ## [1.5.0](https://github.com/woodpecker-ci/helm/releases/tag/1.5.0) - 2024-06-16
