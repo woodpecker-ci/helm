@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-07-19
+
+### ❤️ Thanks to all contributors! ❤️
+
+@davidcurrie
+
+### Misc
+
+- Clarification in README.md [[#209](https://github.com/woodpecker-ci/helm/pull/209)]
+
 ## [1.5.1](https://github.com/woodpecker-ci/helm/releases/tag/1.5.1) - 2024-07-19
 
 ### ❤️ Thanks to all contributors! ❤️
