@@ -15,7 +15,7 @@ Please see the README's of the sub-charts for their configuration options:
 - [(agent)](./charts/woodpecker/charts/agent/README.md)
 
 > [!NOTE]
-> You only need the `woodpecker` chart if you want to install a functional instance of Woodpecker.
+> If you want to install a functional instance of Woodpecker, you only need the `woodpecker` chart.
 > The `server` and `agent` charts are used as sub-charts by the `woodpecker` umbrella chart.
 > They can be used independently but this is usually not needed.
 
