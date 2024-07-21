@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-07-19
+## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-07-21
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.2.0 [[#211](https://github.com/woodpecker-ci/helm/pull/211)]
 - Clarification in README.md [[#209](https://github.com/woodpecker-ci/helm/pull/209)]
 
 ## [1.5.1](https://github.com/woodpecker-ci/helm/releases/tag/1.5.1) - 2024-07-19
