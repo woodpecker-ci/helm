@@ -21,7 +21,6 @@ A Helm chart for the Woodpecker agent
 | command | list | `[]` | Defines a custom command to start the container |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env.WOODPECKER_BACKEND | string | `"kubernetes"` |  |
-| env.WOODPECKER_BACKEND_K8S_NAMESPACE | string | `"woodpecker"` |  |
 | env.WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS | string | `""` |  |
 | env.WOODPECKER_BACKEND_K8S_POD_LABELS | string | `""` |  |
 | env.WOODPECKER_BACKEND_K8S_STORAGE_CLASS | string | `""` |  |
@@ -47,6 +46,7 @@ A Helm chart for the Woodpecker agent
 | persistence.mountPath | string | `"/etc/woodpecker"` | Defines the path where the volume should be mounted |
 | persistence.size | string | `"1Gi"` | Defines the size of the persistent volume |
 | persistence.storageClass | string | `""` | Defines the storageClass of the persistent volume |
+| pipelineNamespace | string | `""` | Specifies the namespace pipelines will be executed in. Default to the same namespace the agent is deployed in. |
 | podAnnotations | object | `{}` | Add pod annotations for the agent component |
 | podSecurityContext | object | `{}` | Add pod security context |
 | replicaCount | int | `2` | The number of replicas for the deployment |

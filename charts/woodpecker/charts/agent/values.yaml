@@ -21,7 +21,6 @@ env:
   # -- Add the environment variables for the agent component
   WOODPECKER_SERVER: 'woodpecker-server:9000'
   WOODPECKER_BACKEND: kubernetes
-  WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
   WOODPECKER_BACKEND_K8S_STORAGE_CLASS: ''
   WOODPECKER_BACKEND_K8S_VOLUME_SIZE: 10G
   WOODPECKER_BACKEND_K8S_STORAGE_RWX: true
@@ -156,3 +155,6 @@ topologySpreadConstraints: []
 #   labelSelector:
 #     matchLabels:
 #       "app.kubernetes.io/name": woodpecker-agent
+
+# -- Specifies the namespace pipelines will be executed in. Default to the same namespace the agent is deployed in.
+pipelineNamespace: ""

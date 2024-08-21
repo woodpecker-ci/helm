@@ -71,6 +71,8 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+            - name: "WOODPECKER_BACKEND_K8S_NAMESPACE"
+              value: {{ if eq .Values.pipelineNamespace "" }}{{ quote .Release.Namespace }}{{ else }}{{ quote .Values.pipelineNamespace }}{{ end }}
           envFrom:
             {{- range .Values.extraSecretNamesForEnvFrom }}
             - secretRef:

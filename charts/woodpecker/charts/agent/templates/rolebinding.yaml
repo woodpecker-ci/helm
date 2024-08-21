@@ -3,6 +3,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: {{ include "woodpecker-agent.serviceAccountName" . }}
+  {{- if ne .Values.pipelineNamespace "" }}
+  namespace: {{ quote .Values.pipelineNamespace }}
+  {{- end }}
   labels:
     {{- include "woodpecker-agent.labels" . | nindent 4 }}
     {{- with .Values.serviceAccount.rbac.roleBinding.labels }}
