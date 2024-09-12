@@ -8,6 +8,7 @@
 
 ### Misc
 
+- Fix release config [[#221](https://github.com/woodpecker-ci/helm/pull/221)]
 - RBAC for Registry Secrets [[#218](https://github.com/woodpecker-ci/helm/pull/218)]
 - Fix env var parsing [[#219](https://github.com/woodpecker-ci/helm/pull/219)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.1 [[#217](https://github.com/woodpecker-ci/helm/pull/217)]
