@@ -1,13 +1,18 @@
 # Changelog
 
-## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-07-23
+## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-09-12
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@davidcurrie
+@davidcurrie, @pat-s
 
 ### Misc
 
+- Fix env var parsing [[#219](https://github.com/woodpecker-ci/helm/pull/219)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.1 [[#217](https://github.com/woodpecker-ci/helm/pull/217)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.6.1 [[#216](https://github.com/woodpecker-ci/helm/pull/216)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.6.0 [[#215](https://github.com/woodpecker-ci/helm/pull/215)]
+- chore(deps): update alpine/helm docker tag to v3.15.4 [[#213](https://github.com/woodpecker-ci/helm/pull/213)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.5.2 [[#212](https://github.com/woodpecker-ci/helm/pull/212)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.2.0 [[#211](https://github.com/woodpecker-ci/helm/pull/211)]
 - Clarification in README.md [[#209](https://github.com/woodpecker-ci/helm/pull/209)]
