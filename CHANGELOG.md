@@ -4,10 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@davidcurrie, @pat-s
+@davidcurrie, @meln5674, @pat-s
 
 ### Misc
 
+- RBAC for Registry Secrets [[#218](https://github.com/woodpecker-ci/helm/pull/218)]
 - Fix env var parsing [[#219](https://github.com/woodpecker-ci/helm/pull/219)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.1 [[#217](https://github.com/woodpecker-ci/helm/pull/217)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.6.1 [[#216](https://github.com/woodpecker-ci/helm/pull/216)]
