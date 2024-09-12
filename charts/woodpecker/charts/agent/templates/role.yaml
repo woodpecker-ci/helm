@@ -14,10 +14,7 @@ metadata:
   {{- end }}
 rules:
   - apiGroups: [''] # '' indicates core apiGroup (don't remove)
-    resources: ['persistentvolumeclaims']
-    verbs: ['create','delete']
-  - apiGroups: ['']
-    resources: ['services']
+    resources: ['persistentvolumeclaims', 'services', 'secrets']
     verbs: ['create','delete']
   - apiGroups: ['']
     resources:
