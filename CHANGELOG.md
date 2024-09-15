@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-09-13
+## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-09-15
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update alpine/helm docker tag to v3.16.1 [[#225](https://github.com/woodpecker-ci/helm/pull/225)]
 - Update subcharts and release config [[#222](https://github.com/woodpecker-ci/helm/pull/222)]
 - Fix release config [[#221](https://github.com/woodpecker-ci/helm/pull/221)]
 - RBAC for Registry Secrets [[#218](https://github.com/woodpecker-ci/helm/pull/218)]
