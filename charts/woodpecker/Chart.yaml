@@ -30,5 +30,5 @@ dependencies:
     version: 1.0.1
     condition: server.enabled
   - name: agent
-    version: 0.3.1
+    version: 0.4.0
     condition: agent.enabled
