@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-09-15
+## [1.6.0](https://github.com/woodpecker-ci/helm/releases/tag/1.6.0) - 2024-09-18
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @davidcurrie, @meln5674, @pat-s
+
+### ✨ Features
+
+- Support separate namespace for pipeline pods [[#223](https://github.com/woodpecker-ci/helm/pull/223)]
 
 ### Misc
 
