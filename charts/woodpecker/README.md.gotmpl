@@ -11,6 +11,11 @@
 To install the latest release of the chart:
 
 ```sh
+# since > 1.6.1
+helm repo add woodpecker oci://ghcr.io/woodpecker-ci/helm
+helm install woodpecker woodpecker/woodpecker
+
+# deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 ```

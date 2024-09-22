@@ -9,8 +9,7 @@ steps:
   pack-chart:
     image: quay.io/helmpack/chart-releaser:v1.6.1
     commands:
-      - mkdir -p .cr-index
-      - cr package charts/woodpecker
+      - helm package --version "${GITHUB_REF_NAME#v}" -d tmp/ charts/woodpecker
 
   release-chart:
     image: quay.io/helmpack/chart-releaser:v1.6.1
@@ -27,6 +26,17 @@ steps:
       - cd ..
       - rm -rf woodpecker-ci.github.io/
       - git reset --hard
+    when:
+      - event: tag
+
+  release-chart-ghcr:
+    image: alpine/helm:3.16.1
+    secrets:
+      - github_token
+    commands:
+      - helm package --version "${CI_COMMIT_TAG}" -d tmp/ charts/woodpecker
+      - echo $GITHUB_TOKEN | helm registry login ghcr.io --username woodpecker-ci --password-stdin
+      - helm push tmp/woodpecker-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpecker-ci/helm
     when:
       - event: tag
 

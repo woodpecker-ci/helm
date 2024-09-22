@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 1.5.1](https://img.shields.io/badge/Version-1.5.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.0](https://img.shields.io/badge/AppVersion-2.7.0-informational?style=flat-square)
+![Version: 1.5.2](https://img.shields.io/badge/Version-1.5.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.1](https://img.shields.io/badge/AppVersion-2.7.1-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -9,6 +9,11 @@
 To install the latest release of the chart:
 
 ```sh
+# since > 1.6.1
+helm repo add woodpecker oci://ghcr.io/woodpecker-ci/helm
+helm install woodpecker woodpecker/woodpecker
+
+# deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 ```
@@ -30,7 +35,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 1.5.1
+  version          = 1.5.2
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -51,8 +56,8 @@ resource "helm_release" "woodpecker" {
 
 | Repository | Name | Version |
 |------------|------|---------|
-|  | agent | 0.3.0 |
-|  | server | 1.0.0 |
+|  | agent | 0.4.0 |
+|  | server | 1.0.1 |
 
 ## Values
 
