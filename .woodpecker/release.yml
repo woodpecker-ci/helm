@@ -9,7 +9,8 @@ steps:
   pack-chart:
     image: quay.io/helmpack/chart-releaser:v1.6.1
     commands:
-      - helm package --version "${GITHUB_REF_NAME#v}" -d tmp/ charts/woodpecker
+      - mkdir -p .cr-index
+      - cr package charts/woodpecker
 
   release-chart:
     image: quay.io/helmpack/chart-releaser:v1.6.1
