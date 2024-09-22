@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 1.5.2](https://img.shields.io/badge/Version-1.5.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.1](https://img.shields.io/badge/AppVersion-2.7.1-informational?style=flat-square)
+![Version: 1.6.0](https://img.shields.io/badge/Version-1.6.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.1](https://img.shields.io/badge/AppVersion-2.7.1-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -35,7 +35,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 1.5.2
+  version          = 1.6.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional

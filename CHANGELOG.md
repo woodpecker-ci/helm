@@ -1,16 +1,36 @@
 # Changelog
 
-## [1.5.2](https://github.com/woodpecker-ci/helm/releases/tag/1.5.2) - 2024-07-23
+## [1.6.0](https://github.com/woodpecker-ci/helm/releases/tag/1.6.0) - 2024-09-18
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@davidcurrie
+@davidcurrie, @meln5674, @pat-s
+
+### ✨ Features
+
+- Support separate namespace for pipeline pods [[#223](https://github.com/woodpecker-ci/helm/pull/223)]
+- RBAC for Registry Secrets [[#218](https://github.com/woodpecker-ci/helm/pull/218)]
+
+### 📈 Enhancement
+
+- Remove uneeded agent role rules [[#224](https://github.com/woodpecker-ci/helm/pull/224)]
+
+### 📚 Documentation
+
+- Clarification in README.md [[#209](https://github.com/woodpecker-ci/helm/pull/209)]
 
 ### Misc
 
+- chore(deps): update alpine/helm docker tag to v3.16.1 [[#225](https://github.com/woodpecker-ci/helm/pull/225)]
+- Update subcharts and release config [[#222](https://github.com/woodpecker-ci/helm/pull/222)]
+- Fix release config [[#221](https://github.com/woodpecker-ci/helm/pull/221)]
+- Fix env var parsing [[#219](https://github.com/woodpecker-ci/helm/pull/219)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.1 [[#217](https://github.com/woodpecker-ci/helm/pull/217)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.6.1 [[#216](https://github.com/woodpecker-ci/helm/pull/216)]
+- chore(deps): update dependency helm-unittest/helm-unittest to v0.6.0 [[#215](https://github.com/woodpecker-ci/helm/pull/215)]
+- chore(deps): update alpine/helm docker tag to v3.15.4 [[#213](https://github.com/woodpecker-ci/helm/pull/213)]
 - chore(deps): update dependency helm-unittest/helm-unittest to v0.5.2 [[#212](https://github.com/woodpecker-ci/helm/pull/212)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.2.0 [[#211](https://github.com/woodpecker-ci/helm/pull/211)]
-- Clarification in README.md [[#209](https://github.com/woodpecker-ci/helm/pull/209)]
 
 ## [1.5.1](https://github.com/woodpecker-ci/helm/releases/tag/1.5.1) - 2024-07-19
 
