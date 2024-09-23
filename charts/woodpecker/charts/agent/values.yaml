@@ -31,13 +31,15 @@ env:
 
 # -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom:
-  - woodpecker-secret
+  - woodpecker-agent-agent-secret
 
+# -- whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-secret. Only needed if the agent is deployed in a different namespace than the server, otherwise the secret is created by the server subchart.
+createAgentSecret: false
 # -- Create an agent secret
-secrets: {}
-#  - name: woodpecker-secret
+secrets:
+#  - name: woodpecker-secrets-agent
 #    data:
-#      WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
+#      key: value
 
 # -- Additional volumes that can be mounted in containers
 extraVolumes: []

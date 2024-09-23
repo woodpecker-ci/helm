@@ -39,13 +39,13 @@ env:
 extraSecretNamesForEnvFrom:
   # - woodpecker-github-client
   # - woodpecker-github-secret
-  - woodpecker-secret
+  - woodpecker-server-agent-secret
 
 # whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-secret
 createAgentSecret: true
 # -- Create a generic secret to store things in, e.g. env values
 secrets:
-  - name: woodpecker-secret
+  - name: woodpecker-secrets-server
   #  data:
   #    key: value
 
