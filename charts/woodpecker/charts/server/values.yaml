@@ -41,11 +41,13 @@ extraSecretNamesForEnvFrom:
   # - woodpecker-github-secret
   - woodpecker-secret
 
+# whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-secret
+createAgentSecret: true
 # -- Create a generic secret to store things in, e.g. env values
 secrets:
   - name: woodpecker-secret
   #  data:
-  #    WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
+  #    key: value
 
 prometheus:
   podmonitor:
