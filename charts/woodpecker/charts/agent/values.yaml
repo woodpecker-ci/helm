@@ -30,14 +30,12 @@ env:
   WOODPECKER_CONNECT_RETRY_COUNT: '1'
 
 # -- Add extra secret that is contains environment variables
-extraSecretNamesForEnvFrom:
-  - woodpecker-agent-agent-secret
+extraSecretNamesForEnvFrom: []
+# - woodpecker-custom-secret
 
-# -- whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-secret. Only needed if the agent is deployed in a different namespace than the server, otherwise the secret is created by the server subchart.
-createAgentSecret: false
 # -- Create an agent secret
-secrets:
-#  - name: woodpecker-secrets-agent
+secrets: []
+#  - name: woodpecker-custom-secret
 #    data:
 #      key: value
 
