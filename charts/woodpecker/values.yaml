@@ -202,9 +202,9 @@ server:
   createAgentSecret: true
   # -- Create a generic secret to store things in, e.g. env values
   secrets: []
-    # - name: secret
-    #   data:
-    #     key: value
+  # - name: secret
+  #   data:
+  #     key: value
 
   # -- Additional volumes that can be mounted in containers
   extraVolumes:
