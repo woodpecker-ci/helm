@@ -38,7 +38,7 @@ agent:
 
   # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom:
-    - woodpecker-secret
+    - woodpecker-default-agent-secret
 
   persistence:
     # -- Enable the creation of the persistent volume
@@ -196,11 +196,15 @@ server:
   extraSecretNamesForEnvFrom:
     # - woodpecker-github-client
     # - woodpecker-github-secret
-    - woodpecker-secret
+    - woodpecker-default-agent-secret
 
+  # whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-default-agent-secret
+  createAgentSecret: true
   # -- Create a generic secret to store things in, e.g. env values
-  secrets:
-    - name: woodpecker-secret
+  secrets: []
+    # - name: secret
+    #   data:
+    #     key: value
 
   # -- Additional volumes that can be mounted in containers
   extraVolumes:
