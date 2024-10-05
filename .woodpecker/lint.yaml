@@ -1,0 +1,31 @@
+when:
+  - event: tag
+  - event: push
+    branch: main
+  - event: pull_request
+
+steps:
+  lint-markdown:
+    depends_on: []
+    image: davidanson/markdownlint-cli2:v0.14.0
+    commands:
+      - 'markdownlint-cli2 *.{md,markdown}'
+
+  editor-config:
+    image: mstruebing/editorconfig-checker:v3.0.3
+    depends_on: []
+
+  helm-lint:
+    image: docker.io/alpine/helm:3.16.1
+    depends_on: []
+    commands:
+      - helm dependency update charts/shinyproxy
+      - helm lint charts/shinyproxy
+
+  lint-yaml:
+    image: pipelinecomponents/yamllint:0.32.1
+    depends_on: []
+    commands:
+      - yamllint .
+    when:
+      path: '*.{yml,yaml}'
