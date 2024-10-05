@@ -1,5 +1,6 @@
 export default {
   commentOnReleasedPullRequests: false,
+  includeContributors: false,
   beforePrepare: async ({ exec, nextVersion }) => {
     await exec(`apt update && apt-get install -y -q git curl`);
     await exec(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`);
