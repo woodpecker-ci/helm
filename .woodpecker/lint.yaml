@@ -19,8 +19,8 @@ steps:
     image: docker.io/alpine/helm:3.16.1
     depends_on: []
     commands:
-      - helm dependency update charts/shinyproxy
-      - helm lint charts/shinyproxy
+      - helm dependency update charts/woodpecker
+      - helm lint --with-subcharts charts/*
 
   lint-yaml:
     image: pipelinecomponents/yamllint:0.32.1
