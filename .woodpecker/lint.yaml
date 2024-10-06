@@ -15,7 +15,7 @@ steps:
     image: docker.io/mstruebing/editorconfig-checker:v3.0.3
     depends_on: []
     commands:
-      - editorconfig-checker --config .editorconfig-checker.json .
+      - ec --config .editorconfig-checker.json .
 
   helm-lint:
     image: docker.io/alpine/helm:3.16.1
