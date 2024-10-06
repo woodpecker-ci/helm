@@ -31,13 +31,13 @@ steps:
       - event: tag
 
   update-readme:
-    image: jnorwood/helm-docs:v1.14.2
+    image: docker.io/jnorwood/helm-docs:v1.14.2
     commands:
       - helm-docs
       - cat charts/woodpecker/README.md
 
   push-readme:
-    image: appleboy/drone-git-push:1.1.0
+    image: docker.io/appleboy/drone-git-push:1.1.0
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main

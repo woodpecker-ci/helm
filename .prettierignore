@@ -1,0 +1,4 @@
+charts/woodpecker/templates/
+charts/woodpecker/server/templates/
+charts/woodpecker/agent/templates/
+values.yaml
