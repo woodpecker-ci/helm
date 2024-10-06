@@ -21,8 +21,7 @@ lint-helm:
 	helm lint --with-subcharts charts/*
 
 .PHONY: lint
-lint:
-	make lint-helm && make lint-yaml && make lint-markdown && make lint-editorconfig
+lint: lint-helm lint-yaml lint-markdown lint-editorconfig
 
 .PHONY: test
 test:
