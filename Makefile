@@ -15,7 +15,7 @@ lint-yaml:
 	yamllint --strict -f colored .
 
 lint-editorconfig:
-	editorconfig-checker .
+	editorconfig-checker --config .editorconfig-checker.json .
 
 lint-helm:
 	helm lint --with-subcharts charts/*
