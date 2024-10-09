@@ -8,6 +8,7 @@
 
 ### Misc
 
+- Publish chart to ghcr [[#226](https://github.com/woodpecker-ci/helm/pull/226)]
 - [pre-commit.ci] pre-commit autoupdate [[#232](https://github.com/woodpecker-ci/helm/pull/232)]
 - chore: update and apply linters [[#231](https://github.com/woodpecker-ci/helm/pull/231)]
 - release-plugin: don't include contributors [[#227](https://github.com/woodpecker-ci/helm/pull/227)]
