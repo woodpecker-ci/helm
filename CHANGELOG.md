@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-10-09
+## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-10-10
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,8 @@
 
 ### Misc
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.2 [[#234](https://github.com/woodpecker-ci/helm/pull/234)]
+- chore(deps): update alpine/helm docker tag to v3.16.2 [[#233](https://github.com/woodpecker-ci/helm/pull/233)]
 - Publish chart to ghcr [[#226](https://github.com/woodpecker-ci/helm/pull/226)]
 - [pre-commit.ci] pre-commit autoupdate [[#232](https://github.com/woodpecker-ci/helm/pull/232)]
 - chore: update and apply linters [[#231](https://github.com/woodpecker-ci/helm/pull/231)]
