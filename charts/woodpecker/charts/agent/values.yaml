@@ -30,14 +30,14 @@ env:
   WOODPECKER_CONNECT_RETRY_COUNT: '1'
 
 # -- Add extra secret that is contains environment variables
-extraSecretNamesForEnvFrom:
-  - woodpecker-secret
+extraSecretNamesForEnvFrom: []
+# - woodpecker-custom-secret
 
 # -- Create an agent secret
-secrets: {}
-#  - name: woodpecker-secret
+secrets: []
+#  - name: woodpecker-custom-secret
 #    data:
-#      WOODPECKER_AGENT_SECRET: ${WOODPECKER_AGENT_SECRET}
+#      key: value
 
 # -- Additional volumes that can be mounted in containers
 extraVolumes: []

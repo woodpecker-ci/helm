@@ -11,6 +11,14 @@
 
 {{ template "chart.requirementsSection" . }}
 
+## Creation of agent secret
+
+The server chart automatically creates an agent secret to securely communicate with the agent.
+In the following scenarios, you need to take additional action:
+
+- if the agent is deployed to a separate namespace, you need to create the same secret also in the agent namespace
+- if you deploy multiple agents (with a different config), you need to create an additional agent secret
+
 ## Upgrading
 
 <details>
