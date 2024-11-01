@@ -1,0 +1,33 @@
+when:
+  - event: tag
+  - event: push
+    branch: main
+  - event: pull_request
+
+steps:
+  lint-markdown:
+    depends_on: []
+    image: docker.io/davidanson/markdownlint-cli2:v0.14.0
+    commands:
+      - 'markdownlint-cli2 *.{md,markdown}'
+
+  editor-config:
+    image: docker.io/mstruebing/editorconfig-checker:v3.0.3
+    depends_on: []
+    commands:
+      - ec --config .editorconfig-checker.json .
+
+  helm-lint:
+    image: docker.io/alpine/helm:3.16.2
+    depends_on: []
+    commands:
+      - helm dependency update charts/woodpecker
+      - helm lint --with-subcharts charts/*
+
+  lint-yaml:
+    image: docker.io/pipelinecomponents/yamllint:0.32.1
+    depends_on: []
+    commands:
+      - yamllint .
+    when:
+      path: '*.{yml,yaml}'
