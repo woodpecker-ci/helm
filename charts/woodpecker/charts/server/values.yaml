@@ -36,10 +36,7 @@ env:
   # WOODPECKER_GITHUB: "true"
 
 # -- Add extra environment variables from the secrets list
-extraSecretNamesForEnvFrom:
-  # - woodpecker-github-client
-  # - woodpecker-github-secret
-  - woodpecker-default-agent-secret # created by `createAgentSecret: true`
+extraSecretNamesForEnvFrom: []
 
 # whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-default-agent-secret
 createAgentSecret: true
