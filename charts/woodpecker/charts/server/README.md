@@ -1,6 +1,6 @@
 # server
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.1](https://img.shields.io/badge/AppVersion-2.7.1-informational?style=flat-square)
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.1](https://img.shields.io/badge/AppVersion-2.7.1-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -24,6 +24,14 @@ In the following scenarios, you need to take additional action:
 
 <details>
 
+<summary>To 2.0.0</summary>
+
+- If you have defined the env var `WOODPECKER_AGENT_SECRET` manually, you need to decide whether you want to continue doing so (if yes, set `createAgentSecret: false`) or if you want to make use of the new `createAgentSecret: true` option (new default). This option creates a k8s secret which contains the env var `WOODPECKER_AGENT_SECRET` and can be used to connect agents in the same namespace.
+
+</details>
+
+<details>
+
 <summary>To 1.0.0</summary>
 
 - split `metrics.enabled` and the PodMonitor deployment to `prometheus.podmonitor.enabled`
@@ -41,7 +49,7 @@ In the following scenarios, you need to take additional action:
 | createAgentSecret | bool | `true` |  |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
-| extraSecretNamesForEnvFrom | list | `["woodpecker-default-agent-secret"]` | Add extra environment variables from the secrets list |
+| extraSecretNamesForEnvFrom | list | `[]` | Add extra environment variables from the secrets list |
 | extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | fullnameOverride | string | `""` | Overrides the full name of the helm chart of the server component |
