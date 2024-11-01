@@ -37,8 +37,7 @@ agent:
     WOODPECKER_CONNECT_RETRY_COUNT: '1'
 
   # -- Add extra secret that is contains environment variables
-  extraSecretNamesForEnvFrom:
-    - woodpecker-default-agent-secret
+  extraSecretNamesForEnvFrom: []
 
   persistence:
     # -- Enable the creation of the persistent volume
@@ -193,10 +192,7 @@ server:
     # WOODPECKER_GITHUB: "true"
 
   # -- Add extra environment variables from the secrets list
-  extraSecretNamesForEnvFrom:
-    # - woodpecker-github-client
-    # - woodpecker-github-secret
-    - woodpecker-default-agent-secret
+  extraSecretNamesForEnvFrom: []
 
   # whether to create the default WOODPECKER_AGENT_SECRET in woodpecker-default-agent-secret
   createAgentSecret: true

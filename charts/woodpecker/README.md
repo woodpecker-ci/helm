@@ -51,8 +51,8 @@ resource "helm_release" "woodpecker" {
 
 | Repository | Name | Version |
 |------------|------|---------|
-|  | agent | 0.4.0 |
-|  | server | 1.0.1 |
+|  | agent | 1.0.0 |
+|  | server | 2.0.0 |
 
 ## Values
 
@@ -70,7 +70,7 @@ resource "helm_release" "woodpecker" {
 | agent.env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
 | agent.env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | agent.env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
-| agent.extraSecretNamesForEnvFrom | list | `["woodpecker-default-agent-secret"]` | Add extra secret that contains environment variables |
+| agent.extraSecretNamesForEnvFrom | list | `[]` | Add extra secret that is contains environment variables |
 | agent.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | agent.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | agent.fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
@@ -109,7 +109,7 @@ resource "helm_release" "woodpecker" {
 | server.dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | server.enabled | bool | `true` | Enable the server component |
 | server.env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
-| server.extraSecretNamesForEnvFrom | list | `["woodpecker-default-agent-secret"]` | Add extra environment variables from the secrets list |
+| server.extraSecretNamesForEnvFrom | list | `[]` | Add extra environment variables from the secrets list |
 | server.extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | server.extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | server.fullnameOverride | string | `""` | Overrides the full name of the helm chart of the server component |
