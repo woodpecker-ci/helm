@@ -29,7 +29,7 @@ A Helm chart for the Woodpecker agent
 | env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
 | env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
-| extraSecretNamesForEnvFrom | list | `[]` | Add extra secret that is contains environment variables |
+| extraSecretNamesForEnvFrom | list | `[]` | Add extra secret that contains environment variables |
 | extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
