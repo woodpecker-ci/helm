@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v2.1.0 [[#239](https://github.com/woodpecker-ci/helm/pull/239)]
 - [pre-commit.ci] pre-commit autoupdate [[#237](https://github.com/woodpecker-ci/helm/pull/237)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.2 [[#236](https://github.com/woodpecker-ci/helm/pull/236)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.16.2 [[#234](https://github.com/woodpecker-ci/helm/pull/234)]
