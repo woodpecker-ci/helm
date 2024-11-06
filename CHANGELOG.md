@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-11-05
+## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-11-06
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.3 [[#240](https://github.com/woodpecker-ci/helm/pull/240)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v2.1.0 [[#239](https://github.com/woodpecker-ci/helm/pull/239)]
 - [pre-commit.ci] pre-commit autoupdate [[#237](https://github.com/woodpecker-ci/helm/pull/237)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.2 [[#236](https://github.com/woodpecker-ci/helm/pull/236)]
