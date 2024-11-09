@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-11-06
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v2.1.1 [[#241](https://github.com/woodpecker-ci/helm/pull/241)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.3 [[#240](https://github.com/woodpecker-ci/helm/pull/240)]
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v2.1.0 [[#239](https://github.com/woodpecker-ci/helm/pull/239)]
+- [pre-commit.ci] pre-commit autoupdate [[#237](https://github.com/woodpecker-ci/helm/pull/237)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.7.2 [[#236](https://github.com/woodpecker-ci/helm/pull/236)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.2 [[#234](https://github.com/woodpecker-ci/helm/pull/234)]
+- chore(deps): update alpine/helm docker tag to v3.16.2 [[#233](https://github.com/woodpecker-ci/helm/pull/233)]
+- Publish chart to ghcr [[#226](https://github.com/woodpecker-ci/helm/pull/226)]
+- [pre-commit.ci] pre-commit autoupdate [[#232](https://github.com/woodpecker-ci/helm/pull/232)]
+- chore: update and apply linters [[#231](https://github.com/woodpecker-ci/helm/pull/231)]
+- release-plugin: don't include contributors [[#227](https://github.com/woodpecker-ci/helm/pull/227)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2 [[#229](https://github.com/woodpecker-ci/helm/pull/229)]
+
 ## [1.6.0](https://github.com/woodpecker-ci/helm/releases/tag/1.6.0) - 2024-09-18
 
 ### ❤️ Thanks to all contributors! ❤️
