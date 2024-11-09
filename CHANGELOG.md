@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.2](https://github.com/woodpecker-ci/helm/releases/tag/1.6.2) - 2024-11-09
+
+### ❤️ Thanks to all contributors! ❤️
+
+@anbraten
+
+### 🐛 Bug Fixes
+
+- Fix ghcr login [[#242](https://github.com/woodpecker-ci/helm/pull/242)]
+
 ## [1.6.1](https://github.com/woodpecker-ci/helm/releases/tag/1.6.1) - 2024-11-06
 
 ### ❤️ Thanks to all contributors! ❤️
