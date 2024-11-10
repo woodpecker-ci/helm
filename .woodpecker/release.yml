@@ -32,11 +32,12 @@ steps:
 
   release-chart-ghcr:
     image: alpine/helm:3.16.2
-    secrets:
-      - github_token
+    environment:
+      GITHUB_TOKEN:
+        from_secret: github_token
     commands:
       - helm package --version "${CI_COMMIT_TAG}" -d tmp/ charts/woodpecker
-      - echo $GITHUB_TOKEN | helm registry login ghcr.io --username woodpecker-ci --password-stdin
+      - echo $GITHUB_TOKEN | helm registry login ghcr.io --username ignored --password-stdin
       - helm push tmp/woodpecker-${CI_COMMIT_TAG}.tgz oci://ghcr.io/woodpecker-ci/helm
     when:
       - event: tag
