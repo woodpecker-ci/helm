@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.3](https://github.com/woodpecker-ci/helm/releases/tag/1.6.3) - 2024-11-10
+
+### Misc
+
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.15.0 [[#244](https://github.com/woodpecker-ci/helm/pull/244)]
+
 ## [1.6.2](https://github.com/woodpecker-ci/helm/releases/tag/1.6.2) - 2024-11-09
 
 ### ❤️ Thanks to all contributors! ❤️
