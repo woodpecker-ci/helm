@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.6.3](https://github.com/woodpecker-ci/helm/releases/tag/1.6.3) - 2024-11-10
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-10
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### 💥 Breaking changes
+
+- Auto-create `WOODPECKER_AGENT_SECRET` secret [[#228](https://github.com/woodpecker-ci/helm/pull/228)]
 
 ### Misc
 
