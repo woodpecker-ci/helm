@@ -94,6 +94,10 @@ spec:
               value: ":{{ .Values.metrics.port }}"
             {{- end }}
           envFrom:
+            {{- if .Values.createAgentSecret }}
+            - secretRef:
+                name: woodpecker-default-agent-secret
+            {{- end }}
             {{- range .Values.extraSecretNamesForEnvFrom }}
             - secretRef:
                 name: {{ . }}

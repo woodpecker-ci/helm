@@ -1,6 +1,6 @@
 # server
 
-![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.3](https://img.shields.io/badge/AppVersion-2.7.3-informational?style=flat-square)
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.3](https://img.shields.io/badge/AppVersion-2.7.3-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -12,7 +12,23 @@ A Helm chart for the Woodpecker server
 | ---- | ------ | --- |
 | Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
 
+## Creation of agent secret
+
+The server chart automatically creates an agent secret to securely communicate with the agent.
+In the following scenarios, you need to take additional action:
+
+- if the agent is deployed to a separate namespace, you need to create the same secret also in the agent namespace
+- if you deploy multiple agents (with a different config), you need to create an additional agent secret
+
 ## Upgrading
+
+<details>
+
+<summary>To 2.0.0</summary>
+
+- If you have defined the env var `WOODPECKER_AGENT_SECRET` manually, you need to decide whether you want to continue doing so (if yes, set `createAgentSecret: false`) or if you want to make use of the new `createAgentSecret: true` option (new default). This option creates a k8s secret which contains the env var `WOODPECKER_AGENT_SECRET` and can be used to connect agents in the same namespace.
+
+</details>
 
 <details>
 
@@ -30,9 +46,10 @@ A Helm chart for the Woodpecker server
 | affinity | object | `{}` | Add affinity |
 | args | list | `[]` | Defines a custom args to start the container |
 | command | list | `[]` | Defines a custom command to start the container |
+| createAgentSecret | bool | `true` |  |
 | dnsConfig | object | `{}` | Overrides the default DNS configuration |
 | env | object | `{"WOODPECKER_ADMIN":"woodpecker,admin","WOODPECKER_HOST":"https://xxxxxxx"}` | Add environment variables for the server component |
-| extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra environment variables from the secrets list |
+| extraSecretNamesForEnvFrom | list | `[]` | Add extra environment variables from the secrets list |
 | extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | fullnameOverride | string | `""` | Overrides the full name of the helm chart of the server component |
@@ -69,7 +86,7 @@ A Helm chart for the Woodpecker server
 | prometheus.rules.enabled | bool | `false` | deploy prometheus-rules |
 | prometheus.rules.labels | object | `{}` | add labels to prometheus-rules (to be selected by prometheus-operator) |
 | resources | object | `{}` | Specifies the ressources for the server component |
-| secrets | list | `[{"name":"woodpecker-secret"}]` | Create a generic secret to store things in, e.g. env values |
+| secrets | list | `[]` | Create a generic secret to store things in, e.g. env values |
 | securityContext | object | `{}` | Add security context |
 | service.clusterIP | string | `nil` | The cluster IP of the service (optional) |
 | service.loadBalancerIP | string | `nil` | The loadbalancer IP of the service (optional) |

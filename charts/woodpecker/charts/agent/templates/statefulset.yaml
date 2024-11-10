@@ -72,6 +72,10 @@ spec:
               value: {{ $value | quote }}
             {{- end }}
           envFrom:
+            {{- if .Values.loadAgentSecret }}
+            - secretRef:
+                name: woodpecker-default-agent-secret
+            {{- end }}
             {{- range .Values.extraSecretNamesForEnvFrom }}
             - secretRef:
                 name: {{ . }}

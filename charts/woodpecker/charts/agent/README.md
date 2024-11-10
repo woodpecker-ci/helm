@@ -1,6 +1,6 @@
 # agent
 
-![Version: 0.4.0](https://img.shields.io/badge/Version-0.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.3](https://img.shields.io/badge/AppVersion-2.7.3-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.3](https://img.shields.io/badge/AppVersion-2.7.3-informational?style=flat-square)
 
 A Helm chart for the Woodpecker agent
 
@@ -11,6 +11,18 @@ A Helm chart for the Woodpecker agent
 | Name | Email | Url |
 | ---- | ------ | --- |
 | Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
+
+## Upgrading
+
+<details>
+
+<summary>To 1.0.0</summary>
+
+- If you have injected/defined the env var `WOODPECKER_AGENT_SECRET` manually, you need to decide whether you want to continue doing so (if yes, set `mapAgentSecret: false`) or if you want to make use of the new `mapAgentSecret: true` option (new default). This option maps an existing k8s secret in the same namespace into the statefulset.
+
+</details>
+
+<details>
 
 ## Values
 
@@ -29,7 +41,7 @@ A Helm chart for the Woodpecker agent
 | env.WOODPECKER_BACKEND_K8S_VOLUME_SIZE | string | `"10G"` |  |
 | env.WOODPECKER_CONNECT_RETRY_COUNT | string | `"1"` |  |
 | env.WOODPECKER_SERVER | string | `"woodpecker-server:9000"` | Add the environment variables for the agent component |
-| extraSecretNamesForEnvFrom | list | `["woodpecker-secret"]` | Add extra secret that is contains environment variables |
+| extraSecretNamesForEnvFrom | list | `[]` | Add extra secret that is contains environment variables |
 | extraVolumeMounts | list | `[]` | Additional volumes that will be attached to the agent container |
 | extraVolumes | list | `[]` | Additional volumes that can be mounted in containers |
 | fullnameOverride | string | `""` | Overrides the full name of the chart of the agent component |
@@ -39,6 +51,7 @@ A Helm chart for the Woodpecker agent
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` | The image pull secrets |
 | initContainers | list | `[]` | Add additional init containers to the pod (evaluated as a template) |
+| mapAgentSecret | bool | `true` |  |
 | nameOverride | string | `""` | Overrides the name of the chart of the agent component |
 | nodeSelector | object | `{}` | Specifies the labels of the nodes that the agent component must be running |
 | persistence.accessModes | list | `["ReadWriteOnce"]` | Defines the access mode of the persistent volume |
@@ -51,7 +64,7 @@ A Helm chart for the Woodpecker agent
 | podSecurityContext | object | `{}` | Add pod security context |
 | replicaCount | int | `2` | The number of replicas for the deployment |
 | resources | object | `{}` | Specifies the resources for the agent component |
-| secrets | object | `{}` | Create an agent secret |
+| secrets | list | `[]` | Create an agent secret |
 | securityContext | object | `{}` | Add security context |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created (also see RBAC subsection) |
