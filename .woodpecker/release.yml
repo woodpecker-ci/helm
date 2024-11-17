@@ -49,7 +49,7 @@ steps:
       - cat charts/woodpecker/README.md
 
   push-readme:
-    image: docker.io/appleboy/drone-git-push:1.1.0
+    image: docker.io/appleboy/drone-git-push:1.1.1
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main
