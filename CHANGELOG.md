@@ -4,11 +4,15 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@pat-s, @wrenix
 
 ### 💥 Breaking changes
 
 - Auto-create `WOODPECKER_AGENT_SECRET` secret [[#228](https://github.com/woodpecker-ci/helm/pull/228)]
+
+### 📈 Enhancement
+
+- fix(server): add group name of prometheus-rules [[#246](https://github.com/woodpecker-ci/helm/pull/246)]
 
 ### Misc
 
