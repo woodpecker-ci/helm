@@ -12,6 +12,7 @@
 
 ### Misc
 
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.1.1 [[#250](https://github.com/woodpecker-ci/helm/pull/250)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#249](https://github.com/woodpecker-ci/helm/pull/249)]
 - chore(deps): update alpine/helm docker tag to v3.16.3 [[#248](https://github.com/woodpecker-ci/helm/pull/248)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.15.0 [[#244](https://github.com/woodpecker-ci/helm/pull/244)]
