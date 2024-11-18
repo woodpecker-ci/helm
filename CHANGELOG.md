@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-17
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-18
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### 📈 Enhancement
 
+- fix: regressions of #228 [[#247](https://github.com/woodpecker-ci/helm/pull/247)]
 - fix(server): add group name of prometheus-rules [[#246](https://github.com/woodpecker-ci/helm/pull/246)]
 
 ### Misc
