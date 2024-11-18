@@ -32,7 +32,7 @@ env:
 # -- Add extra secret that is contains environment variables
 extraSecretNamesForEnvFrom: []
 
-# whether to map the default WOODPECKER_AGENT_SECRET in woodpecker-default-agent-secret. NB: the secret must be either created via the server option `createAgentSecret` or manually created
+# whether to map the default WOODPECKER_AGENT_SECRET in woodpecker-default-agent-secret. NB: the secret must be either created via the server option `createAgentSecret` or manually set
 mapAgentSecret: true
 # -- Create an agent secret
 secrets: []
