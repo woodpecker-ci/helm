@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-18
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-19
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -13,10 +13,14 @@
 ### 📈 Enhancement
 
 - fix: regressions of #228 [[#247](https://github.com/woodpecker-ci/helm/pull/247)]
+
+### 🐛 Bug Fixes
+
 - fix(server): add group name of prometheus-rules [[#246](https://github.com/woodpecker-ci/helm/pull/246)]
 
 ### Misc
 
+- chore: format via prettier [[#253](https://github.com/woodpecker-ci/helm/pull/253)]
 - chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.1.1 [[#250](https://github.com/woodpecker-ci/helm/pull/250)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#249](https://github.com/woodpecker-ci/helm/pull/249)]
 - chore(deps): update alpine/helm docker tag to v3.16.3 [[#248](https://github.com/woodpecker-ci/helm/pull/248)]
