@@ -10,6 +10,10 @@
 
 - Auto-create `WOODPECKER_AGENT_SECRET` secret [[#228](https://github.com/woodpecker-ci/helm/pull/228)]
 
+### 📚 Documentation
+
+- Optimize README [[#254](https://github.com/woodpecker-ci/helm/pull/254)]
+
 ### 📈 Enhancement
 
 - fix: regressions of #228 [[#247](https://github.com/woodpecker-ci/helm/pull/247)]
