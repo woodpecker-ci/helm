@@ -4,23 +4,24 @@
 
 This repository contains the helm charts of the [Woodpecker](https://woodpecker-ci.org) project.
 
-**Source Code**: <https://github.com/woodpecker-ci/woodpecker>
+Upstream repository: <https://github.com/woodpecker-ci/woodpecker>
 
 ## Configuration
 
-Please see the README's of the sub-charts for their configuration options:
+Please check the individual README files of the sub-charts for the respective configuration options:
 
 - [woodpecker](./charts/woodpecker/README.md)
 - [(server)](./charts/woodpecker/charts/server/README.md)
 - [(agent)](./charts/woodpecker/charts/agent/README.md)
 
 > [!NOTE]
-> If you want to install a functional instance of Woodpecker, you only need the `woodpecker` chart.
-> The `server` and `agent` charts are used as sub-charts by the `woodpecker` umbrella chart.
-> They can be used independently but this is usually not needed.
+> To install Woodpecker via Helm, you typically only need the `woodpecker` chart.
+> The `server` and `agent` charts are sub-charts of the `woodpecker` chart.
+> The `agent` chart can be used independently to install agents on multiple clusters with one central server instance.
 
 ## Contributing
 
 - The README is generated via [`helm-docs`](https://github.com/norwoodj/helm-docs).
   To generate it, run `make docs` and **do not** run `helm-docs` directly (as the main chart uses a custom template)
 - Don't edit `README.md` directly, it will be overwritten by `helm-docs`. Instead, edit the respective `*.gotmpl` files.
+- When adding new resources or extending them, please add tests via [`helm-unittest`](https://github.com/helm-unittest/helm-unittest)
