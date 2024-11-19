@@ -4,11 +4,7 @@
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "Exclude": [
-    "LICENSE",
-    ".git/",
-    "Makefile"
-  ],
+  "Exclude": ["LICENSE", ".git/", "Makefile"],
   "AllowedContentTypes": [],
   "PassedFiles": [],
   "Disable": {
