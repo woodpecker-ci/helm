@@ -26,6 +26,20 @@ A Helm chart for the Woodpecker agent
 
 ## Values
 
+### NetworkPolicy
+
+| Key                            | Type   | Default                                                                                                                                      | Description                                                                       |
+| ------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| networkPolicy.egress.apiserver | object | `{"ports":[{"port":6443,"protocol":"TCP"}],"to":[{"ipBlock":{"cidr":"10.43.0.1/32"}}]}`                                                      | rule to access Kubernetes APIServer                                               |
+| networkPolicy.egress.dns       | list   | `[{"namespaceSelector":{"matchLabels":{"kubernetes.io/metadata.name":"kube-system"}},"podSelector":{"matchLabels":{"k8s-app":"kube-dns"}}}]` | rule to access DNS                                                                |
+| networkPolicy.egress.enabled   | bool   | `true`                                                                                                                                       | activate egress no networkpolicy                                                  |
+| networkPolicy.egress.extra     | list   | `[]`                                                                                                                                         | rule to access additional PS: you should not use (the job it-self are other pods) |
+| networkPolicy.egress.server    | object | `{"ports":[{"port":9000,"protocol":"TCP"}],"to":[{"podSelector":{"matchLabels":{"app.kubernetes.io/name":"server"}}}]}`                      | rule to access woodpecker-agent                                                   |
+| networkPolicy.enabled          | bool   | `false`                                                                                                                                      | deploy networkpolicy                                                              |
+| networkPolicy.ingress.http     | list   | `[]`                                                                                                                                         | allow to http ports normaly not needed                                            |
+
+### Other Values
+
 | Key                                         | Type   | Default                           | Description                                                                                                                                                                                                                                                                                                                              |
 | ------------------------------------------- | ------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | affinity                                    | object | `{}`                              | Specifies the affinity                                                                                                                                                                                                                                                                                                                   |

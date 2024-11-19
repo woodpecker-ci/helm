@@ -1,0 +1,61 @@
+{{- with .Values.networkPolicy }}
+{{- if .enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "woodpecker-server.fullname" $ }}
+  labels:
+    {{- include "woodpecker-server.labels" $ | nindent 4 }}
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "woodpecker-server.selectorLabels" $ | nindent 6 }}
+  policyTypes:
+    - Ingress
+    {{- if .egress.enabled }}
+    - Egress
+    {{- end }}
+  ingress:
+    {{- with .ingress.http }}
+    - ports:
+        - port: 8000
+          protocol: TCP
+      from:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}{{/* end-with .ingress.http */}}
+    {{- with .ingress.grpc }}
+    - ports:
+        - port: 9000
+          protocol: TCP
+      from:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}{{/* end-with .ingress.grpc */}}
+    {{- with .ingress.metrics }}
+    - ports:
+        - port: {{ $.Values.metrics.port }}
+          protocol: TCP
+      from:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}{{/* end-with .ingress.metrics */}}
+
+  {{- with .egress }}
+  {{- if .enabled }}
+  egress:
+    {{- with .dns }}
+    - ports:
+        - port: 53
+          protocol: UDP
+      to:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .database }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+    {{- with .extra }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}{{/* end-if egress.enabled */}}
+  {{- end }}{{/* end-with .egress */}}
+{{- end }}
+{{- end }}
