@@ -28,6 +28,7 @@
 
 ### Misc
 
+- Remove custom package rules and config [[#258](https://github.com/woodpecker-ci/helm/pull/258)]
 - fix: update tarball output dir [[#257](https://github.com/woodpecker-ci/helm/pull/257)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#255](https://github.com/woodpecker-ci/helm/pull/255)]
 - Refine CODEOWNER [[#256](https://github.com/woodpecker-ci/helm/pull/256)]
