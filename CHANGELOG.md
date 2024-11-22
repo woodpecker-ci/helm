@@ -10,6 +10,10 @@
 
 - Auto-create `WOODPECKER_AGENT_SECRET` secret [[#228](https://github.com/woodpecker-ci/helm/pull/228)]
 
+### ✨ Features
+
+- feat(woodpecker): add network-polices [[#252](https://github.com/woodpecker-ci/helm/pull/252)]
+
 ### 📚 Documentation
 
 - Optimize README [[#254](https://github.com/woodpecker-ci/helm/pull/254)]
