@@ -1,18 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":maintainLockFilesWeekly"],
+  "extends": ["github>woodpecker-ci/renovate-config"],
   "prConcurrentLimit": 5,
-  "packageRules": [
-    {
-      "matchManagers": ["dockerfile", "woodpecker"],
-      "labels": ["chore 🧰"]
-    },
-    {
-      "description": "Automerge renovate updates",
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "automerge": true
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",
