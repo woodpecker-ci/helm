@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-19
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-22
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -24,6 +24,8 @@
 
 ### Misc
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#255](https://github.com/woodpecker-ci/helm/pull/255)]
+- Refine CODEOWNER [[#256](https://github.com/woodpecker-ci/helm/pull/256)]
 - chore: format via prettier [[#253](https://github.com/woodpecker-ci/helm/pull/253)]
 - chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.1.1 [[#250](https://github.com/woodpecker-ci/helm/pull/250)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#249](https://github.com/woodpecker-ci/helm/pull/249)]
