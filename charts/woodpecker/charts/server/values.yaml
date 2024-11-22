@@ -169,6 +169,55 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+networkPolicy:
+  # -- deploy networkpolicy
+  # @section -- NetworkPolicy
+  enabled: false
+  ingress:
+
+    # -- allow to http ports
+    # should be your ingress-controller
+    # @section -- NetworkPolicy
+    http: []
+
+    # -- allow to metrics ports
+    # should be your prometheus instance
+    # @section -- NetworkPolicy
+    metrics:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: monitoring
+        podSelector:
+          matchLabels:
+            app.kubernetes.io/name: prometheus
+
+    # -- allow to grpc ports
+    # should be your woodpecker-agent
+    # @section -- NetworkPolicy
+    grpc:
+      - podSelector:
+          matchLabels:
+            app.kubernetes.io/name: agent
+  egress:
+    # -- activate egress no networkpolicy
+    # @section -- NetworkPolicy
+    enabled: true
+    # -- rule to access DNS
+    # @section -- NetworkPolicy
+    dns:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+        podSelector:
+          matchLabels:
+            k8s-app: kube-dns
+    # -- rule to access Database
+    # @section -- NetworkPolicy
+    database: []
+    # -- rule to access additional
+    # @section -- NetworkPolicy
+    extra: []
+
 # -- Specifies the ressources for the server component
 resources:
   {}

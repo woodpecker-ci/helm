@@ -102,6 +102,53 @@ serviceAccount:
       annotations: {}
       labels: {}
 
+networkPolicy:
+  # -- deploy networkpolicy
+  # @section -- NetworkPolicy
+  enabled: false
+  ingress:
+    # -- allow to http ports
+    # normaly not needed
+    # @section -- NetworkPolicy
+    http: []
+  egress:
+    # -- activate egress no networkpolicy
+    # @section -- NetworkPolicy
+    enabled: true
+    # -- rule to access DNS
+    # @section -- NetworkPolicy
+    dns:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+        podSelector:
+          matchLabels:
+            k8s-app: kube-dns
+    # -- rule to access woodpecker-agent
+    # @section -- NetworkPolicy
+    server:
+      ports:
+        - port: 9000
+          protocol: TCP
+      to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: server
+    # -- rule to access Kubernetes APIServer
+    # @section -- NetworkPolicy
+    apiserver:
+      ports:
+        - port: 6443
+          protocol: TCP
+      to:
+        - ipBlock:
+            cidr: 10.43.0.1/32
+
+    # -- rule to access additional
+    # PS: you should not use (the job it-self are other pods)
+    # @section -- NetworkPolicy
+    extra: []
+
 # -- Add pod annotations for the agent component
 podAnnotations: {}
 
