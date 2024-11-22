@@ -41,6 +41,21 @@ In the following scenarios, you need to take additional action:
 
 ## Values
 
+### NetworkPolicy
+
+| Key                           | Type | Default                                                                                                                                                      | Description                                               |
+| ----------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| networkPolicy.egress.database | list | `[]`                                                                                                                                                         | rule to access Database                                   |
+| networkPolicy.egress.dns      | list | `[{"namespaceSelector":{"matchLabels":{"kubernetes.io/metadata.name":"kube-system"}},"podSelector":{"matchLabels":{"k8s-app":"kube-dns"}}}]`                 | rule to access DNS                                        |
+| networkPolicy.egress.enabled  | bool | `true`                                                                                                                                                       | activate egress no networkpolicy                          |
+| networkPolicy.egress.extra    | list | `[]`                                                                                                                                                         | rule to access additional                                 |
+| networkPolicy.enabled         | bool | `false`                                                                                                                                                      | deploy networkpolicy                                      |
+| networkPolicy.ingress.grpc    | list | `[{"podSelector":{"matchLabels":{"app.kubernetes.io/name":"agent"}}}]`                                                                                       | allow to grpc ports should be your woodpecker-agent       |
+| networkPolicy.ingress.http    | list | `[]`                                                                                                                                                         | allow to http ports should be your ingress-controller     |
+| networkPolicy.ingress.metrics | list | `[{"namespaceSelector":{"matchLabels":{"kubernetes.io/metadata.name":"monitoring"}},"podSelector":{"matchLabels":{"app.kubernetes.io/name":"prometheus"}}}]` | allow to metrics ports should be your prometheus instance |
+
+### Other Values
+
 | Key                              | Type   | Default                                                                       | Description                                                                                                            |
 | -------------------------------- | ------ | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | affinity                         | object | `{}`                                                                          | Add affinity                                                                                                           |

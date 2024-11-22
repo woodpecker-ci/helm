@@ -1,0 +1,11 @@
+agent:
+  networkPolicy:
+    enabled: true
+    egress:
+      enabled: true
+
+server:
+  networkPolicy:
+    enabled: true
+    egress:
+      enabled: true
