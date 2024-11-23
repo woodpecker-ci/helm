@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-22
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-23
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -25,6 +25,10 @@
 ### 🐛 Bug Fixes
 
 - fix(server): add group name of prometheus-rules [[#246](https://github.com/woodpecker-ci/helm/pull/246)]
+
+### 📦️ Dependency
+
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.15.0 [[#259](https://github.com/woodpecker-ci/helm/pull/259)]
 
 ### Misc
 
