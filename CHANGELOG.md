@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-23
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-24
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -28,6 +28,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.33.0 [[#260](https://github.com/woodpecker-ci/helm/pull/260)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.15.0 [[#259](https://github.com/woodpecker-ci/helm/pull/259)]
 
 ### Misc
