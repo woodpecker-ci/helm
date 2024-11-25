@@ -1,5 +1,48 @@
 # Changelog
 
+## [2.0.0](https://github.com/woodpecker-ci/helm/releases/tag/2.0.0) - 2024-11-24
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s, @wrenix
+
+### 💥 Breaking changes
+
+- Auto-create `WOODPECKER_AGENT_SECRET` secret [[#228](https://github.com/woodpecker-ci/helm/pull/228)]
+
+### ✨ Features
+
+- feat(woodpecker): add network-polices [[#252](https://github.com/woodpecker-ci/helm/pull/252)]
+
+### 📚 Documentation
+
+- Optimize README [[#254](https://github.com/woodpecker-ci/helm/pull/254)]
+
+### 📈 Enhancement
+
+- fix: regressions of #228 [[#247](https://github.com/woodpecker-ci/helm/pull/247)]
+
+### 🐛 Bug Fixes
+
+- fix(server): add group name of prometheus-rules [[#246](https://github.com/woodpecker-ci/helm/pull/246)]
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.33.0 [[#260](https://github.com/woodpecker-ci/helm/pull/260)]
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.15.0 [[#259](https://github.com/woodpecker-ci/helm/pull/259)]
+
+### Misc
+
+- Remove custom package rules and config [[#258](https://github.com/woodpecker-ci/helm/pull/258)]
+- fix: update tarball output dir [[#257](https://github.com/woodpecker-ci/helm/pull/257)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#255](https://github.com/woodpecker-ci/helm/pull/255)]
+- Refine CODEOWNER [[#256](https://github.com/woodpecker-ci/helm/pull/256)]
+- chore: format via prettier [[#253](https://github.com/woodpecker-ci/helm/pull/253)]
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.1.1 [[#250](https://github.com/woodpecker-ci/helm/pull/250)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.3 [[#249](https://github.com/woodpecker-ci/helm/pull/249)]
+- chore(deps): update alpine/helm docker tag to v3.16.3 [[#248](https://github.com/woodpecker-ci/helm/pull/248)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.15.0 [[#244](https://github.com/woodpecker-ci/helm/pull/244)]
+
 ## [1.6.2](https://github.com/woodpecker-ci/helm/releases/tag/1.6.2) - 2024-11-09
 
 ### ❤️ Thanks to all contributors! ❤️
