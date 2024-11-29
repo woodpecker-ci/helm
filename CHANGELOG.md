@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.2](https://github.com/woodpecker-ci/helm/releases/tag/2.0.2) - 2024-11-29
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### Misc
+
+- fix: run prettier after README update [[#265](https://github.com/woodpecker-ci/helm/pull/265)]
+
 ## [2.0.1](https://github.com/woodpecker-ci/helm/releases/tag/2.0.1) - 2024-11-29
 
 ### 📦️ Dependency
