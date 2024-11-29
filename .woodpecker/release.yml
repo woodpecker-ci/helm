@@ -48,6 +48,11 @@ steps:
       - helm-docs
       - cat charts/woodpecker/README.md
 
+  prettier:
+    image: docker.io/jauderho/prettier:3.4.1
+    commands:
+      - prettier -w .
+
   push-readme:
     image: docker.io/appleboy/drone-git-push:1.1.1
     settings:
