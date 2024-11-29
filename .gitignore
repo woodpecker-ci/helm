@@ -2,3 +2,4 @@
 .cr-release-packages
 woodpecker-ci.github.io
 .cr-index/index.yaml
+node_modules/
