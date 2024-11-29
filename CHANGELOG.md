@@ -4,7 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@pat-s, @roobre
+
+### 🐛 Bug Fixes
+
+- server/templates/secret: fix extra chomper breaking secret templating [[#263](https://github.com/woodpecker-ci/helm/pull/263)]
 
 ### Misc
 
