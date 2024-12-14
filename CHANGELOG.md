@@ -1,9 +1,11 @@
 # Changelog
 
-## [2.0.3](https://github.com/woodpecker-ci/helm/releases/tag/2.0.3) - 2024-12-08
+## [2.0.3](https://github.com/woodpecker-ci/helm/releases/tag/2.0.3) - 2024-12-14
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.16.0 [[#274](https://github.com/woodpecker-ci/helm/pull/274)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.8.1 [[#273](https://github.com/woodpecker-ci/helm/pull/273)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.0 [[#271](https://github.com/woodpecker-ci/helm/pull/271)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3 [[#270](https://github.com/woodpecker-ci/helm/pull/270)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1 [[#268](https://github.com/woodpecker-ci/helm/pull/268)]
