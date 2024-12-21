@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 [[#279](https://github.com/woodpecker-ci/helm/pull/279)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.25 [[#277](https://github.com/woodpecker-ci/helm/pull/277)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v2.8.2 [[#276](https://github.com/woodpecker-ci/helm/pull/276)]
 
