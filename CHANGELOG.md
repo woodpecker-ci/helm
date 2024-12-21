@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/woodpecker-ci/helm/releases/tag/2.0.4) - 2024-12-21
+
+### 📦️ Dependency
+
+- chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.25 [[#277](https://github.com/woodpecker-ci/helm/pull/277)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.8.2 [[#276](https://github.com/woodpecker-ci/helm/pull/276)]
+
 ## [2.0.3](https://github.com/woodpecker-ci/helm/releases/tag/2.0.3) - 2024-12-14
 
 ### 📦️ Dependency
