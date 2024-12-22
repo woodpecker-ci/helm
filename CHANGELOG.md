@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/woodpecker-ci/helm/releases/tag/2.0.5) - 2024-12-22
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.4 [[#281](https://github.com/woodpecker-ci/helm/pull/281)]
+- chore(deps): update alpine/helm docker tag to v3.16.4 [[#280](https://github.com/woodpecker-ci/helm/pull/280)]
+
 ## [2.0.4](https://github.com/woodpecker-ci/helm/releases/tag/2.0.4) - 2024-12-21
 
 ### 📦️ Dependency
