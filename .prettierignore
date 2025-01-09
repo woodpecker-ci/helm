@@ -4,3 +4,4 @@ charts/woodpecker/agent/templates/
 values.yaml
 **/*.yaml
 **/*.yml
+node_modules/
