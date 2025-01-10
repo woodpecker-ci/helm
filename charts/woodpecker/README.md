@@ -56,8 +56,8 @@ resource "helm_release" "woodpecker" {
 
 | Repository | Name   | Version |
 | ---------- | ------ | ------- |
-|            | agent  | 1.0.1   |
-|            | server | 2.0.1   |
+|            | agent  | 1.1.0   |
+|            | server | 2.1.0   |
 
 ## Values
 
