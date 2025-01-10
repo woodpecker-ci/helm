@@ -1,6 +1,14 @@
 # Changelog
 
-## [2.0.5](https://github.com/woodpecker-ci/helm/releases/tag/2.0.5) - 2025-01-09
+## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-10
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### ✨ Features
+
+- Set default `securityContext` [[#288](https://github.com/woodpecker-ci/helm/pull/288)]
 
 ### 📦️ Dependency
 
