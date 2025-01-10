@@ -159,13 +159,8 @@ podSecurityContext:
 
 # -- Add security context
 securityContext:
-  {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+  runAsUser: 1000
+  runAsGroup: 1000
 
 # -- Specifies the resources for the agent component
 resources:
