@@ -1,6 +1,6 @@
 # server
 
-![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.8.2](https://img.shields.io/badge/AppVersion-2.8.2-informational?style=flat-square)
+![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.8.2](https://img.shields.io/badge/AppVersion-2.8.2-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -102,7 +102,7 @@ In the following scenarios, you need to take additional action:
 | prometheus.rules.labels          | object | `{}`                                                                          | add labels to prometheus-rules (to be selected by prometheus-operator)                                                 |
 | resources                        | object | `{}`                                                                          | Specifies the ressources for the server component                                                                      |
 | secrets                          | list   | `[]`                                                                          | Create a generic secret to store things in, e.g. env values                                                            |
-| securityContext                  | object | `{}`                                                                          | Add security context                                                                                                   |
+| securityContext                  | object | `{"runAsGroup":1000,"runAsUser":1000}`                                        | Add security context                                                                                                   |
 | service.clusterIP                | string | `nil`                                                                         | The cluster IP of the service (optional)                                                                               |
 | service.loadBalancerIP           | string | `nil`                                                                         | The loadbalancer IP of the service (optional)                                                                          |
 | service.port                     | int    | `80`                                                                          | The port of the service                                                                                                |
