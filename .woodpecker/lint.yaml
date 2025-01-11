@@ -12,7 +12,7 @@ steps:
       - 'markdownlint-cli2 *.{md,markdown}'
 
   editor-config:
-    image: docker.io/mstruebing/editorconfig-checker:v3.0.3
+    image: docker.io/mstruebing/editorconfig-checker:v3.1.2
     depends_on: []
     commands:
       - ec --config .editorconfig-checker.json .
