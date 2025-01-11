@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-10
+## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-11
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,8 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.1.2 [[#291](https://github.com/woodpecker-ci/helm/pull/291)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.17.1 [[#290](https://github.com/woodpecker-ci/helm/pull/290)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.1 [[#285](https://github.com/woodpecker-ci/helm/pull/285)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.17.0 [[#284](https://github.com/woodpecker-ci/helm/pull/284)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.17.0 [[#283](https://github.com/woodpecker-ci/helm/pull/283)]
