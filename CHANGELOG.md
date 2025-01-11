@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.1.0 [[#292](https://github.com/woodpecker-ci/helm/pull/292)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.1.2 [[#291](https://github.com/woodpecker-ci/helm/pull/291)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.17.1 [[#290](https://github.com/woodpecker-ci/helm/pull/290)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.1 [[#285](https://github.com/woodpecker-ci/helm/pull/285)]
