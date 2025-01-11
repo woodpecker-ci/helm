@@ -7,12 +7,12 @@ when:
 steps:
   lint-markdown:
     depends_on: []
-    image: docker.io/davidanson/markdownlint-cli2:v0.17.0
+    image: docker.io/davidanson/markdownlint-cli2:v0.17.1
     commands:
       - 'markdownlint-cli2 *.{md,markdown}'
 
   editor-config:
-    image: docker.io/mstruebing/editorconfig-checker:v3.0.3
+    image: docker.io/mstruebing/editorconfig-checker:v3.1.2
     depends_on: []
     commands:
       - ec --config .editorconfig-checker.json .
