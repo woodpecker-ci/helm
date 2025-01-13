@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-13
+
+### ❤️ Thanks to all contributors! ❤️
+
+@adamroyjones, @pat-s
+
+### ✨ Features
+
+- server/templates/service: Add support for annotations (redux) [[#295](https://github.com/woodpecker-ci/helm/pull/295)]
+- Set default `securityContext` [[#288](https://github.com/woodpecker-ci/helm/pull/288)]
+
+### 📦️ Dependency
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v2.8.3 [[#293](https://github.com/woodpecker-ci/helm/pull/293)]
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.1.0 [[#292](https://github.com/woodpecker-ci/helm/pull/292)]
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.1.2 [[#291](https://github.com/woodpecker-ci/helm/pull/291)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.17.1 [[#290](https://github.com/woodpecker-ci/helm/pull/290)]
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.1 [[#285](https://github.com/woodpecker-ci/helm/pull/285)]
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.17.0 [[#284](https://github.com/woodpecker-ci/helm/pull/284)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.17.0 [[#283](https://github.com/woodpecker-ci/helm/pull/283)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.16.4 [[#281](https://github.com/woodpecker-ci/helm/pull/281)]
+- chore(deps): update alpine/helm docker tag to v3.16.4 [[#280](https://github.com/woodpecker-ci/helm/pull/280)]
+
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#286](https://github.com/woodpecker-ci/helm/pull/286)]
+
 ## [2.0.4](https://github.com/woodpecker-ci/helm/releases/tag/2.0.4) - 2024-12-21
 
 ### 📦️ Dependency
