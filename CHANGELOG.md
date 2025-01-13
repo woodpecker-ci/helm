@@ -1,13 +1,14 @@
 # Changelog
 
-## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-12
+## [2.1.0](https://github.com/woodpecker-ci/helm/releases/tag/2.1.0) - 2025-01-13
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s
+@adamroyjones, @pat-s
 
 ### ✨ Features
 
+- server/templates/service: Add support for annotations (redux) [[#295](https://github.com/woodpecker-ci/helm/pull/295)]
 - Set default `securityContext` [[#288](https://github.com/woodpecker-ci/helm/pull/288)]
 
 ### 📦️ Dependency
