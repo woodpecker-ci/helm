@@ -143,6 +143,8 @@ service:
   clusterIP:
   # -- The loadbalancer IP of the service (optional)
   loadBalancerIP:
+  # -- Annotations to add to the service
+  annotations: {}
 
 ingress:
   # -- Enable the ingress for the server component
