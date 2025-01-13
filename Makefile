@@ -6,7 +6,7 @@
 
 .PHONY: docs
 docs:
-	helm-docs
+	helm-docs && cd charts/woodpecker && helm dependency update && cd ../../ && prettier -w .
 
 lint-markdown:
 	markdownlint-cli2 *.{md,markdown}
