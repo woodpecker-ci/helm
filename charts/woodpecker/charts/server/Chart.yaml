@@ -2,7 +2,7 @@ apiVersion: v2
 name: server
 description: A Helm chart for the Woodpecker server
 type: application
-version: 2.1.0
+version: 2.2.0
 # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker extractVersion=^v(?<version>.*)$
 appVersion: 2.8.3
 home: https://woodpecker-ci.org/
