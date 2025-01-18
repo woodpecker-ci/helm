@@ -1,6 +1,6 @@
 # agent
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.8.3](https://img.shields.io/badge/AppVersion-2.8.3-informational?style=flat-square)
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
 
 A Helm chart for the Woodpecker agent
 
@@ -13,6 +13,16 @@ A Helm chart for the Woodpecker agent
 | Woodpecker Maintainers | <owner@woodpecker-ci.org> | <https://github.com/woodpecker-ci> |
 
 ## Upgrading
+
+<details>
+
+<summary>To 2.0.0</summary>
+
+See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
+
+</details>
+
+<details>
 
 <details>
 
