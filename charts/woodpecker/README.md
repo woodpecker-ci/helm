@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.8.3](https://img.shields.io/badge/AppVersion-2.8.3-informational?style=flat-square)
+![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -35,13 +35,21 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 2.1.0
+  version          = 3.0.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
 ```
 
 ## Upgrading
+
+<details>
+
+<summary>To 3.0.0</summary>
+
+See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
+
+</details>
 
 <details>
 
@@ -56,8 +64,8 @@ resource "helm_release" "woodpecker" {
 
 | Repository | Name   | Version |
 | ---------- | ------ | ------- |
-|            | agent  | 1.1.0   |
-|            | server | 2.2.0   |
+|            | agent  | 2.0.0   |
+|            | server | 3.0.0   |
 
 ## Values
 

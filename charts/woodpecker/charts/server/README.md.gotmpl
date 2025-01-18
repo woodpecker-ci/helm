@@ -23,6 +23,14 @@ In the following scenarios, you need to take additional action:
 
 <details>
 
+<summary>To 3.0.0</summary>
+
+See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
+
+</details>
+
+<details>
+
 <summary>To 2.0.0</summary>
 
 - If you have defined the env var `WOODPECKER_AGENT_SECRET` manually, you need to decide whether you want to continue doing so (if yes, set `createAgentSecret: false`) or if you want to make use of the new `createAgentSecret: true` option (new default). This option creates a k8s secret which contains the env var `WOODPECKER_AGENT_SECRET` and can be used to connect agents in the same namespace.
