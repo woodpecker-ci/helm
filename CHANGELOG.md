@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.12.0 [[#306](https://github.com/woodpecker-ci/helm/pull/306)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.17.0 [[#303](https://github.com/woodpecker-ci/helm/pull/303)]
 - chore(deps): update alpine/helm docker tag to v3.17.0 [[#302](https://github.com/woodpecker-ci/helm/pull/302)]
 
