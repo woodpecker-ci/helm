@@ -1,9 +1,11 @@
 # Changelog
 
-## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-19
+## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-25
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.3 [[#309](https://github.com/woodpecker-ci/helm/pull/309)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.0.1 [[#308](https://github.com/woodpecker-ci/helm/pull/308)]
 - chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.12.0 [[#306](https://github.com/woodpecker-ci/helm/pull/306)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.17.0 [[#303](https://github.com/woodpecker-ci/helm/pull/303)]
 - chore(deps): update alpine/helm docker tag to v3.17.0 [[#302](https://github.com/woodpecker-ci/helm/pull/302)]
