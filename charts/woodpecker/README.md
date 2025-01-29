@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
+![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.1](https://img.shields.io/badge/AppVersion-3.0.1-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -10,8 +10,7 @@ To install the latest release of the chart:
 
 ```sh
 # since > 1.6.1
-helm repo add woodpecker oci://ghcr.io/woodpecker-ci/helm
-helm install woodpecker woodpecker/woodpecker
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION>
 
 # deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/

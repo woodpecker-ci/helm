@@ -1,6 +1,6 @@
 # server
 
-![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
+![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.1](https://img.shields.io/badge/AppVersion-3.0.1-informational?style=flat-square)
 
 A Helm chart for the Woodpecker server
 
@@ -100,7 +100,7 @@ See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
 | persistentVolume.size            | string | `"10Gi"`                                                                      | Defines the size of the persistent volume                                                                              |
 | persistentVolume.storageClass    | string | `""`                                                                          | Defines the storageClass of the persistent volume                                                                      |
 | podAnnotations                   | object | `{}`                                                                          | Add pod annotations                                                                                                    |
-| podSecurityContext               | object | `{}`                                                                          | Add pod security context                                                                                               |
+| podSecurityContext               | object | `{"fsGroup":1000}`                                                            | Add pod security context                                                                                               |
 | prometheus.podmonitor.enabled    | bool   | `false`                                                                       | deploy podmonitor                                                                                                      |
 | prometheus.podmonitor.interval   | string | `nil`                                                                         | scrape interval in prometheus for this podmonitor                                                                      |
 | prometheus.podmonitor.labels     | object | `{}`                                                                          | add labels to podmonitor (to be selected by prometheus-operator)                                                       |
