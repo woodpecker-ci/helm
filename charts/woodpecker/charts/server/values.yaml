@@ -126,8 +126,7 @@ podAnnotations:
 
 # -- Add pod security context
 podSecurityContext:
-  {}
-  # fsGroup: 2000
+  fsGroup: 1000
 
 # -- Add security context
 securityContext:
