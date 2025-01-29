@@ -1,6 +1,14 @@
 # Changelog
 
-## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-25
+## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-29
+
+### ❤️ Thanks to all contributors! ❤️
+
+@tijder
+
+### 🐛 Bug Fixes
+
+- Also set the default file system group Security Context [[#307](https://github.com/woodpecker-ci/helm/pull/307)]
 
 ### 📦️ Dependency
 
