@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-01
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.2.0 [[#311](https://github.com/woodpecker-ci/helm/pull/311)]
+
 ## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-29
 
 ### ❤️ Thanks to all contributors! ❤️
