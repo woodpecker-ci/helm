@@ -10,15 +10,24 @@ To install the latest release of the chart:
 
 ```sh
 # since > 1.6.1
-helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION>
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm/woodpecker --version <VERSION>
 
 # deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 ```
 
-**Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
-If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
+The `woodpecker/woodpecker` chart contains both the server and the agent. To install only the server or agent, disable the unnecessary component:
+
+```sh
+# server only
+helm install woodpecker woodpecker/woodpecker --set agent.enabled=false
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION> --set agent.enabled=false
+
+# agent only
+helm install woodpecker woodpecker/woodpecker --set server.enabled=false
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION> --set server.enabled=false
+```
 
 ### Backend Configuration
 
