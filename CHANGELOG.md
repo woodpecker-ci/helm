@@ -4,6 +4,9 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 [[#305](https://github.com/woodpecker-ci/helm/pull/305)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.5.1 [[#318](https://github.com/woodpecker-ci/helm/pull/318)]
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.2.1 [[#317](https://github.com/woodpecker-ci/helm/pull/317)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v3.1.0 [[#316](https://github.com/woodpecker-ci/helm/pull/316)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.1 [[#315](https://github.com/woodpecker-ci/helm/pull/315)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.0 [[#313](https://github.com/woodpecker-ci/helm/pull/313)]
