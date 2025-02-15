@@ -2,6 +2,15 @@
 
 ## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-15
 
+### ❤️ Thanks to all contributors! ❤️
+
+@xoxys
+
+### 📚 Documentation
+
+- Fix oci helm install command [[#319](https://github.com/woodpecker-ci/helm/pull/319)]
+- Add correct instructions to install server or argent only [[#320](https://github.com/woodpecker-ci/helm/pull/320)]
+
 ### 📦️ Dependency
 
 - chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 [[#305](https://github.com/woodpecker-ci/helm/pull/305)]
