@@ -10,7 +10,7 @@ To install the latest release of the chart:
 
 ```sh
 # since > 1.6.1
-helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION>
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm/woodpecker --version <VERSION>
 
 # deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/
