@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-16
+
+### ❤️ Thanks to all contributors! ❤️
+
+@xoxys
+
+### 📚 Documentation
+
+- Fix oci helm install command [[#319](https://github.com/woodpecker-ci/helm/pull/319)]
+- Add correct instructions to install server or argent only [[#320](https://github.com/woodpecker-ci/helm/pull/320)]
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/alpine/helm docker tag to v3.17.1 [[#322](https://github.com/woodpecker-ci/helm/pull/322)]
+- chore(deps): update alpine/helm docker tag to v3.17.1 [[#321](https://github.com/woodpecker-ci/helm/pull/321)]
+- chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 [[#305](https://github.com/woodpecker-ci/helm/pull/305)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.5.1 [[#318](https://github.com/woodpecker-ci/helm/pull/318)]
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.2.1 [[#317](https://github.com/woodpecker-ci/helm/pull/317)]
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.1.0 [[#316](https://github.com/woodpecker-ci/helm/pull/316)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.1 [[#315](https://github.com/woodpecker-ci/helm/pull/315)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.0 [[#313](https://github.com/woodpecker-ci/helm/pull/313)]
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.2.0 [[#311](https://github.com/woodpecker-ci/helm/pull/311)]
+
 ## [3.0.1](https://github.com/woodpecker-ci/helm/releases/tag/3.0.1) - 2025-01-29
 
 ### ❤️ Thanks to all contributors! ❤️
