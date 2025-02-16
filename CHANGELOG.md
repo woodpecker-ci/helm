@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-15
+## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-16
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -13,6 +13,8 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.17.1 [[#322](https://github.com/woodpecker-ci/helm/pull/322)]
+- chore(deps): update alpine/helm docker tag to v3.17.1 [[#321](https://github.com/woodpecker-ci/helm/pull/321)]
 - chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 [[#305](https://github.com/woodpecker-ci/helm/pull/305)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.5.1 [[#318](https://github.com/woodpecker-ci/helm/pull/318)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.2.1 [[#317](https://github.com/woodpecker-ci/helm/pull/317)]
