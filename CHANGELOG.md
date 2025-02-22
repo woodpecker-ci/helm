@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.5.2 [[#328](https://github.com/woodpecker-ci/helm/pull/328)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.2 [[#327](https://github.com/woodpecker-ci/helm/pull/327)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.3.0 [[#325](https://github.com/woodpecker-ci/helm/pull/325)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.26 [[#324](https://github.com/woodpecker-ci/helm/pull/324)]
