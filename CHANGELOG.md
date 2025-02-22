@@ -2,12 +2,20 @@
 
 ## [3.0.3](https://github.com/woodpecker-ci/helm/releases/tag/3.0.3) - 2025-02-22
 
+### ❤️ Thanks to all contributors! ❤️
+
+@xoxys
+
 ### 📦️ Dependency
 
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.5.2 [[#328](https://github.com/woodpecker-ci/helm/pull/328)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.2 [[#327](https://github.com/woodpecker-ci/helm/pull/327)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.3.0 [[#325](https://github.com/woodpecker-ci/helm/pull/325)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.26 [[#324](https://github.com/woodpecker-ci/helm/pull/324)]
+
+### Misc
+
+- Revert "chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.7.0 (#305)" [[#329](https://github.com/woodpecker-ci/helm/pull/329)]
 
 ## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-16
 
