@@ -33,7 +33,7 @@ steps:
       path: '*.{yml,yaml}'
 
   lint-prettier:
-    image: docker.io/woodpeckerci/plugin-prettier:1.2.1
+    image: docker.io/woodpeckerci/plugin-prettier:1.3.0
     depends_on: []
     settings:
       version: 3.3.3
