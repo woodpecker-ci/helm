@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/woodpecker-ci/helm/releases/tag/3.0.3) - 2025-02-22
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.3.0 [[#325](https://github.com/woodpecker-ci/helm/pull/325)]
+- chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.26 [[#324](https://github.com/woodpecker-ci/helm/pull/324)]
+
 ## [3.0.2](https://github.com/woodpecker-ci/helm/releases/tag/3.0.2) - 2025-02-16
 
 ### ❤️ Thanks to all contributors! ❤️
