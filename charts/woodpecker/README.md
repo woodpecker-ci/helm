@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 3.0.1](https://img.shields.io/badge/Version-3.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.1](https://img.shields.io/badge/AppVersion-3.0.1-informational?style=flat-square)
+![Version: 3.0.3](https://img.shields.io/badge/Version-3.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.1.0](https://img.shields.io/badge/AppVersion-3.1.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -10,24 +10,15 @@ To install the latest release of the chart:
 
 ```sh
 # since > 1.6.1
-helm install woodpecker oci://ghcr.io/woodpecker-ci/helm/woodpecker --version <VERSION>
+helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION>
 
 # deprecated (but still functional)
 helm repo add woodpecker https://woodpecker-ci.org/
 helm install woodpecker woodpecker/woodpecker
 ```
 
-The `woodpecker/woodpecker` chart contains both the server and the agent. To install only the server or agent, disable the unnecessary component:
-
-```sh
-# server only
-helm install woodpecker woodpecker/woodpecker --set agent.enabled=false
-helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION> --set agent.enabled=false
-
-# agent only
-helm install woodpecker woodpecker/woodpecker --set server.enabled=false
-helm install woodpecker oci://ghcr.io/woodpecker-ci/helm --version <VERSION> --set server.enabled=false
-```
+**Note**: The `woodpecker/woodpecker` chart contains both the server and the agent.
+If you want to install only the server or agent you can use the [`woodpecker/server`](./charts/server/README.md) or [`woodpecker/agent`](./charts/server/README.md) charts respectively.
 
 ### Backend Configuration
 
@@ -43,7 +34,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 3.0.1
+  version          = 3.0.3
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
