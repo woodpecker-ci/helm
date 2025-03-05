@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.0.5](https://github.com/woodpecker-ci/helm/releases/tag/3.0.5) - 2025-03-04
+## [3.0.5](https://github.com/woodpecker-ci/helm/releases/tag/3.0.5) - 2025-03-05
+
+### 📦️ Dependency
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.3.0 [[#335](https://github.com/woodpecker-ci/helm/pull/335)]
 
 ### Misc
 
