@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.2.1 [[#340](https://github.com/woodpecker-ci/helm/pull/340)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.36.1 [[#341](https://github.com/woodpecker-ci/helm/pull/341)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.36.0 [[#339](https://github.com/woodpecker-ci/helm/pull/339)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.34.0 [[#337](https://github.com/woodpecker-ci/helm/pull/337)]
