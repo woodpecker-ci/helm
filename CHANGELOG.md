@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.34.0 [[#337](https://github.com/woodpecker-ci/helm/pull/337)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.5.3 [[#336](https://github.com/woodpecker-ci/helm/pull/336)]
 
 ## [3.0.5](https://github.com/woodpecker-ci/helm/releases/tag/3.0.5) - 2025-03-05
