@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.0.6](https://github.com/woodpecker-ci/helm/releases/tag/3.0.6) - 2025-03-15
+## [3.0.6](https://github.com/woodpecker-ci/helm/releases/tag/3.0.6) - 2025-03-16
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.17.2 [[#343](https://github.com/woodpecker-ci/helm/pull/343)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.2.1 [[#340](https://github.com/woodpecker-ci/helm/pull/340)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.36.1 [[#341](https://github.com/woodpecker-ci/helm/pull/341)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.36.0 [[#339](https://github.com/woodpecker-ci/helm/pull/339)]
