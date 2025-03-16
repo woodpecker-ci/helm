@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v3.17.2 [[#342](https://github.com/woodpecker-ci/helm/pull/342)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.17.2 [[#343](https://github.com/woodpecker-ci/helm/pull/343)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.2.1 [[#340](https://github.com/woodpecker-ci/helm/pull/340)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.36.1 [[#341](https://github.com/woodpecker-ci/helm/pull/341)]
