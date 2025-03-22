@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: checkmake
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.26
+    rev: v0.1.28
     hooks:
       - id: helmlint
 
