@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-03-29
+## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-04-05
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.5.1 [[#350](https://github.com/woodpecker-ci/helm/pull/350)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.1.4 [[#349](https://github.com/woodpecker-ci/helm/pull/349)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.37.0 [[#348](https://github.com/woodpecker-ci/helm/pull/348)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.28 [[#346](https://github.com/woodpecker-ci/helm/pull/346)]
