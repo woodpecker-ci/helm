@@ -325,3 +325,26 @@ server:
 
   # -- Overrides the default DNS configuration
   dnsConfig: {}
+
+  # -- Configure probe options for container health checking
+  probes:
+    # -- Configure liveness probe options
+    liveness:
+      # -- Number of seconds after which the probe times out (default: 10)
+      timeoutSeconds: 10
+      # -- How often (in seconds) to perform the probe (default: 10)
+      periodSeconds: 10
+      # -- Minimum consecutive successes for the probe to be considered successful after having failed (default: 1)
+      successThreshold: 1
+      # -- When a probe fails, Kubernetes will try failureThreshold times before giving up (default: 3)
+      failureThreshold: 3
+    # -- Configure readiness probe options
+    readiness:
+      # -- Number of seconds after which the probe times out (default: 10)
+      timeoutSeconds: 10
+      # -- How often (in seconds) to perform the probe (default: 10)
+      periodSeconds: 10
+      # -- Minimum consecutive successes for the probe to be considered successful after having failed (default: 1)
+      successThreshold: 1
+      # -- When a probe fails, Kubernetes will try failureThreshold times before giving up (default: 3)
+      failureThreshold: 3
