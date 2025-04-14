@@ -70,10 +70,26 @@ spec:
             httpGet:
               path: /healthz
               port: 8000
+            {{- if .Values.probes }}
+            {{- with .Values.probes.liveness }}
+            timeoutSeconds: {{ .timeoutSeconds | default 10 }}
+            periodSeconds: {{ .periodSeconds | default 10 }}
+            successThreshold: {{ .successThreshold | default 1 }}
+            failureThreshold: {{ .failureThreshold | default 3 }}
+            {{- end }}
+            {{- end }}
           readinessProbe:
             httpGet:
               path: /healthz
               port: 8000
+            {{- if .Values.probes }}
+            {{- with .Values.probes.readiness }}
+            timeoutSeconds: {{ .timeoutSeconds | default 10 }}
+            periodSeconds: {{ .periodSeconds | default 10 }}
+            successThreshold: {{ .successThreshold | default 1 }}
+            failureThreshold: {{ .failureThreshold | default 3 }}
+            {{- end }}
+            {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
