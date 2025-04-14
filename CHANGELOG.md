@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-14
+
+### ❤️ Thanks to all contributors! ❤️
+
+@occ
+
+### 📈 Enhancement
+
+- Add configurable prober options for woodpecker server [[#351](https://github.com/woodpecker-ci/helm/pull/351)]
+
 ## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-04-05
 
 ### 📦️ Dependency
