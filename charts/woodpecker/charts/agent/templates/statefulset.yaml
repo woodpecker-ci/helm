@@ -112,7 +112,9 @@ spec:
 
 {{- if and (not .Values.persistence.existingClaim) .Values.persistence.enabled }}
   volumeClaimTemplates:
-    - metadata:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
         name: agent-config
         namespace: {{ $.namespace }}
         annotations:
