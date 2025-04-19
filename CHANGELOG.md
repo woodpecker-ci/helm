@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.5.2 [[#353](https://github.com/woodpecker-ci/helm/pull/353)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.2.0 [[#354](https://github.com/woodpecker-ci/helm/pull/354)]
 
 ## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-04-05
