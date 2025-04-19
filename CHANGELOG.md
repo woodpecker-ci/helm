@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-14
+## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-19
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -9,6 +9,10 @@
 ### 📈 Enhancement
 
 - Add configurable prober options for woodpecker server [[#351](https://github.com/woodpecker-ci/helm/pull/351)]
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.2.0 [[#354](https://github.com/woodpecker-ci/helm/pull/354)]
 
 ## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-04-05
 
