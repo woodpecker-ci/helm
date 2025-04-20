@@ -1,10 +1,14 @@
 # Changelog
 
-## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-19
+## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-20
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@occ
+@foosinn, @occ
+
+### 🐛 Bug Fixes
+
+- Add api version and kind to volume claim template [[#355](https://github.com/woodpecker-ci/helm/pull/355)]
 
 ### 📈 Enhancement
 
