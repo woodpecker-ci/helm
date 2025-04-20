@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.1.0](https://github.com/woodpecker-ci/helm/releases/tag/3.1.0) - 2025-04-20
+
+### ❤️ Thanks to all contributors! ❤️
+
+@foosinn, @occ
+
+### 🐛 Bug Fixes
+
+- Add api version and kind to volume claim template [[#355](https://github.com/woodpecker-ci/helm/pull/355)]
+
+### 📈 Enhancement
+
+- Add configurable prober options for woodpecker server [[#351](https://github.com/woodpecker-ci/helm/pull/351)]
+
+### 📦️ Dependency
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.5.2 [[#353](https://github.com/woodpecker-ci/helm/pull/353)]
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.2.0 [[#354](https://github.com/woodpecker-ci/helm/pull/354)]
+
 ## [3.0.7](https://github.com/woodpecker-ci/helm/releases/tag/3.0.7) - 2025-04-05
 
 ### 📦️ Dependency
