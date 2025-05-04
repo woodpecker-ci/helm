@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.17.3 [[#359](https://github.com/woodpecker-ci/helm/pull/359)]
 - chore(deps): update alpine/helm docker tag to v3.17.3 [[#358](https://github.com/woodpecker-ci/helm/pull/358)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.29 [[#356](https://github.com/woodpecker-ci/helm/pull/356)]
 
