@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.6.0 [[#361](https://github.com/woodpecker-ci/helm/pull/361)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.3.0 [[#362](https://github.com/woodpecker-ci/helm/pull/362)]
 - chore(deps): update pre-commit hook adrienverge/yamllint to v1.37.1 [[#360](https://github.com/woodpecker-ci/helm/pull/360)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.17.3 [[#359](https://github.com/woodpecker-ci/helm/pull/359)]
