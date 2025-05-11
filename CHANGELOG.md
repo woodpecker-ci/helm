@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.18.0 [[#364](https://github.com/woodpecker-ci/helm/pull/364)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.18.0 [[#363](https://github.com/woodpecker-ci/helm/pull/363)]
 
 ## [3.1.1](https://github.com/woodpecker-ci/helm/releases/tag/3.1.1) - 2025-05-07
