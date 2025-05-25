@@ -6,12 +6,12 @@ when:
 
 steps:
   lint:
-    image: alpine/helm:3.17.3
+    image: alpine/helm:3.18.0
     commands:
       - helm lint --with-subcharts charts/*
 
   unittest:
-    image: alpine/helm:3.17.3
+    image: alpine/helm:3.18.0
     environment:
       # NB: we can't use the official helmunittest/helm-unittest image as it's rootless and WP does not support that
       # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
