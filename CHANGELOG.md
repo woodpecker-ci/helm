@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.18.0 [[#370](https://github.com/woodpecker-ci/helm/pull/370)]
 - chore(deps): update alpine/helm docker tag to v3.18.0 [[#369](https://github.com/woodpecker-ci/helm/pull/369)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.18.1 [[#367](https://github.com/woodpecker-ci/helm/pull/367)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.0 [[#368](https://github.com/woodpecker-ci/helm/pull/368)]
