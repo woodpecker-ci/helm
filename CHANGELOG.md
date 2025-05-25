@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-05-24
+## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-05-25
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v3.18.0 [[#369](https://github.com/woodpecker-ci/helm/pull/369)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.18.1 [[#367](https://github.com/woodpecker-ci/helm/pull/367)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.0 [[#368](https://github.com/woodpecker-ci/helm/pull/368)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.18.1 [[#366](https://github.com/woodpecker-ci/helm/pull/366)]
