@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-06-01
+## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-06-07
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.7.0 [[#373](https://github.com/woodpecker-ci/helm/pull/373)]
 - chore(deps): update alpine/helm docker tag to v3.18.1 [[#371](https://github.com/woodpecker-ci/helm/pull/371)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.18.1 [[#372](https://github.com/woodpecker-ci/helm/pull/372)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.18.0 [[#370](https://github.com/woodpecker-ci/helm/pull/370)]
