@@ -21,7 +21,7 @@ steps:
       - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/ ./charts/woodpecker/charts/agent
 
   test-chart:
-    image: quay.io/helmpack/chart-testing:v3.12.0
+    image: quay.io/helmpack/chart-testing:v3.13.0
     commands:
       # Needed for `ct` to check which chart was edited. See https://github.com/woodpecker-ci/helm/pull/56#issuecomment-1676343140
       - git fetch origin main --unshallow --no-tags || true
