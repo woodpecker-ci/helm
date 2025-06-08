@@ -18,7 +18,7 @@ steps:
       - ec --config .editorconfig-checker.json .
 
   helm-lint:
-    image: docker.io/alpine/helm:3.18.1
+    image: docker.io/alpine/helm:3.18.2
     depends_on: []
     commands:
       - helm dependency update charts/woodpecker
