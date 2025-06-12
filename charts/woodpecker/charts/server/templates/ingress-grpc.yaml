@@ -1,25 +1,26 @@
-{{- if .Values.ingress.enabled -}}
+{{- if .Values.ingress.grpc.enabled -}}
 {{- $fullName := include "woodpecker-server.fullname" . -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ $fullName }}-grpc
   labels:
     {{- include "woodpecker-server.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
   annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
+    {{- with .Values.ingress.grpc.annotations }}
     {{- toYaml . | nindent 4 }}
-  {{- end }}
+    {{- end }}
 spec:
-  {{- with .Values.ingress.ingressClassName }}
+  {{- with .Values.ingress.grpc.ingressClassName }}
   ingressClassName: {{ . }}
   {{- end }}
-  {{- with .Values.ingress.tls }}
+  {{- with .Values.ingress.grpc.tls }}
   tls:
     {{- toYaml . | nindent 4 }}
   {{- end }}
   rules:
-    {{- range .Values.ingress.hosts }}
+    {{- range .Values.ingress.grpc.hosts }}
     - host: {{ .host | quote }}
       http:
         paths:
@@ -30,7 +31,7 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  name: http
+                  number: 9000
           {{- end }}
     {{- end }}
-  {{- end }}
+{{- end }}

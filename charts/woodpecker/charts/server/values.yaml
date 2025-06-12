@@ -165,6 +165,22 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+  grpc:
+    # -- Enable the GRPC ingress for the server component
+    enabled: false
+    # -- Add annotations to the GRPC ingress
+    annotations: {}
+    # -- Defines which ingress controller will implement the GRPC resource
+    ingressClassName: ''
+    hosts:
+      - host: chart-example.local
+        paths:
+          - path: /
+    tls: []
+    #  - secretName: chart-example-grpc-tls
+    #    hosts:
+    #      - chart-example.local
+
 networkPolicy:
   # -- deploy networkpolicy
   # @section -- NetworkPolicy
