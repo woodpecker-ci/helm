@@ -1,0 +1,216 @@
+suite: test grpc ingress
+templates:
+  - ingress-http.yaml
+  - ingress-grpc.yaml
+tests:
+  - it: should not create grpc ingress when disabled
+    set:
+      ingress.enabled: true
+      ingress.grpc.enabled: false
+    asserts:
+      - template: ingress-http.yaml
+        hasDocuments:
+          count: 1
+      - template: ingress-http.yaml
+        isKind:
+          of: Ingress
+      - template: ingress-http.yaml
+        equal:
+          path: metadata.name
+          value: RELEASE-NAME-server
+      - template: ingress-grpc.yaml
+        hasDocuments:
+          count: 0
+
+  - it: should create grpc ingress when enabled
+    set:
+      ingress.enabled: true
+      ingress.grpc.enabled: true
+    asserts:
+      - template: ingress-http.yaml
+        hasDocuments:
+          count: 1
+      - template: ingress-http.yaml
+        isKind:
+          of: Ingress
+      - template: ingress-http.yaml
+        equal:
+          path: metadata.name
+          value: RELEASE-NAME-server
+      - template: ingress-grpc.yaml
+        hasDocuments:
+          count: 1
+      - template: ingress-grpc.yaml
+        isKind:
+          of: Ingress
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.name
+          value: RELEASE-NAME-server-grpc
+
+  - it: should create only grpc ingress when http disabled
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+    asserts:
+      - template: ingress-http.yaml
+        hasDocuments:
+          count: 0
+      - template: ingress-grpc.yaml
+        hasDocuments:
+          count: 1
+      - template: ingress-grpc.yaml
+        isKind:
+          of: Ingress
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.name
+          value: RELEASE-NAME-server-grpc
+
+  - it: should have correct grpc backend protocol annotation
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.annotations["nginx.ingress.kubernetes.io/backend-protocol"]
+          value: "GRPC"
+
+  - it: should use correct service port for grpc ingress
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.hosts:
+        - host: grpc.example.com
+          paths:
+            - path: /
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].http.paths[0].backend.service.port.number
+          value: 9000
+
+  - it: should use correct service name for grpc ingress
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.hosts:
+        - host: grpc.example.com
+          paths:
+            - path: /
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].http.paths[0].backend.service.name
+          value: RELEASE-NAME-server
+
+  - it: should support custom grpc ingress class
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.ingressClassName: "custom-nginx"
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.ingressClassName
+          value: "custom-nginx"
+
+  - it: should support custom grpc annotations
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.annotations:
+        custom.annotation/test: "value"
+        nginx.ingress.kubernetes.io/proxy-timeout: "300"
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.annotations["custom.annotation/test"]
+          value: "value"
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.annotations["nginx.ingress.kubernetes.io/proxy-timeout"]
+          value: "300"
+      - template: ingress-grpc.yaml
+        equal:
+          path: metadata.annotations["nginx.ingress.kubernetes.io/backend-protocol"]
+          value: "GRPC"
+
+  - it: should support grpc tls configuration
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.tls:
+        - secretName: grpc-tls-secret
+          hosts:
+            - grpc.example.com
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.tls[0].secretName
+          value: grpc-tls-secret
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.tls[0].hosts[0]
+          value: grpc.example.com
+
+  - it: should support multiple grpc hosts and paths
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.hosts:
+        - host: grpc1.example.com
+          paths:
+            - path: /
+            - path: /api
+        - host: grpc2.example.com
+          paths:
+            - path: /v1
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].host
+          value: grpc1.example.com
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].http.paths[0].path
+          value: /
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].http.paths[1].path
+          value: /api
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[1].host
+          value: grpc2.example.com
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[1].http.paths[0].path
+          value: /v1
+
+  - it: should have correct pathType for grpc ingress
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: true
+      ingress.grpc.hosts:
+        - host: grpc.example.com
+          paths:
+            - path: /
+    asserts:
+      - template: ingress-grpc.yaml
+        equal:
+          path: spec.rules[0].http.paths[0].pathType
+          value: Prefix
+
+  - it: should not create any ingress when both disabled
+    set:
+      ingress.enabled: false
+      ingress.grpc.enabled: false
+    asserts:
+      - template: ingress-http.yaml
+        hasDocuments:
+          count: 0
+      - template: ingress-grpc.yaml
+        hasDocuments:
+          count: 0
