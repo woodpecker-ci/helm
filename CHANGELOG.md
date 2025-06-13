@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.2.0](https://github.com/woodpecker-ci/helm/releases/tag/3.2.0) - 2025-06-13
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pat-s
+
+### ✨ Features
+
+- feat: add GRPC ingress support [[#377](https://github.com/woodpecker-ci/helm/pull/377)]
+
 ## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-06-08
 
 ### 📦️ Dependency
