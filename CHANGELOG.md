@@ -8,7 +8,7 @@
 
 ### ✨ Features
 
-- feat: add GRPC ingress support [[#377](https://github.com/woodpecker-ci/helm/pull/377)]
+- Add support for GRPC ingress [[#377](https://github.com/woodpecker-ci/helm/pull/377)]
 
 ### 📦️ Dependency
 
