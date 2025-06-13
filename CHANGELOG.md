@@ -10,6 +10,10 @@
 
 - feat: add GRPC ingress support [[#377](https://github.com/woodpecker-ci/helm/pull/377)]
 
+### 📦️ Dependency
+
+- chore(deps): update quay.io/helmpack/chart-releaser docker tag to v1.8.1 [[#330](https://github.com/woodpecker-ci/helm/pull/330)]
+
 ## [3.1.2](https://github.com/woodpecker-ci/helm/releases/tag/3.1.2) - 2025-06-08
 
 ### 📦️ Dependency
