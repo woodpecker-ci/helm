@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-06-14
+## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-06-22
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.18.3 [[#382](https://github.com/woodpecker-ci/helm/pull/382)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.3.1 [[#379](https://github.com/woodpecker-ci/helm/pull/379)]
 
 ## [3.2.0](https://github.com/woodpecker-ci/helm/releases/tag/3.2.0) - 2025-06-13
