@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v3.18.3 [[#381](https://github.com/woodpecker-ci/helm/pull/381)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.18.3 [[#382](https://github.com/woodpecker-ci/helm/pull/382)]
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.3.1 [[#379](https://github.com/woodpecker-ci/helm/pull/379)]
 
