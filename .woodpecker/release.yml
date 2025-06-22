@@ -31,7 +31,7 @@ steps:
       - event: tag
 
   release-chart-ghcr:
-    image: alpine/helm:3.18.2
+    image: alpine/helm:3.18.3
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
