@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-06-28
+## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-07-05
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.3.0 [[#386](https://github.com/woodpecker-ci/helm/pull/386)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.6.2 [[#385](https://github.com/woodpecker-ci/helm/pull/385)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.6.2 [[#384](https://github.com/woodpecker-ci/helm/pull/384)]
 - chore(deps): update alpine/helm docker tag to v3.18.3 [[#381](https://github.com/woodpecker-ci/helm/pull/381)]
