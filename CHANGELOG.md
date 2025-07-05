@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.8.0 [[#387](https://github.com/woodpecker-ci/helm/pull/387)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.3.0 [[#386](https://github.com/woodpecker-ci/helm/pull/386)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.6.2 [[#385](https://github.com/woodpecker-ci/helm/pull/385)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.6.2 [[#384](https://github.com/woodpecker-ci/helm/pull/384)]
