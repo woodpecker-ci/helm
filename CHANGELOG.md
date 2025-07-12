@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.2.2](https://github.com/woodpecker-ci/helm/releases/tag/3.2.2) - 2025-07-12
+
+### 📦️ Dependency
+
+- chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.30 [[#388](https://github.com/woodpecker-ci/helm/pull/388)]
+
 ## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-07-05
 
 ### 📦️ Dependency
