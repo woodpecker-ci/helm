@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.2.2](https://github.com/woodpecker-ci/helm/releases/tag/3.2.2) - 2025-07-14
+## [3.2.2](https://github.com/woodpecker-ci/helm/releases/tag/3.2.2) - 2025-08-03
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v3.18.4 [[#393](https://github.com/woodpecker-ci/helm/pull/393)]
 - chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.30 [[#388](https://github.com/woodpecker-ci/helm/pull/388)]
 
 ### Misc
