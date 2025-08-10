@@ -1,0 +1,65 @@
+suite: test agent clusterrole
+templates:
+  - role.yaml
+tests:
+  - it: should create ClusterRole when namespace per organization is true
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: true
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ClusterRole
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME-agent
+      - equal:
+          path: rules[0].apiGroups[0]
+          value: ""
+      - equal:
+          path: rules[0].resources
+          value: ["persistentvolumeclaims", "services", "secrets"]
+      - equal:
+          path: rules[0].verbs
+          value: ["create", "delete"]
+      - equal:
+          path: rules[1].resources
+          value: ["pods"]
+      - equal:
+          path: rules[1].verbs
+          value: ["watch", "create", "delete", "get", "list"]
+      - equal:
+          path: rules[2].resources
+          value: ["pods/log"]
+      - equal:
+          path: rules[2].verbs
+          value: ["get"]
+      - equal:
+          path: rules[3].resources
+          value: ["namespaces"]
+      - equal:
+          path: rules[3].verbs
+          value: ["get", "list", "create"]
+
+  - it: should apply custom labels and annotations to ClusterRole
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: true
+      serviceAccount.rbac.role.labels:
+        custom-label: test-value
+      serviceAccount.rbac.role.annotations:
+        custom-annotation: test-value
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ClusterRole
+      - equal:
+          path: metadata.labels["custom-label"]
+          value: test-value
+      - equal:
+          path: metadata.annotations["custom-annotation"]
+          value: test-value
