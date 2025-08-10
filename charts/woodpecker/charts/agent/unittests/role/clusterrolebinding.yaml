@@ -1,0 +1,56 @@
+suite: test agent clusterrolebinding
+templates:
+  - rolebinding.yaml
+tests:
+  - it: should create ClusterRoleBinding when namespace per organization is true
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: true
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ClusterRoleBinding
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME-agent
+      - equal:
+          path: subjects[0].kind
+          value: ServiceAccount
+      - equal:
+          path: subjects[0].name
+          value: RELEASE-NAME-agent
+      - equal:
+          path: subjects[0].namespace
+          value: NAMESPACE
+      - equal:
+          path: roleRef.kind
+          value: ClusterRole
+      - equal:
+          path: roleRef.name
+          value: RELEASE-NAME-agent
+      - equal:
+          path: roleRef.apiGroup
+          value: rbac.authorization.k8s.io
+
+  - it: should apply custom labels and annotations to ClusterRoleBinding
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: true
+      serviceAccount.rbac.roleBinding.labels:
+        custom-label: test-value
+      serviceAccount.rbac.roleBinding.annotations:
+        custom-annotation: test-value
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ClusterRoleBinding
+      - equal:
+          path: metadata.labels["custom-label"]
+          value: test-value
+      - equal:
+          path: metadata.annotations["custom-annotation"]
+          value: test-value

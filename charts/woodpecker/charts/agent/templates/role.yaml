@@ -48,12 +48,10 @@ rules:
     resources: ['persistentvolumeclaims', 'services', 'secrets']
     verbs: ['create','delete']
   - apiGroups: ['']
-    resources:
-      - pods
+    resources: ['pods']
     verbs: ['watch','create','delete','get','list']
   - apiGroups: ['']
-    resources:
-      - pods/log
+    resources: ['pods/log']
     verbs: ['get']
 {{- end -}}
 {{- end }}
