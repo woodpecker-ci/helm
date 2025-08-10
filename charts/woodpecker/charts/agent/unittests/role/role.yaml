@@ -1,0 +1,80 @@
+suite: test agent role
+templates:
+  - role.yaml
+tests:
+  - it: should not create role when RBAC is disabled
+    set:
+      serviceAccount.create: false
+      serviceAccount.rbac.create: true
+    asserts:
+      - hasDocuments:
+          count: 0
+
+  - it: should not create role when RBAC is disabled (rbac.create=false)
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: false
+    asserts:
+      - hasDocuments:
+          count: 0
+
+  - it: should create Role when namespace per organization is false
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: false
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE: "test-namespace"
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Role
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME-agent
+      - equal:
+          path: metadata.namespace
+          value: "test-namespace"
+      - equal:
+          path: rules[0].apiGroups[0]
+          value: ""
+      - equal:
+          path: rules[0].resources
+          value: ["persistentvolumeclaims", "services", "secrets"]
+      - equal:
+          path: rules[0].verbs
+          value: ["create", "delete"]
+      - equal:
+          path: rules[1].resources
+          value: ["pods"]
+      - equal:
+          path: rules[1].verbs
+          value: ["watch", "create", "delete", "get", "list"]
+      - equal:
+          path: rules[2].resources
+          value: ["pods/log"]
+      - equal:
+          path: rules[2].verbs
+          value: ["get"]
+
+  - it: should apply custom labels and annotations to Role
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: false
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE: "test-namespace"
+      serviceAccount.rbac.role.labels:
+        custom-label: test-value
+      serviceAccount.rbac.role.annotations:
+        custom-annotation: test-value
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Role
+      - equal:
+          path: metadata.labels["custom-label"]
+          value: test-value
+      - equal:
+          path: metadata.annotations["custom-annotation"]
+          value: test-value
