@@ -1,10 +1,14 @@
 # Changelog
 
-## [3.2.2](https://github.com/woodpecker-ci/helm/releases/tag/3.2.2) - 2025-08-10
+## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-10
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@xoxys
+@henkka, @xoxys
+
+### ✨ Features
+
+- Add env var to use namespace per organization [[#391](https://github.com/woodpecker-ci/helm/pull/391)]
 
 ### 📦️ Dependency
 
