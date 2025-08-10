@@ -18,7 +18,6 @@ command: []
 args: []
 
 env:
-  # -- Add the environment variables for the agent component
   WOODPECKER_SERVER: 'woodpecker-server:9000'
   WOODPECKER_BACKEND: kubernetes
   WOODPECKER_BACKEND_K8S_NAMESPACE: woodpecker
