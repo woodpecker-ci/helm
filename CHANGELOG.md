@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v3.18.5 [[#398](https://github.com/woodpecker-ci/helm/pull/398)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.18.5 [[#399](https://github.com/woodpecker-ci/helm/pull/399)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.0 [[#397](https://github.com/woodpecker-ci/helm/pull/397)]
 - chore(deps): update pre-commit hook pre-commit/pre-commit-hooks to v6 [[#396](https://github.com/woodpecker-ci/helm/pull/396)]
