@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-16
+## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-17
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v3.18.5 [[#399](https://github.com/woodpecker-ci/helm/pull/399)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.0 [[#397](https://github.com/woodpecker-ci/helm/pull/397)]
 - chore(deps): update pre-commit hook pre-commit/pre-commit-hooks to v6 [[#396](https://github.com/woodpecker-ci/helm/pull/396)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.4.0 [[#395](https://github.com/woodpecker-ci/helm/pull/395)]
