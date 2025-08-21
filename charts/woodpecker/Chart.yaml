@@ -4,7 +4,7 @@ description: A Helm chart for Woodpecker CI
 type: application
 version: 3.2.1
 # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker extractVersion=^v(?<version>.*)$
-appVersion: 3.8.0
+appVersion: 3.9.0
 home: https://woodpecker-ci.org/
 icon: https://avatars.githubusercontent.com/u/84780935?s=200&v=4
 
