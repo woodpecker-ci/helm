@@ -1,5 +1,31 @@
 # Changelog
 
+## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-21
+
+### ❤️ Thanks to all contributors! ❤️
+
+@henkka, @xoxys
+
+### ✨ Features
+
+- Add env var to use namespace per organization [[#391](https://github.com/woodpecker-ci/helm/pull/391)]
+
+### 📦️ Dependency
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.9.0 [[#400](https://github.com/woodpecker-ci/helm/pull/400)]
+- chore(deps): update alpine/helm docker tag to v3.18.5 [[#398](https://github.com/woodpecker-ci/helm/pull/398)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.18.5 [[#399](https://github.com/woodpecker-ci/helm/pull/399)]
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.0 [[#397](https://github.com/woodpecker-ci/helm/pull/397)]
+- chore(deps): update pre-commit hook pre-commit/pre-commit-hooks to v6 [[#396](https://github.com/woodpecker-ci/helm/pull/396)]
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.4.0 [[#395](https://github.com/woodpecker-ci/helm/pull/395)]
+- chore(deps): update docker.io/alpine/helm docker tag to v3.18.4 [[#394](https://github.com/woodpecker-ci/helm/pull/394)]
+- chore(deps): update alpine/helm docker tag to v3.18.4 [[#393](https://github.com/woodpecker-ci/helm/pull/393)]
+- chore(deps): update pre-commit hook gruntwork-io/pre-commit to v0.1.30 [[#388](https://github.com/woodpecker-ci/helm/pull/388)]
+
+### Misc
+
+- Fix path of oci repo [[#390](https://github.com/woodpecker-ci/helm/pull/390)]
+
 ## [3.2.1](https://github.com/woodpecker-ci/helm/releases/tag/3.2.1) - 2025-07-05
 
 ### 📦️ Dependency
