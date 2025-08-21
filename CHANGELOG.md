@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-17
+## [3.3.0](https://github.com/woodpecker-ci/helm/releases/tag/3.3.0) - 2025-08-21
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.9.0 [[#400](https://github.com/woodpecker-ci/helm/pull/400)]
 - chore(deps): update alpine/helm docker tag to v3.18.5 [[#398](https://github.com/woodpecker-ci/helm/pull/398)]
 - chore(deps): update docker.io/alpine/helm docker tag to v3.18.5 [[#399](https://github.com/woodpecker-ci/helm/pull/399)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.0 [[#397](https://github.com/woodpecker-ci/helm/pull/397)]
