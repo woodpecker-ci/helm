@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.3.2](https://github.com/woodpecker-ci/helm/releases/tag/3.3.2) - 2025-10-04
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.4.0 [[#407](https://github.com/woodpecker-ci/helm/pull/407)]
+
 ## [3.3.1](https://github.com/woodpecker-ci/helm/releases/tag/3.3.1) - 2025-09-28
 
 ### 📦️ Dependency
