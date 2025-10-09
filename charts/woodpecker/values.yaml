@@ -350,4 +350,3 @@ server:
       failureThreshold: 3
 # -- Allow adding additional custom kubernets objects
 additionalObjects: []
-
