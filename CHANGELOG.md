@@ -1,18 +1,18 @@
 # Changelog
 
-## [3.3.2](https://github.com/woodpecker-ci/helm/releases/tag/3.3.2) - 2025-10-09
+## [3.4.0](https://github.com/woodpecker-ci/helm/releases/tag/3.4.0) - 2025-10-09
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @marcusramberg
 
+### ✨ Features
+
+- Add support for specifying additional objects in the chart [[#409](https://github.com/woodpecker-ci/helm/pull/409)]
+
 ### 📦️ Dependency
 
 - chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.4.0 [[#407](https://github.com/woodpecker-ci/helm/pull/407)]
-
-### Misc
-
-- Add support for specifying additional objects in the chart [[#409](https://github.com/woodpecker-ci/helm/pull/409)]
 
 ## [3.3.1](https://github.com/woodpecker-ci/helm/releases/tag/3.3.1) - 2025-09-28
 
