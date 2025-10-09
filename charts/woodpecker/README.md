@@ -1,6 +1,6 @@
 # woodpecker
 
-![Version: 3.3.1](https://img.shields.io/badge/Version-3.3.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.10.0](https://img.shields.io/badge/AppVersion-3.10.0-informational?style=flat-square)
+![Version: 3.4.0](https://img.shields.io/badge/Version-3.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.10.0](https://img.shields.io/badge/AppVersion-3.10.0-informational?style=flat-square)
 
 **Source Code**: <https://github.com/woodpecker-ci/woodpecker>
 
@@ -34,7 +34,7 @@ resource "helm_release" "woodpecker" {
   chart            = "woodpecker"
   repository       = "https://woodpecker-ci.org/"
   create_namespace = true # optional
-  version          = 3.3.1
+  version          = 3.4.0
   namespace        = "woodpecker"
   count            = 1 # optional
   timeout          = 90 # optional
@@ -70,6 +70,7 @@ See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
 
 | Key                                                         | Type   | Default                                                                                                                                                                                          | Description                                                                                                                                                                                                                                                                                                                              |
 | ----------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| additionalObjects                                           | list   | `[]`                                                                                                                                                                                             | Allow adding additional custom kubernets objects                                                                                                                                                                                                                                                                                         |
 | agent.affinity                                              | object | `{}`                                                                                                                                                                                             | Specifies the affinity                                                                                                                                                                                                                                                                                                                   |
 | agent.dnsConfig                                             | object | `{}`                                                                                                                                                                                             | Overrides the default DNS configuration                                                                                                                                                                                                                                                                                                  |
 | agent.enabled                                               | bool   | `true`                                                                                                                                                                                           | Enable the agent component                                                                                                                                                                                                                                                                                                               |
