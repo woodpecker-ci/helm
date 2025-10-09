@@ -348,3 +348,5 @@ server:
       successThreshold: 1
       # -- When a probe fails, Kubernetes will try failureThreshold times before giving up (default: 3)
       failureThreshold: 3
+# -- Allow adding additional custom kubernets objects
+additionalObjects: []
