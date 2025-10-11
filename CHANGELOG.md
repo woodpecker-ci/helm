@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.1 [[#410](https://github.com/woodpecker-ci/helm/pull/410)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.6 [[#411](https://github.com/woodpecker-ci/helm/pull/411)]
 
 ## [3.4.0](https://github.com/woodpecker-ci/helm/releases/tag/3.4.0) - 2025-10-09
