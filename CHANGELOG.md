@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.14.0 [[#413](https://github.com/woodpecker-ci/helm/pull/413)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.1 [[#410](https://github.com/woodpecker-ci/helm/pull/410)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.6 [[#411](https://github.com/woodpecker-ci/helm/pull/411)]
 
