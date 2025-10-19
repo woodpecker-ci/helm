@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.4.1](https://github.com/woodpecker-ci/helm/releases/tag/3.4.1) - 2025-10-11
+## [3.4.1](https://github.com/woodpecker-ci/helm/releases/tag/3.4.1) - 2025-10-19
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.11.0 [[#414](https://github.com/woodpecker-ci/helm/pull/414)]
 - chore(deps): update quay.io/helmpack/chart-testing docker tag to v3.14.0 [[#413](https://github.com/woodpecker-ci/helm/pull/413)]
 - chore(deps): update docker.io/mstruebing/editorconfig-checker docker tag to v3.4.1 [[#410](https://github.com/woodpecker-ci/helm/pull/410)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.6 [[#411](https://github.com/woodpecker-ci/helm/pull/411)]
