@@ -12,10 +12,8 @@ steps:
       - 'markdownlint-cli2 *.{md,markdown}'
 
   editor-config:
-    image: docker.io/mstruebing/editorconfig-checker:v3.4.1
+    image: docker.io/woodpeckerci/plugin-editorconfig-checker:0.3.2
     depends_on: []
-    commands:
-      - ec --config .editorconfig-checker.json .
 
   helm-lint:
     image: docker.io/alpine/helm:3.19.0
