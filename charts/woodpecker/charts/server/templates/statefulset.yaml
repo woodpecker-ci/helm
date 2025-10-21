@@ -103,7 +103,14 @@ spec:
           env:
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
+              {{- if kindIs "string" $value }}
               value: {{ $value | quote }}
+              {{- else if kindIs "map" $value }}
+              {{- if $value.valueFrom }}
+              valueFrom:
+                {{- toYaml $value.valueFrom | nindent 16 }}
+              {{- end }}
+              {{- end }}
             {{- end }}
             {{- if .Values.metrics.enabled }}
             - name: WOODPECKER_METRICS_SERVER_ADDR
