@@ -35,6 +35,11 @@ agent:
     WOODPECKER_BACKEND_K8S_POD_LABELS: ''
     WOODPECKER_BACKEND_K8S_POD_ANNOTATIONS: ''
     WOODPECKER_CONNECT_RETRY_COUNT: '1'
+  # WOODPECKER_DATABASE_DATASOURCE:
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: woodpecker-database-secret
+  #       key: datasource
 
   # -- Add extra secret that is contains environment variables
   extraSecretNamesForEnvFrom: []
