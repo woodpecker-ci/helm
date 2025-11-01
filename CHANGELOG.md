@@ -1,10 +1,14 @@
 # Changelog
 
-## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-10-20
+## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-01
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @6543
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.9 [[#418](https://github.com/woodpecker-ci/helm/pull/418)]
 
 ### Misc
 
