@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.19.0 [[#420](https://github.com/woodpecker-ci/helm/pull/420)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.19.0 [[#419](https://github.com/woodpecker-ci/helm/pull/419)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.9 [[#418](https://github.com/woodpecker-ci/helm/pull/418)]
 
