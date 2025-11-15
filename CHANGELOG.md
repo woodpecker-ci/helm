@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-01
+## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-15
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.19.0 [[#419](https://github.com/woodpecker-ci/helm/pull/419)]
 - chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.9 [[#418](https://github.com/woodpecker-ci/helm/pull/418)]
 
 ### Misc
