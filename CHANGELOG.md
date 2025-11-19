@@ -1,10 +1,10 @@
 # Changelog
 
-## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-15
+## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-19
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@6543
+@6543, @marcusramberg
 
 ### 📦️ Dependency
 
@@ -14,6 +14,7 @@
 
 ### Misc
 
+- chore(deps): bump woodpecker to 3.12.0 [[#421](https://github.com/woodpecker-ci/helm/pull/421)]
 - Use our own editorconfig checker plugin [[#415](https://github.com/woodpecker-ci/helm/pull/415)]
 
 ## [3.4.1](https://github.com/woodpecker-ci/helm/releases/tag/3.4.1) - 2025-10-19
