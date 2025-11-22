@@ -7,7 +7,7 @@ when:
 steps:
   lint-markdown:
     depends_on: []
-    image: docker.io/davidanson/markdownlint-cli2:v0.19.0
+    image: docker.io/davidanson/markdownlint-cli2:v0.19.1
     commands:
       - 'markdownlint-cli2 *.{md,markdown}'
 
