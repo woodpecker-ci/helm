@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update alpine/helm docker tag to v4 [[#425](https://github.com/woodpecker-ci/helm/pull/425)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4 [[#426](https://github.com/woodpecker-ci/helm/pull/426)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.3 [[#430](https://github.com/woodpecker-ci/helm/pull/430)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.3 [[#431](https://github.com/woodpecker-ci/helm/pull/431)]
