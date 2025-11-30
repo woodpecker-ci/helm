@@ -34,6 +34,11 @@ env:
   WOODPECKER_ADMIN: 'woodpecker,admin'
   WOODPECKER_HOST: 'https://xxxxxxx'
   # WOODPECKER_GITHUB: "true"
+  # WOODPECKER_DATABASE_DATASOURCE:
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: woodpecker-database-secret
+  #       key: datasource
 
 # -- Add extra environment variables from the secrets list
 extraSecretNamesForEnvFrom: []
