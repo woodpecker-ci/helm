@@ -6,18 +6,18 @@ when:
 
 steps:
   lint:
-    image: alpine/helm:3.19.0
+    image: alpine/helm:4.0.1
     commands:
       - helm lint --with-subcharts charts/*
 
   unittest:
-    image: alpine/helm:3.19.0
+    image: alpine/helm:4.0.1
     environment:
       # NB: we can't use the official helmunittest/helm-unittest image as it's rootless and WP does not support that
       # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
-      HELM_UNITTEST_VERSION: v0.6.1
+      HELM_UNITTEST_VERSION: v1.0.3
     commands:
-      - helm plugin install --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest > /dev/null
+      - helm plugin install --verify=false --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest > /dev/null
       - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/ ./charts/woodpecker/charts/agent
 
   test-chart:
