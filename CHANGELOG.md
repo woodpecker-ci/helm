@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-19
+
+### ❤️ Thanks to all contributors! ❤️
+
+@6543, @marcusramberg
+
+### 📦️ Dependency
+
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.19.0 [[#420](https://github.com/woodpecker-ci/helm/pull/420)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.19.0 [[#419](https://github.com/woodpecker-ci/helm/pull/419)]
+- chore(deps): update docker.io/pipelinecomponents/yamllint docker tag to v0.35.9 [[#418](https://github.com/woodpecker-ci/helm/pull/418)]
+
+### Misc
+
+- chore(deps): bump woodpecker to 3.12.0 [[#421](https://github.com/woodpecker-ci/helm/pull/421)]
+- Use our own editorconfig checker plugin [[#415](https://github.com/woodpecker-ci/helm/pull/415)]
+
 ## [3.4.1](https://github.com/woodpecker-ci/helm/releases/tag/3.4.1) - 2025-10-19
 
 ### 📦️ Dependency
