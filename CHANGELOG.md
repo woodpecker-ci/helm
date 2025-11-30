@@ -1,6 +1,14 @@
 # Changelog
 
-## [3.4.3](https://github.com/woodpecker-ci/helm/releases/tag/3.4.3) - 2025-11-30
+## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2025-11-30
+
+### ❤️ Thanks to all contributors! ❤️
+
+@baprx
+
+### ✨ Features
+
+- feat(statefulset): add support for valueFrom in env [[#417](https://github.com/woodpecker-ci/helm/pull/417)]
 
 ### 📦️ Dependency
 
