@@ -1,10 +1,10 @@
 # Changelog
 
-## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2025-11-30
+## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2025-12-01
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@baprx
+@baprx, @xoxys
 
 ### ✨ Features
 
@@ -21,6 +21,10 @@
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.2 [[#427](https://github.com/woodpecker-ci/helm/pull/427)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.19.1 [[#423](https://github.com/woodpecker-ci/helm/pull/423)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.19.1 [[#422](https://github.com/woodpecker-ci/helm/pull/422)]
+
+### Misc
+
+- ci: use list format for pipelines [[#432](https://github.com/woodpecker-ci/helm/pull/432)]
 
 ## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-19
 
