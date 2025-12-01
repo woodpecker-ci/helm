@@ -5,24 +5,24 @@ when:
   - event: pull_request
 
 steps:
-  lint-markdown:
+  - name: lint-markdown
     depends_on: []
     image: docker.io/davidanson/markdownlint-cli2:v0.19.1
     commands:
       - 'markdownlint-cli2 *.{md,markdown}'
 
-  editor-config:
+  - name: editor-config
     image: docker.io/woodpeckerci/plugin-editorconfig-checker:0.3.2
     depends_on: []
 
-  helm-lint:
+  - name: helm-lint
     image: docker.io/alpine/helm:4.0.1
     depends_on: []
     commands:
       - helm dependency update charts/woodpecker
       - helm lint --with-subcharts charts/*
 
-  lint-yaml:
+  - name: lint-yaml
     image: docker.io/pipelinecomponents/yamllint:0.35.9
     depends_on: []
     commands:
@@ -30,7 +30,7 @@ steps:
     when:
       path: '*.{yml,yaml}'
 
-  lint-prettier:
+  - name: lint-prettier
     image: docker.io/woodpeckerci/plugin-prettier:1.4.0
     depends_on: []
     settings:

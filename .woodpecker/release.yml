@@ -6,13 +6,13 @@ when:
   - event: pull_request
 
 steps:
-  pack-chart:
+  - name: pack-chart
     image: quay.io/helmpack/chart-releaser:v1.8.1
     commands:
       - mkdir -p .cr-index
       - cr package charts/woodpecker
 
-  release-chart:
+  - name: release-chart
     image: quay.io/helmpack/chart-releaser:v1.8.1
     environment:
       CR_TOKEN:
@@ -30,8 +30,8 @@ steps:
     when:
       - event: tag
 
-  release-chart-ghcr:
-    image: alpine/helm:4.0.1
+  - name: release-chart-ghcr
+    image: docker.io/alpine/helm:4.0.1
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
@@ -42,18 +42,18 @@ steps:
     when:
       - event: tag
 
-  update-readme:
+  - name: update-readme
     image: docker.io/jnorwood/helm-docs:v1.14.2
     commands:
       - helm-docs
       - cat charts/woodpecker/README.md
 
-  prettier:
+  - name: prettier
     image: docker.io/jauderho/prettier:3.7.3
     commands:
       - prettier -w .
 
-  push-readme:
+  - name: push-readme
     image: docker.io/appleboy/drone-git-push:1.1.1
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
