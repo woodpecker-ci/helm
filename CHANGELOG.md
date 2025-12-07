@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.20.0 [[#436](https://github.com/woodpecker-ci/helm/pull/436)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.20.0 [[#435](https://github.com/woodpecker-ci/helm/pull/435)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.4 [[#433](https://github.com/woodpecker-ci/helm/pull/433)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.4 [[#434](https://github.com/woodpecker-ci/helm/pull/434)]
