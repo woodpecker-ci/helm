@@ -16,7 +16,7 @@ steps:
     depends_on: []
 
   - name: helm-lint
-    image: docker.io/alpine/helm:4.0.1
+    image: docker.io/alpine/helm:4.0.4
     depends_on: []
     commands:
       - helm dependency update charts/woodpecker
