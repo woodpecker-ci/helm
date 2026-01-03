@@ -54,7 +54,7 @@ steps:
       - prettier -w .
 
   - name: push-readme
-    image: docker.io/appleboy/drone-git-push:1.2.0
+    image: docker.io/appleboy/drone-git-push:1.2.1
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main
