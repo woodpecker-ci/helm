@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2025-12-20
+## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2026-01-03
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.1 [[#439](https://github.com/woodpecker-ci/helm/pull/439)]
 - chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.0 [[#438](https://github.com/woodpecker-ci/helm/pull/438)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4.0.4 [[#437](https://github.com/woodpecker-ci/helm/pull/437)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.20.0 [[#436](https://github.com/woodpecker-ci/helm/pull/436)]
