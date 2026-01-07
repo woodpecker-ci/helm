@@ -1,5 +1,38 @@
 # Changelog
 
+## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2026-01-03
+
+### ❤️ Thanks to all contributors! ❤️
+
+@baprx, @xoxys
+
+### ✨ Features
+
+- feat(statefulset): add support for valueFrom in env [[#417](https://github.com/woodpecker-ci/helm/pull/417)]
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.1 [[#439](https://github.com/woodpecker-ci/helm/pull/439)]
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.0 [[#438](https://github.com/woodpecker-ci/helm/pull/438)]
+- chore(deps): update docker.io/alpine/helm docker tag to v4.0.4 [[#437](https://github.com/woodpecker-ci/helm/pull/437)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.20.0 [[#436](https://github.com/woodpecker-ci/helm/pull/436)]
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.20.0 [[#435](https://github.com/woodpecker-ci/helm/pull/435)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.4 [[#433](https://github.com/woodpecker-ci/helm/pull/433)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.4 [[#434](https://github.com/woodpecker-ci/helm/pull/434)]
+- chore(deps): update alpine/helm docker tag to v4 [[#425](https://github.com/woodpecker-ci/helm/pull/425)]
+- chore(deps): update docker.io/alpine/helm docker tag to v4 [[#426](https://github.com/woodpecker-ci/helm/pull/426)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.3 [[#430](https://github.com/woodpecker-ci/helm/pull/430)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.3 [[#431](https://github.com/woodpecker-ci/helm/pull/431)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.2 [[#429](https://github.com/woodpecker-ci/helm/pull/429)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.7.1 [[#428](https://github.com/woodpecker-ci/helm/pull/428)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.7.2 [[#427](https://github.com/woodpecker-ci/helm/pull/427)]
+- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.19.1 [[#423](https://github.com/woodpecker-ci/helm/pull/423)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.19.1 [[#422](https://github.com/woodpecker-ci/helm/pull/422)]
+
+### Misc
+
+- ci: use list format for pipelines [[#432](https://github.com/woodpecker-ci/helm/pull/432)]
+
 ## [3.4.2](https://github.com/woodpecker-ci/helm/releases/tag/3.4.2) - 2025-11-19
 
 ### ❤️ Thanks to all contributors! ❤️
