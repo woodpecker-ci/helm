@@ -12,7 +12,7 @@ steps:
       - 'markdownlint-cli2 *.{md,markdown}'
 
   - name: editor-config
-    image: docker.io/woodpeckerci/plugin-editorconfig-checker:0.3.2
+    image: docker.io/woodpeckerci/plugin-editorconfig-checker:0.3.3
     depends_on: []
 
   - name: helm-lint
