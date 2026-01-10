@@ -4,7 +4,7 @@ when:
 
 steps:
   - name: release-helper
-    image: docker.io/woodpeckerci/plugin-ready-release-go:3.4.0
+    image: docker.io/woodpeckerci/plugin-ready-release-go:3.4.1
     pull: true
     settings:
       release_branch: ${CI_REPO_DEFAULT_BRANCH}
