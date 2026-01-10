@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.1](https://github.com/woodpecker-ci/helm/releases/tag/3.5.1) - 2026-01-10
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/woodpeckerci/plugin-editorconfig-checker docker tag to v0.3.3 [[#442](https://github.com/woodpecker-ci/helm/pull/442)]
+- chore(deps): update docker.io/woodpeckerci/plugin-prettier docker tag to v1.4.1 [[#443](https://github.com/woodpecker-ci/helm/pull/443)]
+
 ## [3.5.0](https://github.com/woodpecker-ci/helm/releases/tag/3.5.0) - 2026-01-03
 
 ### ❤️ Thanks to all contributors! ❤️
