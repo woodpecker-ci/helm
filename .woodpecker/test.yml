@@ -6,12 +6,12 @@ when:
 
 steps:
   - name: lint
-    image: docker.io/alpine/helm:4.0.4
+    image: docker.io/alpine/helm:4.0.5
     commands:
       - helm lint --with-subcharts charts/*
 
   - name: unittest
-    image: docker.io/alpine/helm:4.0.4
+    image: docker.io/alpine/helm:4.0.5
     environment:
       # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
       HELM_UNITTEST_VERSION: v1.0.3
