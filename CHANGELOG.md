@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit non-major [[#444](https://github.com/woodpecker-ci/helm/pull/444)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.0 [[#450](https://github.com/woodpecker-ci/helm/pull/450)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4.0.5 [[#448](https://github.com/woodpecker-ci/helm/pull/448)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v3.13.0 [[#449](https://github.com/woodpecker-ci/helm/pull/449)]
