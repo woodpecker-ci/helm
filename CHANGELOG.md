@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v4.0.5 [[#448](https://github.com/woodpecker-ci/helm/pull/448)]
 - chore(deps): update dependency woodpecker-ci/woodpecker to v3.13.0 [[#449](https://github.com/woodpecker-ci/helm/pull/449)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v3.4.1 [[#446](https://github.com/woodpecker-ci/helm/pull/446)]
 - chore(deps): update docker.io/woodpeckerci/plugin-editorconfig-checker docker tag to v0.3.3 [[#442](https://github.com/woodpecker-ci/helm/pull/442)]
