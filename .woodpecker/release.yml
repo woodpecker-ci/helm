@@ -31,7 +31,7 @@ steps:
       - event: tag
 
   - name: release-chart-ghcr
-    image: docker.io/alpine/helm:4.0.4
+    image: docker.io/alpine/helm:4.0.5
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
