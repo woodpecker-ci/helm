@@ -28,7 +28,7 @@ repos:
         args: [--strict, -c=.yamllint.yaml]
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.0
+    rev: v3.8.1
     hooks:
       - id: prettier
 
