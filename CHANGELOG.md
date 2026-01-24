@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-01-24
+
+### 📦️ Dependency
+
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.1 [[#451](https://github.com/woodpecker-ci/helm/pull/451)]
+
 ## [3.5.1](https://github.com/woodpecker-ci/helm/releases/tag/3.5.1) - 2026-01-15
 
 ### 📦️ Dependency
