@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.2 [[#461](https://github.com/woodpecker-ci/helm/pull/461)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4.1.3 [[#460](https://github.com/woodpecker-ci/helm/pull/460)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4 [[#459](https://github.com/woodpecker-ci/helm/pull/459)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.21.0 [[#458](https://github.com/woodpecker-ci/helm/pull/458)]
