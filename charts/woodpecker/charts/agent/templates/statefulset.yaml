@@ -76,6 +76,8 @@ spec:
               valueFrom:
                 {{- toYaml $value.valueFrom | nindent 16 }}
               {{- end }}
+              {{- else }}
+              value: {{ $value | quote }}
               {{- end }}
             {{- end }}
           envFrom:
