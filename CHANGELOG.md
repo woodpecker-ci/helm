@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.2 [[#466](https://github.com/woodpecker-ci/helm/pull/466)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4.1.4 [[#465](https://github.com/woodpecker-ci/helm/pull/465)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4.1.0 [[#464](https://github.com/woodpecker-ci/helm/pull/464)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.0 [[#463](https://github.com/woodpecker-ci/helm/pull/463)]
