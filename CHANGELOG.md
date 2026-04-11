@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-03-28
+## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-04-11
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/alpine/helm docker tag to v4.1.4 [[#465](https://github.com/woodpecker-ci/helm/pull/465)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4.1.0 [[#464](https://github.com/woodpecker-ci/helm/pull/464)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.0 [[#463](https://github.com/woodpecker-ci/helm/pull/463)]
 - chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.22.0 [[#462](https://github.com/woodpecker-ci/helm/pull/462)]
