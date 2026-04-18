@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-04-11
+## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-04-18
 
 ### 📦️ Dependency
 
