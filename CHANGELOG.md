@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.3 [[#468](https://github.com/woodpecker-ci/helm/pull/468)]
 - chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.3 [[#470](https://github.com/woodpecker-ci/helm/pull/470)]
 - chore(deps): update pre-commit non-major [[#471](https://github.com/woodpecker-ci/helm/pull/471)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4.1.1 [[#469](https://github.com/woodpecker-ci/helm/pull/469)]
