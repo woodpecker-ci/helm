@@ -25,6 +25,9 @@ spec:
       name: grpc
       port: 9000
       targetPort: grpc
+      {{- with .Values.service.appProtocol }}
+      appProtocol: {{ . }}
+      {{- end }}
     {{- if .Values.metrics.enabled }}
     - protocol: TCP
       name: metrics
