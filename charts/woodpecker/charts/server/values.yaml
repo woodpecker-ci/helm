@@ -149,6 +149,8 @@ service:
   loadBalancerIP:
   # -- Annotations to add to the service
   annotations: {}
+  # -- https://kubernetes.io/docs/concepts/services-networking/service/#application-protocol
+  appProtocol: ""
 
 ingress:
   # -- Enable the ingress for the server component
