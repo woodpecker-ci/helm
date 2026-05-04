@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-05-02
+## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-05-04
 
 ### 📦️ Dependency
 
@@ -25,6 +25,10 @@
 - chore(deps): update docker.io/alpine/helm docker tag to v4.1.0 [[#454](https://github.com/woodpecker-ci/helm/pull/454)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.8.1 [[#452](https://github.com/woodpecker-ci/helm/pull/452)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.1 [[#451](https://github.com/woodpecker-ci/helm/pull/451)]
+
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#455](https://github.com/woodpecker-ci/helm/pull/455)]
 
 ## [3.5.1](https://github.com/woodpecker-ci/helm/releases/tag/3.5.1) - 2026-01-15
 
