@@ -5,14 +5,14 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [".woodpecker/.+\\.ya?ml$"],
+      "managerFilePatterns": ["/.woodpecker/.+\\.ya?ml$/"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[a-z-0-9]+?))?\\s.*_VERSION=(?<currentValue>.*)\\s"
       ]
     },
     {
       "customType": "regex",
-      "fileMatch": ["charts/.*Chart.yaml"],
+      "managerFilePatterns": ["/charts/.*Chart.yaml/"],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\sappVersion: (?<currentValue>.*)\\s"
       ],
