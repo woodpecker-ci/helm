@@ -31,7 +31,7 @@ steps:
       - event: tag
 
   - name: release-chart-ghcr
-    image: docker.io/alpine/helm:4.0.4
+    image: docker.io/alpine/helm:4.1.4
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
@@ -49,12 +49,12 @@ steps:
       - cat charts/woodpecker/README.md
 
   - name: prettier
-    image: docker.io/jauderho/prettier:3.7.4
+    image: docker.io/jauderho/prettier:3.8.3
     commands:
       - prettier -w .
 
   - name: push-readme
-    image: docker.io/appleboy/drone-git-push:1.2.1
+    image: docker.io/appleboy/drone-git-push:1.2.3
     settings:
       remote: ssh://git@github.com/woodpecker-ci/helm.git
       branch: main
