@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.5.2](https://github.com/woodpecker-ci/helm/releases/tag/3.5.2) - 2026-05-06
+## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-06
+
+### 📈 Enhancement
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.14.0 [[#474](https://github.com/woodpecker-ci/helm/pull/474)]
 
 ### 🐛 Bug Fixes
 
@@ -8,7 +12,7 @@
 
 ### 📦️ Dependency
 
-- chore(deps): update dependency woodpecker-ci/woodpecker to v3.14.0 [[#474](https://github.com/woodpecker-ci/helm/pull/474)]
+- chore(deps): update pre-commit hook mrtazz/checkmake to v0.3.2 [[#476](https://github.com/woodpecker-ci/helm/pull/476)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.1 [[#472](https://github.com/woodpecker-ci/helm/pull/472)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.3 [[#468](https://github.com/woodpecker-ci/helm/pull/468)]
 - chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.3 [[#470](https://github.com/woodpecker-ci/helm/pull/470)]
