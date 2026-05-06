@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(config): migrate Renovate config [[#477](https://github.com/woodpecker-ci/helm/pull/477)]
 - chore(deps): update pre-commit hook mrtazz/checkmake to v0.3.2 [[#476](https://github.com/woodpecker-ci/helm/pull/476)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.1 [[#472](https://github.com/woodpecker-ci/helm/pull/472)]
 - chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.3 [[#468](https://github.com/woodpecker-ci/helm/pull/468)]
