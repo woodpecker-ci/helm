@@ -20,15 +20,7 @@
 - chore(deps): update pre-commit non-major [[#471](https://github.com/woodpecker-ci/helm/pull/471)]
 - chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4.1.1 [[#469](https://github.com/woodpecker-ci/helm/pull/469)]
 - chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.8.2 [[#467](https://github.com/woodpecker-ci/helm/pull/467)]
-- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.2 [[#466](https://github.com/woodpecker-ci/helm/pull/466)]
 - chore(deps): update docker.io/alpine/helm docker tag to v4.1.4 [[#465](https://github.com/woodpecker-ci/helm/pull/465)]
-- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.0 [[#463](https://github.com/woodpecker-ci/helm/pull/463)]
-- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.22.0 [[#462](https://github.com/woodpecker-ci/helm/pull/462)]
-- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.2 [[#461](https://github.com/woodpecker-ci/helm/pull/461)]
-- chore(deps): update pre-commit hook davidanson/markdownlint-cli2 to v0.21.0 [[#458](https://github.com/woodpecker-ci/helm/pull/458)]
-- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.21.0 [[#457](https://github.com/woodpecker-ci/helm/pull/457)]
-- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.8.1 [[#452](https://github.com/woodpecker-ci/helm/pull/452)]
-- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.1 [[#451](https://github.com/woodpecker-ci/helm/pull/451)]
 
 ### Misc
 
