@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-07
+## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-09
 
 ### 📈 Enhancement
 
@@ -12,6 +12,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update dependency helm-unittest/helm-unittest to v1.1.0 [[#478](https://github.com/woodpecker-ci/helm/pull/478)]
 - chore(config): migrate Renovate config [[#477](https://github.com/woodpecker-ci/helm/pull/477)]
 - chore(deps): update pre-commit hook mrtazz/checkmake to v0.3.2 [[#476](https://github.com/woodpecker-ci/helm/pull/476)]
 - chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.1 [[#472](https://github.com/woodpecker-ci/helm/pull/472)]
