@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-09
+## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-10
 
 ### 📈 Enhancement
 
