@@ -1,5 +1,32 @@
 # Changelog
 
+## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-10
+
+### 📈 Enhancement
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.14.0 [[#474](https://github.com/woodpecker-ci/helm/pull/474)]
+
+### 🐛 Bug Fixes
+
+- Agent on different machine, GRPCRoute issue, Gateway SSL terminated [[#473](https://github.com/woodpecker-ci/helm/pull/473)]
+
+### 📦️ Dependency
+
+- chore(deps): update dependency helm-unittest/helm-unittest to v1.1.0 [[#478](https://github.com/woodpecker-ci/helm/pull/478)]
+- chore(config): migrate Renovate config [[#477](https://github.com/woodpecker-ci/helm/pull/477)]
+- chore(deps): update pre-commit hook mrtazz/checkmake to v0.3.2 [[#476](https://github.com/woodpecker-ci/helm/pull/476)]
+- chore(deps): update docker.io/davidanson/markdownlint-cli2 docker tag to v0.22.1 [[#472](https://github.com/woodpecker-ci/helm/pull/472)]
+- chore(deps): update docker.io/jauderho/prettier docker tag to v3.8.3 [[#468](https://github.com/woodpecker-ci/helm/pull/468)]
+- chore(deps): update docker.io/appleboy/drone-git-push docker tag to v1.2.3 [[#470](https://github.com/woodpecker-ci/helm/pull/470)]
+- chore(deps): update pre-commit non-major [[#471](https://github.com/woodpecker-ci/helm/pull/471)]
+- chore(deps): update docker.io/woodpeckerci/plugin-ready-release-go docker tag to v4.1.1 [[#469](https://github.com/woodpecker-ci/helm/pull/469)]
+- chore(deps): update pre-commit hook rbubley/mirrors-prettier to v3.8.2 [[#467](https://github.com/woodpecker-ci/helm/pull/467)]
+- chore(deps): update docker.io/alpine/helm docker tag to v4.1.4 [[#465](https://github.com/woodpecker-ci/helm/pull/465)]
+
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#455](https://github.com/woodpecker-ci/helm/pull/455)]
+
 ## [3.5.1](https://github.com/woodpecker-ci/helm/releases/tag/3.5.1) - 2026-01-15
 
 ### 📦️ Dependency
