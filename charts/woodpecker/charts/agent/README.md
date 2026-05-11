@@ -1,6 +1,6 @@
 # agent
 
-![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.13.0](https://img.shields.io/badge/AppVersion-3.13.0-informational?style=flat-square)
+![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.14.0](https://img.shields.io/badge/AppVersion-3.14.0-informational?style=flat-square)
 
 A Helm chart for the Woodpecker agent
 
@@ -24,11 +24,15 @@ See the [3.0.0 release notes](https://woodpecker-ci.org/migrations#300).
 
 <details>
 
+<details>
+
 <summary>To 1.0.0</summary>
 
 - If you have injected/defined the env var `WOODPECKER_AGENT_SECRET` manually, you need to decide whether you want to continue doing so (if yes, set `mapAgentSecret: false`) or if you want to make use of the new `mapAgentSecret: true` option (new default). This option maps an existing k8s secret in the same namespace into the statefulset.
 
 </details>
+
+<details>
 
 ## Values
 
