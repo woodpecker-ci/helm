@@ -25,6 +25,7 @@ spec:
       name: grpc
       port: 9000
       targetPort: grpc
+      appProtocol: kubernetes.io/h2c
     {{- if .Values.metrics.enabled }}
     - protocol: TCP
       name: metrics

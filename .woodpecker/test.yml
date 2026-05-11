@@ -14,7 +14,7 @@ steps:
     image: docker.io/alpine/helm:4.1.4
     environment:
       # renovate: datasource=github-releases depName=helm-unittest/helm-unittest
-      HELM_UNITTEST_VERSION: v1.0.3
+      HELM_UNITTEST_VERSION: v1.1.0
     commands:
       - helm plugin install --verify=false --version $HELM_UNITTEST_VERSION https://github.com/helm-unittest/helm-unittest > /dev/null
       - helm unittest --strict -f 'unittests/**/*.yaml' ./charts/woodpecker/charts/server/ ./charts/woodpecker/charts/agent
