@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.6.2](https://github.com/woodpecker-ci/helm/releases/tag/3.6.2) - 2026-05-12
+
+### 🔒 Security
+
+- chore(deps): update dependency woodpecker-ci/woodpecker to v3.14.1 [[#482](https://github.com/woodpecker-ci/helm/pull/482)]
+
 ## [3.6.1](https://github.com/woodpecker-ci/helm/releases/tag/3.6.1) - 2026-05-11
 
 ### 🐛 Bug Fixes
