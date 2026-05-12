@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.6.1](https://github.com/woodpecker-ci/helm/releases/tag/3.6.1) - 2026-05-11
+
+### 🐛 Bug Fixes
+
+- Fix rendering of the primitive types in env values [[#480](https://github.com/woodpecker-ci/helm/pull/480)]
+
 ## [3.6.0](https://github.com/woodpecker-ci/helm/releases/tag/3.6.0) - 2026-05-10
 
 ### 📈 Enhancement
