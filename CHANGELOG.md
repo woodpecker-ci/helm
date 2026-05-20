@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.6.3](https://github.com/woodpecker-ci/helm/releases/tag/3.6.3) - 2026-05-17
+## [3.6.3](https://github.com/woodpecker-ci/helm/releases/tag/3.6.3) - 2026-05-20
+
+### 🐛 Bug Fixes
+
+- Fix YAML parse error when persistence.existingClaim and extraVolumeMounts [[#486](https://github.com/woodpecker-ci/helm/pull/486)]
 
 ### 📦️ Dependency
 
