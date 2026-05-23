@@ -23,7 +23,7 @@ steps:
       - helm lint --with-subcharts charts/*
 
   - name: lint-yaml
-    image: docker.io/pipelinecomponents/yamllint:0.35.9
+    image: docker.io/pipelinecomponents/yamllint:0.35.13
     depends_on: []
     commands:
       - yamllint .
