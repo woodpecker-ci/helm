@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-23
+## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-28
 
 ### 📦️ Dependency
 
+- Update dependency woodpecker-ci/woodpecker to v3.15.0 [[#489](https://github.com/woodpecker-ci/helm/pull/489)]
 - Update docker.io/pipelinecomponents/yamllint Docker tag to v0.35.13 [[#487](https://github.com/woodpecker-ci/helm/pull/487)]
 
 ## [3.6.3](https://github.com/woodpecker-ci/helm/releases/tag/3.6.3) - 2026-05-20
