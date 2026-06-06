@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-06
+
+### 📦️ Dependency
+
+- Update dependency helm-unittest/helm-unittest to v1.1.1 [[#491](https://github.com/woodpecker-ci/helm/pull/491)]
+
 ## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-28
 
 ### 📦️ Dependency
