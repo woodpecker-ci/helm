@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-06
+## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-13
 
 ### 📦️ Dependency
 
+- Update docker.io/jauderho/prettier Docker tag to v3.8.4 [[#493](https://github.com/woodpecker-ci/helm/pull/493)]
 - Update dependency helm-unittest/helm-unittest to v1.1.1 [[#491](https://github.com/woodpecker-ci/helm/pull/491)]
 
 ## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-28
