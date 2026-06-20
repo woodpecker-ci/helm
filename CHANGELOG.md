@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-13
+## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-20
 
 ### 📦️ Dependency
 
+- Update docker.io/alpine/helm Docker tag to v4.2.2 [[#497](https://github.com/woodpecker-ci/helm/pull/497)]
 - Update docker.io/alpine/helm Docker tag to v4.2.1 [[#495](https://github.com/woodpecker-ci/helm/pull/495)]
 - Update pre-commit non-major to v3.8.4 [[#494](https://github.com/woodpecker-ci/helm/pull/494)]
 - Update docker.io/jauderho/prettier Docker tag to v3.8.4 [[#493](https://github.com/woodpecker-ci/helm/pull/493)]
