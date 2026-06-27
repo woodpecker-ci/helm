@@ -6,10 +6,12 @@
 
 - Update docker.io/jauderho/prettier Docker tag to v3.8.5 [[#499](https://github.com/woodpecker-ci/helm/pull/499)]
 - Update docker.io/alpine/helm Docker tag to v4.2.2 [[#497](https://github.com/woodpecker-ci/helm/pull/497)]
-- Update docker.io/alpine/helm Docker tag to v4.2.1 [[#495](https://github.com/woodpecker-ci/helm/pull/495)]
 - Update pre-commit non-major to v3.8.4 [[#494](https://github.com/woodpecker-ci/helm/pull/494)]
-- Update docker.io/jauderho/prettier Docker tag to v3.8.4 [[#493](https://github.com/woodpecker-ci/helm/pull/493)]
 - Update dependency helm-unittest/helm-unittest to v1.1.1 [[#491](https://github.com/woodpecker-ci/helm/pull/491)]
+
+### Misc
+
+- Fix editorconfig deprecation [[#500](https://github.com/woodpecker-ci/helm/pull/500)]
 
 ## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-28
 
