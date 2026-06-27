@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-27
+
+### 📦️ Dependency
+
+- Update dependency woodpecker-ci/woodpecker to v3.16.0 [[#502](https://github.com/woodpecker-ci/helm/pull/502)]
+- Update pre-commit hook rbubley/mirrors-prettier to v3.8.5 [[#501](https://github.com/woodpecker-ci/helm/pull/501)]
+- Update docker.io/jauderho/prettier Docker tag to v3.8.5 [[#499](https://github.com/woodpecker-ci/helm/pull/499)]
+- Update docker.io/alpine/helm Docker tag to v4.2.2 [[#497](https://github.com/woodpecker-ci/helm/pull/497)]
+- Update pre-commit non-major to v3.8.4 [[#494](https://github.com/woodpecker-ci/helm/pull/494)]
+- Update dependency helm-unittest/helm-unittest to v1.1.1 [[#491](https://github.com/woodpecker-ci/helm/pull/491)]
+
+### Misc
+
+- Fix editorconfig deprecation [[#500](https://github.com/woodpecker-ci/helm/pull/500)]
+
 ## [3.6.4](https://github.com/woodpecker-ci/helm/releases/tag/3.6.4) - 2026-05-28
 
 ### 📦️ Dependency
