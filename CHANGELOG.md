@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update pre-commit hook rbubley/mirrors-prettier to v3.9.1 [[#506](https://github.com/woodpecker-ci/helm/pull/506)]
 - Update docker.io/jauderho/prettier Docker tag to v3.9.1 [[#505](https://github.com/woodpecker-ci/helm/pull/505)]
 - Update docker.io/jauderho/prettier Docker tag to v3.9.0 [[#503](https://github.com/woodpecker-ci/helm/pull/503)]
 
