@@ -13,7 +13,7 @@ repos:
     hooks:
       - id: markdownlint-cli2
   - repo: https://github.com/mrtazz/checkmake
-    rev: v0.3.2
+    rev: v0.3.0
     hooks:
       - id: checkmake
   - repo: https://github.com/gruntwork-io/pre-commit
