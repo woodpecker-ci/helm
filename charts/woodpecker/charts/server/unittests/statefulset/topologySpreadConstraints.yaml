@@ -7,9 +7,6 @@ templates:
   - templates/statefulset.yaml
 tests:
   - it: renders topologySpreadConstraints when set
-    capabilities:
-      majorVersion: 1
-      minorVersion: 25
     set:
       topologySpreadConstraints:
         - maxSkew: 1
@@ -31,23 +28,6 @@ tests:
                 matchLabels:
                   app.kubernetes.io/name: woodpecker-server
   - it: omits topologySpreadConstraints by default
-    capabilities:
-      majorVersion: 1
-      minorVersion: 25
-    asserts:
-      - hasDocuments:
-          count: 1
-      - notExists:
-          path: spec.template.spec.topologySpreadConstraints
-  - it: omits topologySpreadConstraints on Kubernetes below 1.19
-    capabilities:
-      majorVersion: 1
-      minorVersion: 18
-    set:
-      topologySpreadConstraints:
-        - maxSkew: 1
-          topologyKey: kubernetes.io/hostname
-          whenUnsatisfiable: DoNotSchedule
     asserts:
       - hasDocuments:
           count: 1

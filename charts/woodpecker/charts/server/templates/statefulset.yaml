@@ -125,11 +125,9 @@ spec:
             - secretRef:
                 name: {{ . }}
             {{- end }}
-      {{- if and (semverCompare ">=1.19-0" .Capabilities.KubeVersion.GitVersion) (.Values.topologySpreadConstraints) }}
       {{- with .Values.topologySpreadConstraints }}
       topologySpreadConstraints:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
       {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
