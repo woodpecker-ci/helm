@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.6.6](https://github.com/woodpecker-ci/helm/releases/tag/3.6.6) - 2026-07-04
+## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-10
+
+### 📈 Enhancement
+
+- Add topologySpreadConstraints to the server [[#498](https://github.com/woodpecker-ci/helm/pull/498)]
 
 ### 📦️ Dependency
 
