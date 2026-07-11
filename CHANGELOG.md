@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/alpine/helm Docker tag to v4.2.3 [[#511](https://github.com/woodpecker-ci/helm/pull/511)]
 - Update docker.io/jauderho/prettier Docker tag to v3.9.5 [[#512](https://github.com/woodpecker-ci/helm/pull/512)]
 - Update pre-commit non-major [[#509](https://github.com/woodpecker-ci/helm/pull/509)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.0 [[#508](https://github.com/woodpecker-ci/helm/pull/508)]
