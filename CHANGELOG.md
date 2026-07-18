@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.1 [[#516](https://github.com/woodpecker-ci/helm/pull/516)]
 - Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.2 [[#515](https://github.com/woodpecker-ci/helm/pull/515)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.1 [[#514](https://github.com/woodpecker-ci/helm/pull/514)]
 - Update pre-commit hook rbubley/mirrors-prettier to v3.9.5 [[#513](https://github.com/woodpecker-ci/helm/pull/513)]
