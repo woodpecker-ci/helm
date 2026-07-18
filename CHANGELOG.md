@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.2 [[#515](https://github.com/woodpecker-ci/helm/pull/515)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.1 [[#514](https://github.com/woodpecker-ci/helm/pull/514)]
 - Update pre-commit hook rbubley/mirrors-prettier to v3.9.5 [[#513](https://github.com/woodpecker-ci/helm/pull/513)]
 - Update docker.io/alpine/helm Docker tag to v4.2.3 [[#511](https://github.com/woodpecker-ci/helm/pull/511)]
