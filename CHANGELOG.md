@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-18
+
+### 📈 Enhancement
+
+- Add topologySpreadConstraints to the server [[#498](https://github.com/woodpecker-ci/helm/pull/498)]
+
+### 📦️ Dependency
+
+- Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.1 [[#516](https://github.com/woodpecker-ci/helm/pull/516)]
+- Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.2 [[#515](https://github.com/woodpecker-ci/helm/pull/515)]
+- Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.1 [[#514](https://github.com/woodpecker-ci/helm/pull/514)]
+- Update pre-commit hook rbubley/mirrors-prettier to v3.9.5 [[#513](https://github.com/woodpecker-ci/helm/pull/513)]
+- Update docker.io/alpine/helm Docker tag to v4.2.3 [[#511](https://github.com/woodpecker-ci/helm/pull/511)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.5 [[#512](https://github.com/woodpecker-ci/helm/pull/512)]
+- Update pre-commit non-major [[#509](https://github.com/woodpecker-ci/helm/pull/509)]
+- Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.0 [[#508](https://github.com/woodpecker-ci/helm/pull/508)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.4 [[#507](https://github.com/woodpecker-ci/helm/pull/507)]
+- Update pre-commit hook rbubley/mirrors-prettier to v3.9.1 [[#506](https://github.com/woodpecker-ci/helm/pull/506)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.1 [[#505](https://github.com/woodpecker-ci/helm/pull/505)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.0 [[#503](https://github.com/woodpecker-ci/helm/pull/503)]
+
 ## [3.6.5](https://github.com/woodpecker-ci/helm/releases/tag/3.6.5) - 2026-06-27
 
 ### 📦️ Dependency
