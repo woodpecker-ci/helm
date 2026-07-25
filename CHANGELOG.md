@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/jauderho/prettier Docker tag to v3.9.6 [[#518](https://github.com/woodpecker-ci/helm/pull/518)]
 - Update dependency helm-unittest/helm-unittest to v1.1.2 [[#517](https://github.com/woodpecker-ci/helm/pull/517)]
 - Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.1 [[#516](https://github.com/woodpecker-ci/helm/pull/516)]
 - Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.2 [[#515](https://github.com/woodpecker-ci/helm/pull/515)]
