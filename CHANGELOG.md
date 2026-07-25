@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-18
+## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-25
 
 ### 📈 Enhancement
 
@@ -8,6 +8,7 @@
 
 ### 📦️ Dependency
 
+- Update dependency helm-unittest/helm-unittest to v1.1.2 [[#517](https://github.com/woodpecker-ci/helm/pull/517)]
 - Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.1 [[#516](https://github.com/woodpecker-ci/helm/pull/516)]
 - Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.2 [[#515](https://github.com/woodpecker-ci/helm/pull/515)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.1 [[#514](https://github.com/woodpecker-ci/helm/pull/514)]
