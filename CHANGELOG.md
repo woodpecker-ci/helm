@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.7.1](https://github.com/woodpecker-ci/helm/releases/tag/3.7.1) - 2026-08-15
+
+### 📦️ Dependency
+
+- Update docker.io/alpine/helm Docker tag to v4.2.4 [[#524](https://github.com/woodpecker-ci/helm/pull/524)]
+
 ## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-31
 
 ### 📈 Enhancement
