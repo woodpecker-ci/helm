@@ -22,8 +22,8 @@ keywords:
   - kubernetes
 
 sources:
+  - https://github.com/woodpecker-ci/helm.git  # First item because it's used by `helm push` for the `org.opencontainers.image.source` OCI annotation
   - https://github.com/woodpecker-ci/woodpecker.git
-  - https://github.com/woodpecker-ci/helm.git
 
 dependencies:
   - name: server
