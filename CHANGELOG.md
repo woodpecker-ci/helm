@@ -1,10 +1,14 @@
 # Changelog
 
-## [3.7.1](https://github.com/woodpecker-ci/helm/releases/tag/3.7.1) - 2026-08-15
+## [3.7.1](https://github.com/woodpecker-ci/helm/releases/tag/3.7.1) - 2026-08-17
 
 ### 📦️ Dependency
 
 - Update docker.io/alpine/helm Docker tag to v4.2.4 [[#524](https://github.com/woodpecker-ci/helm/pull/524)]
+
+### Misc
+
+- Put helm repo first in sources for OCI `image.source` [[#526](https://github.com/woodpecker-ci/helm/pull/526)]
 
 ## [3.7.0](https://github.com/woodpecker-ci/helm/releases/tag/3.7.0) - 2026-07-31
 
