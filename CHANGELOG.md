@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.7.3](https://github.com/woodpecker-ci/helm/releases/tag/3.7.3) - 2026-08-30
+
+### 🐛 Bug Fixes
+
+- Move `WOODPECKER_DATABASE_DATASOURCE` to server env [[#530](https://github.com/woodpecker-ci/helm/pull/530)]
+
 ## [3.7.2](https://github.com/woodpecker-ci/helm/releases/tag/3.7.2) - 2026-08-24
 
 ### 📦️ Dependency
