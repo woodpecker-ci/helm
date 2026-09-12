@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/alpine/helm Docker tag to v4.3.0 [[#533](https://github.com/woodpecker-ci/helm/pull/533)]
 - Update dependency woodpecker-ci/woodpecker to v3.18.1 [[#532](https://github.com/woodpecker-ci/helm/pull/532)]
 
 ## [3.7.3](https://github.com/woodpecker-ci/helm/releases/tag/3.7.3) - 2026-08-30
