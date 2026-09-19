@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/jauderho/prettier Docker tag to v3.9.8 [[#535](https://github.com/woodpecker-ci/helm/pull/535)]
 - Update pre-commit hook rbubley/mirrors-prettier to v3.9.8 [[#536](https://github.com/woodpecker-ci/helm/pull/536)]
 - Update docker.io/alpine/helm Docker tag to v4.3.0 [[#533](https://github.com/woodpecker-ci/helm/pull/533)]
 - Update dependency woodpecker-ci/woodpecker to v3.18.1 [[#532](https://github.com/woodpecker-ci/helm/pull/532)]
