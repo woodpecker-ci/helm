@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.7.4](https://github.com/woodpecker-ci/helm/releases/tag/3.7.4) - 2026-09-19
+## [3.7.4](https://github.com/woodpecker-ci/helm/releases/tag/3.7.4) - 2026-09-20
 
 ### 📦️ Dependency
 
+- Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.3 [[#537](https://github.com/woodpecker-ci/helm/pull/537)]
 - Update docker.io/jauderho/prettier Docker tag to v3.9.8 [[#535](https://github.com/woodpecker-ci/helm/pull/535)]
 - Update pre-commit hook rbubley/mirrors-prettier to v3.9.8 [[#536](https://github.com/woodpecker-ci/helm/pull/536)]
 - Update docker.io/alpine/helm Docker tag to v4.3.0 [[#533](https://github.com/woodpecker-ci/helm/pull/533)]
