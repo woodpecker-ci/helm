@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.7.4](https://github.com/woodpecker-ci/helm/releases/tag/3.7.4) - 2026-09-26
+
+### 📦️ Dependency
+
+- Update pre-commit hook rbubley/mirrors-prettier to v3.9.9 [[#542](https://github.com/woodpecker-ci/helm/pull/542)]
+- Update docker.io/woodpeckerci/plugin-prettier Docker tag to v1.4.2 [[#541](https://github.com/woodpecker-ci/helm/pull/541)]
+- Update docker.io/woodpeckerci/plugin-editorconfig-checker Docker tag to v0.3.4 [[#540](https://github.com/woodpecker-ci/helm/pull/540)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.9 [[#539](https://github.com/woodpecker-ci/helm/pull/539)]
+- Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.23.3 [[#538](https://github.com/woodpecker-ci/helm/pull/538)]
+- Update pre-commit hook davidanson/markdownlint-cli2 to v0.23.3 [[#537](https://github.com/woodpecker-ci/helm/pull/537)]
+- Update docker.io/jauderho/prettier Docker tag to v3.9.8 [[#535](https://github.com/woodpecker-ci/helm/pull/535)]
+- Update pre-commit hook rbubley/mirrors-prettier to v3.9.8 [[#536](https://github.com/woodpecker-ci/helm/pull/536)]
+- Update docker.io/alpine/helm Docker tag to v4.3.0 [[#533](https://github.com/woodpecker-ci/helm/pull/533)]
+- Update dependency woodpecker-ci/woodpecker to v3.18.1 [[#532](https://github.com/woodpecker-ci/helm/pull/532)]
+
 ## [3.7.3](https://github.com/woodpecker-ci/helm/releases/tag/3.7.3) - 2026-08-30
 
 ### 🐛 Bug Fixes
