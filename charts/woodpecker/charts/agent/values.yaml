@@ -71,6 +71,10 @@ persistence:
   # -- Defines the access mode of the persistent volume
   accessModes:
     - ReadWriteOnce
+  # -- Defines the labels of the persistent volume
+  labels: {}
+  # -- Defines the annotations of the persistent volume
+  annotations: {}
 
 # -- The image pull secrets
 imagePullSecrets: []
