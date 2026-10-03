@@ -39,49 +39,49 @@ tests:
       persistence:
         enabled: true
         labels:
-          - 'label0'
+          label0: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[0]
-          value: 'label0'
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
   - it: persistence enabled with two labels
     set:
       persistence:
         enabled: true
         labels:
-          - 'label0'
-          - 'label1'
+          label0: 'value'
+          label1: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[0]
-          value: 'label0'
-      - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[1]
-          value: 'label1'
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
+            label1: 'value'
   - it: persistence enabled with one annotation
     set:
       persistence:
         enabled: true
         annotations:
-          - 'annotation0'
+          annotation0: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[0]
-          value: 'annotation0'
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+          value:
+            annotation0: 'value'
   - it: persistence enabled with two annotations
     set:
       persistence:
         enabled: true
         annotations:
-          - 'annotation0'
-          - 'annotation1'
+          annotation0: 'value'
+          annotation1: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[0]
-          value: 'annotation0'
-      - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[1]
-          value: 'annotation1'
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+          value:
+            annotation0: 'value'
+            annotation1: 'value'
   - it: persistence enabled with existingClaim
     set:
       persistence:

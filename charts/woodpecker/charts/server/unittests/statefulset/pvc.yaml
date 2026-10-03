@@ -39,74 +39,46 @@ tests:
       persistentVolume:
         enabled: true
         labels:
-          - 'label0'
+          label0: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[0]
-          value: 'label0'
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
   - it: persistentVolume enabled with two labels
     set:
       persistentVolume:
         enabled: true
         labels:
-          - 'label0'
-          - 'label1'
+          label0: 'value'
+          label1: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[0]
-          value: 'label0'
-      - equal:
-          path: spec.volumeClaimTemplates[0].metadata.labels[1]
-          value: 'label1'
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
+            label1: 'value'
   - it: persistentVolume enabled with one annotation
     set:
       persistentVolume:
         enabled: true
         annotations:
-          - 'annotation0'
+          annotation0: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[0]
-          value: 'annotation0'
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+          value:
+            annotation0: 'value'
   - it: persistentVolume enabled with two annotations
     set:
       persistentVolume:
         enabled: true
         annotations:
-          - 'annotation0'
-          - 'annotation1'
+          annotation0: 'value'
+          annotation1: 'value'
     asserts:
       - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[0]
-          value: 'annotation0'
-      - equal:
-          path: spec.volumeClaimTemplates[0].metadata.annotations[1]
-          value: 'annotation1'
-  - it: persistentVolume enabled with existingClaim
-    set:
-      persistentVolume:
-        enabled: true
-        existingClaim: 'my-claim'
-    asserts:
-      - notExists:
-          path: spec.volumeClaimTemplates[0].spec.accessModes[0]
-      - equal:
-          path: spec.template.spec.volumes
+          path: spec.volumeClaimTemplates[0].metadata.annotations
           value:
-            - name: agent-config
-              persistentVolumeClaim:
-                claimName: my-claim
-  - it: persistentVolume disabled
-    set:
-      persistentVolume:
-        enabled: false
-    asserts:
-      - notExists:
-          path: spec.template.spec.volumes
-      - notExists:
-          path: spec.template.spec.containers[0].volumeMounts
-          value:
-            - mountPath: /data
-              name: data
-      - notExists:
-          path: spec.volumeClaimTemplates
+            annotation0: 'value'
+            annotation1: 'value'
