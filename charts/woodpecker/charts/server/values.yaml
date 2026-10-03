@@ -109,7 +109,7 @@ persistentVolume:
   storageClass: ''
   # -- Defines the access mode of the persistent volume
   accessModes:
-    - ReadWriteOnce
+    - 'ReadWriteOnce'
   # -- Defines the labels of the persistent volume
   labels: {}
   # -- Defines the annotations of the persistent volume

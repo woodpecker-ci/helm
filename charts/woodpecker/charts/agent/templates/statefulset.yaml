@@ -126,9 +126,9 @@ spec:
         labels:
           {{- toYaml . | nindent 10 }}
         {{- end }}
+        {{- with .Values.persistence.annotations }}
         annotations:
-        {{- range $key, $value := .Values.persistence.annotations }}
-          {{ $key }}: {{ $value }}
+          {{- toYaml . | nindent 10 }}
         {{- end }}
       spec:
         accessModes:
