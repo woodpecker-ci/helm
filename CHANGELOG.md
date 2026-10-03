@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update dependency helm-unittest/helm-unittest to v1.2.1 [[#545](https://github.com/woodpecker-ci/helm/pull/545)]
 - Update dependency helm-unittest/helm-unittest to v1.2.0 [[#544](https://github.com/woodpecker-ci/helm/pull/544)]
 - Update pre-commit hook rbubley/mirrors-prettier to v3.9.9 [[#542](https://github.com/woodpecker-ci/helm/pull/542)]
 - Update docker.io/woodpeckerci/plugin-prettier Docker tag to v1.4.2 [[#541](https://github.com/woodpecker-ci/helm/pull/541)]
