@@ -82,3 +82,33 @@ tests:
           value:
             annotation0: 'value'
             annotation1: 'value'
+  - it: persistentVolume enabled with default labels and annotations omits both keys
+    set:
+      persistentVolume:
+        enabled: true
+    asserts:
+      - notExists:
+          path: spec.volumeClaimTemplates[0].metadata.labels
+      - notExists:
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+  - it: persistentVolume enabled with labels and annotations together
+    set:
+      persistentVolume:
+        enabled: true
+        labels:
+          label0: 'value'
+          label1: 'value'
+        annotations:
+          annotation0: 'value'
+          annotation1: 'value'
+    asserts:
+      - equal:
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
+            label1: 'value'
+      - equal:
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+          value:
+            annotation0: 'value'
+            annotation1: 'value'

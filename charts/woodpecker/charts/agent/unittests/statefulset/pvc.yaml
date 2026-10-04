@@ -110,3 +110,33 @@ tests:
               name: data
       - notExists:
           path: spec.volumeClaimTemplates
+  - it: persistence enabled with default labels and annotations omits both keys
+    set:
+      persistence:
+        enabled: true
+    asserts:
+      - notExists:
+          path: spec.volumeClaimTemplates[0].metadata.labels
+      - notExists:
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+  - it: persistence enabled with labels and annotations together
+    set:
+      persistence:
+        enabled: true
+        labels:
+          label0: 'value'
+          label1: 'value'
+        annotations:
+          annotation0: 'value'
+          annotation1: 'value'
+    asserts:
+      - equal:
+          path: spec.volumeClaimTemplates[0].metadata.labels
+          value:
+            label0: 'value'
+            label1: 'value'
+      - equal:
+          path: spec.volumeClaimTemplates[0].metadata.annotations
+          value:
+            annotation0: 'value'
+            annotation1: 'value'
