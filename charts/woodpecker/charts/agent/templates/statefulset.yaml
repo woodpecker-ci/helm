@@ -122,9 +122,13 @@ spec:
       metadata:
         name: agent-config
         namespace: {{ $.namespace }}
+        {{- with .Values.persistence.labels }}
+        labels:
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
+        {{- with .Values.persistence.annotations }}
         annotations:
-        {{- range $key, $value := .Values.persistence.annotations }}
-          {{ $key }}: {{ $value }}
+          {{- toYaml . | nindent 10 }}
         {{- end }}
       spec:
         accessModes:

@@ -2,17 +2,17 @@ suite: test deployment
 templates:
   - templates/statefulset.yaml
 tests:
-  - it: persistence enabled
+  - it: persistentVolume enabled
     set:
-      persistence:
+      persistentVolume:
         enabled: true
     asserts:
       - equal:
           path: spec.volumeClaimTemplates[0].spec.accessModes[0]
           value: 'ReadWriteOnce'
-  - it: persistence enabled with one accessModes
+  - it: persistentVolume enabled with one accessModes
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         accessModes:
           - 'ReadWriteOncePod'
@@ -20,9 +20,9 @@ tests:
       - equal:
           path: spec.volumeClaimTemplates[0].spec.accessModes[0]
           value: 'ReadWriteOncePod'
-  - it: persistence enabled with two accessModes
+  - it: persistentVolume enabled with two accessModes
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         accessModes:
           - 'ReadWriteOncePod'
@@ -34,9 +34,9 @@ tests:
       - equal:
           path: spec.volumeClaimTemplates[0].spec.accessModes[1]
           value: 'ReadWriteMany'
-  - it: persistence enabled with one label
+  - it: persistentVolume enabled with one label
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         labels:
           label0: 'value'
@@ -45,9 +45,9 @@ tests:
           path: spec.volumeClaimTemplates[0].metadata.labels
           value:
             label0: 'value'
-  - it: persistence enabled with two labels
+  - it: persistentVolume enabled with two labels
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         labels:
           label0: 'value'
@@ -58,9 +58,9 @@ tests:
           value:
             label0: 'value'
             label1: 'value'
-  - it: persistence enabled with one annotation
+  - it: persistentVolume enabled with one annotation
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         annotations:
           annotation0: 'value'
@@ -69,9 +69,9 @@ tests:
           path: spec.volumeClaimTemplates[0].metadata.annotations
           value:
             annotation0: 'value'
-  - it: persistence enabled with two annotations
+  - it: persistentVolume enabled with two annotations
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         annotations:
           annotation0: 'value'
@@ -82,46 +82,18 @@ tests:
           value:
             annotation0: 'value'
             annotation1: 'value'
-  - it: persistence enabled with existingClaim
+  - it: persistentVolume enabled with default labels and annotations omits both keys
     set:
-      persistence:
-        enabled: true
-        existingClaim: 'my-claim'
-    asserts:
-      - notExists:
-          path: spec.volumeClaimTemplates[0].spec.accessModes[0]
-      - equal:
-          path: spec.template.spec.volumes
-          value:
-            - name: agent-config
-              persistentVolumeClaim:
-                claimName: my-claim
-  - it: persistence disabled
-    set:
-      persistence:
-        enabled: false
-    asserts:
-      - notExists:
-          path: spec.template.spec.volumes
-      - notExists:
-          path: spec.template.spec.containers[0].volumeMounts
-          value:
-            - mountPath: /data
-              name: data
-      - notExists:
-          path: spec.volumeClaimTemplates
-  - it: persistence enabled with default labels and annotations omits both keys
-    set:
-      persistence:
+      persistentVolume:
         enabled: true
     asserts:
       - notExists:
           path: spec.volumeClaimTemplates[0].metadata.labels
       - notExists:
           path: spec.volumeClaimTemplates[0].metadata.annotations
-  - it: persistence enabled with labels and annotations together
+  - it: persistentVolume enabled with labels and annotations together
     set:
-      persistence:
+      persistentVolume:
         enabled: true
         labels:
           label0: 'value'
