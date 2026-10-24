@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.24.0 [[#555](https://github.com/woodpecker-ci/helm/pull/555)]
 - Update pre-commit hook davidanson/markdownlint-cli2 to v0.24.0 [[#556](https://github.com/woodpecker-ci/helm/pull/556)]
 - Update docker.io/alpine/helm Docker tag to v4.3.1 [[#553](https://github.com/woodpecker-ci/helm/pull/553)]
 - Update docker.io/pipelinecomponents/yamllint Docker tag to v0.35.27 [[#554](https://github.com/woodpecker-ci/helm/pull/554)]
