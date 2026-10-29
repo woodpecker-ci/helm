@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.7.6](https://github.com/woodpecker-ci/helm/releases/tag/3.7.6) - 2026-10-24
+## [3.7.6](https://github.com/woodpecker-ci/helm/releases/tag/3.7.6) - 2026-10-29
 
 ### 📦️ Dependency
 
+- Update quay.io/helmpack/chart-releaser Docker tag to v1.9.0 [[#558](https://github.com/woodpecker-ci/helm/pull/558)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.24.0 [[#555](https://github.com/woodpecker-ci/helm/pull/555)]
 - Update pre-commit hook davidanson/markdownlint-cli2 to v0.24.0 [[#556](https://github.com/woodpecker-ci/helm/pull/556)]
 - Update docker.io/alpine/helm Docker tag to v4.3.1 [[#553](https://github.com/woodpecker-ci/helm/pull/553)]
