@@ -7,13 +7,13 @@ when:
 
 steps:
   - name: pack-chart
-    image: quay.io/helmpack/chart-releaser:v1.9.0
+    image: quay.io/helmpack/chart-releaser:v1.10.0
     commands:
       - mkdir -p .cr-index
       - cr package charts/woodpecker
 
   - name: release-chart
-    image: quay.io/helmpack/chart-releaser:v1.9.0
+    image: quay.io/helmpack/chart-releaser:v1.10.0
     environment:
       CR_TOKEN:
         from_secret: github_token
