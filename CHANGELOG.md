@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update quay.io/helmpack/chart-releaser Docker tag to v1.10.1 [[#563](https://github.com/woodpecker-ci/helm/pull/563)]
 - Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.3 [[#562](https://github.com/woodpecker-ci/helm/pull/562)]
 - Update quay.io/helmpack/chart-releaser Docker tag to v1.10.0 [[#560](https://github.com/woodpecker-ci/helm/pull/560)]
 
