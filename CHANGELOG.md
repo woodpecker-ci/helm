@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-10-31
+
+### 📦️ Dependency
+
+- Update quay.io/helmpack/chart-releaser Docker tag to v1.10.0 [[#560](https://github.com/woodpecker-ci/helm/pull/560)]
+
 ## [3.7.6](https://github.com/woodpecker-ci/helm/releases/tag/3.7.6) - 2026-10-30
 
 ### 📦️ Dependency
