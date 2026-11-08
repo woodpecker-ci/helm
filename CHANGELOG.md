@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-11-01
+## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-11-08
 
 ### 📦️ Dependency
 
+- Update docker.io/appleboy/drone-git-push Docker tag to v1.2.6 [[#566](https://github.com/woodpecker-ci/helm/pull/566)]
 - Update docker.io/appleboy/drone-git-push Docker tag to v1.2.5 [[#564](https://github.com/woodpecker-ci/helm/pull/564)]
 - Update quay.io/helmpack/chart-releaser Docker tag to v1.10.1 [[#563](https://github.com/woodpecker-ci/helm/pull/563)]
 - Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.3 [[#562](https://github.com/woodpecker-ci/helm/pull/562)]
