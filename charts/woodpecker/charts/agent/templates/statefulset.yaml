@@ -121,7 +121,6 @@ spec:
       kind: PersistentVolumeClaim
       metadata:
         name: agent-config
-        namespace: {{ $.namespace }}
         {{- with .Values.persistence.labels }}
         labels:
           {{- toYaml . | nindent 10 }}
