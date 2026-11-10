@@ -1,0 +1,35 @@
+suite: test server namespace
+templates:
+  - ingress-grpc.yaml
+  - ingress-http.yaml
+  - networkpolicy.yaml
+  - pod-monitor.yaml
+  - prometheus-rules.yaml
+  - secret.yaml
+  - service-headless.yaml
+  - service.yaml
+  - serviceaccount.yaml
+  - statefulset.yaml
+release:
+  namespace: woodpecker-test
+capabilities:
+  apiVersions:
+    - monitoring.coreos.com/v1
+tests:
+  - it: should set the release namespace on all namespaced resources
+    set:
+      ingress.enabled: true
+      ingress.grpc.enabled: true
+      networkPolicy.enabled: true
+      metrics.enabled: true
+      prometheus.podmonitor.enabled: true
+      prometheus.rules.enabled: true
+      serviceAccount.create: true
+      secrets:
+        - name: extra
+          data:
+            KEY: value
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: woodpecker-test
