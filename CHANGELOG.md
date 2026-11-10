@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-11-08
+## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-11-10
+
+### 🐛 Bug Fixes
+
+- Separate agent secrets into own YAML documents [[#568](https://github.com/woodpecker-ci/helm/pull/568)]
 
 ### 📦️ Dependency
 
