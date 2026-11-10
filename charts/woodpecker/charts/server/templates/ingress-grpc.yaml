@@ -4,6 +4,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}-grpc
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "woodpecker-server.labels" . | nindent 4 }}
   annotations:

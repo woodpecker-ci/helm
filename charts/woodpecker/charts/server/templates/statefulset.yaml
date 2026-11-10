@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: {{ include "woodpecker-server.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   {{- with .Values.statefulSet.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}

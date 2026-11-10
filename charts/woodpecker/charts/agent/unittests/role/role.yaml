@@ -78,3 +78,16 @@ tests:
       - equal:
           path: metadata.annotations["custom-annotation"]
           value: test-value
+
+  - it: should use the release namespace for Role when no backend namespace is set
+    set:
+      serviceAccount.create: true
+      serviceAccount.rbac.create: true
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE_PER_ORGANIZATION: false
+      env.WOODPECKER_BACKEND_K8S_NAMESPACE: ""
+    asserts:
+      - isKind:
+          of: Role
+      - equal:
+          path: metadata.namespace
+          value: NAMESPACE

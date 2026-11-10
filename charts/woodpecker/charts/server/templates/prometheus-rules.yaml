@@ -3,6 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: {{ include "woodpecker-server.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "woodpecker-server.labels" . | nindent 4 }}
     {{- with .Values.prometheus.rules.labels }}

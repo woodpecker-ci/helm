@@ -1,0 +1,20 @@
+suite: test agent namespace
+templates:
+  - networkpolicy.yaml
+  - secret.yml
+  - serviceaccount.yaml
+  - statefulset.yaml
+release:
+  namespace: woodpecker-test
+tests:
+  - it: should set the release namespace on all namespaced resources
+    set:
+      networkPolicy.enabled: true
+      secrets:
+        - name: extra
+          data:
+            KEY: value
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: woodpecker-test
