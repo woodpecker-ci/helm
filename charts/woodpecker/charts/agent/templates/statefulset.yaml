@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: {{ include "woodpecker-agent.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "woodpecker-agent.labels" . | nindent 4 }}
 spec:
@@ -121,7 +122,6 @@ spec:
       kind: PersistentVolumeClaim
       metadata:
         name: agent-config
-        namespace: {{ $.namespace }}
         {{- with .Values.persistence.labels }}
         labels:
           {{- toYaml . | nindent 10 }}
