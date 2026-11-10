@@ -4,6 +4,7 @@
 
 ### 🐛 Bug Fixes
 
+- Apply secret namespace from release [[#567](https://github.com/woodpecker-ci/helm/pull/567)]
 - Separate agent secrets into own YAML documents [[#568](https://github.com/woodpecker-ci/helm/pull/568)]
 
 ### 📦️ Dependency
