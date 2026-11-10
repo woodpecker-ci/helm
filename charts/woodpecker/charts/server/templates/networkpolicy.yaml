@@ -5,6 +5,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: {{ include "woodpecker-server.fullname" $ }}
+  namespace: {{ $.Release.Namespace }}
   labels:
     {{- include "woodpecker-server.labels" $ | nindent 4 }}
 spec:
