@@ -179,6 +179,21 @@ resources:
   #   cpu: 100m
   #   memory: 128Mi
 
+# -- Liveness probe for the agent container. Off by default. The agent serves `/healthz` on
+# the `http` port (3000, `WOODPECKER_HEALTHCHECK_ADDR`), which fails once the agent has lost
+# contact with the server.
+livenessProbe:
+  {}
+  # httpGet:
+  #   path: /healthz
+  #   port: http
+  # initialDelaySeconds: 10
+  # periodSeconds: 15
+  # failureThreshold: 3
+
+# -- Readiness probe for the agent container. Off by default; same endpoint as `livenessProbe`.
+readinessProbe: {}
+
 # -- Specifies the labels of the nodes that the agent component must be running
 nodeSelector: {}
 
