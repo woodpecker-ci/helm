@@ -1,0 +1,48 @@
+suite: test agent probes
+templates:
+  - templates/statefulset.yaml
+tests:
+  - it: should not set probes by default
+    asserts:
+      - notExists:
+          path: spec.template.spec.containers[0].livenessProbe
+      - notExists:
+          path: spec.template.spec.containers[0].readinessProbe
+  - it: should render livenessProbe when set
+    set:
+      livenessProbe:
+        httpGet:
+          path: /healthz
+          port: http
+        initialDelaySeconds: 10
+        periodSeconds: 15
+        failureThreshold: 3
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].livenessProbe
+          value:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 15
+            failureThreshold: 3
+      - notExists:
+          path: spec.template.spec.containers[0].readinessProbe
+  - it: should render readinessProbe when set
+    set:
+      readinessProbe:
+        httpGet:
+          path: /healthz
+          port: 3000
+        periodSeconds: 5
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].readinessProbe
+          value:
+            httpGet:
+              path: /healthz
+              port: 3000
+            periodSeconds: 5
+      - notExists:
+          path: spec.template.spec.containers[0].livenessProbe
