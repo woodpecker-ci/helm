@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/alpine/helm Docker tag to v4.3.2 [[#572](https://github.com/woodpecker-ci/helm/pull/572)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.24.1 [[#573](https://github.com/woodpecker-ci/helm/pull/573)]
 
 ## [3.7.7](https://github.com/woodpecker-ci/helm/releases/tag/3.7.7) - 2026-11-10
