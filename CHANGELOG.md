@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- Update docker.io/woodpeckerci/plugin-ready-release-go Docker tag to v4.1.4 [[#578](https://github.com/woodpecker-ci/helm/pull/578)]
 - Update docker.io/davidanson/markdownlint-cli2 Docker tag to v0.24.2 [[#577](https://github.com/woodpecker-ci/helm/pull/577)]
 - Update pre-commit non-major [[#575](https://github.com/woodpecker-ci/helm/pull/575)]
 - Update docker.io/jauderho/prettier Docker tag to v3.10.1 [[#576](https://github.com/woodpecker-ci/helm/pull/576)]
