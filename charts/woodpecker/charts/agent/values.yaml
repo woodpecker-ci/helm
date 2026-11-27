@@ -156,6 +156,15 @@ networkPolicy:
 # -- Add pod annotations for the agent component
 podAnnotations: {}
 
+# -- Add pod labels for the agent component
+podLabels: {}
+
+statefulSet:
+  # -- Add annotations to the agent StatefulSet
+  annotations: {}
+  # -- Add labels to the agent StatefulSet
+  labels: {}
+
 # -- Add pod security context
 podSecurityContext:
   fsGroup: 1000

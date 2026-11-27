@@ -3,8 +3,15 @@ kind: StatefulSet
 metadata:
   name: {{ include "woodpecker-agent.fullname" . }}
   namespace: {{ .Release.Namespace }}
+  {{- with .Values.statefulSet.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   labels:
     {{- include "woodpecker-agent.labels" . | nindent 4 }}
+    {{- with .Values.statefulSet.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
 spec:
   serviceName: {{ include "woodpecker-agent.fullname" . }}
   replicas: {{ .Values.replicaCount }}
@@ -19,6 +26,9 @@ spec:
       {{- end }}
       labels:
         {{- include "woodpecker-agent.selectorLabels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
     spec:
       {{- with .Values.topologySpreadConstraints }}
       topologySpreadConstraints:

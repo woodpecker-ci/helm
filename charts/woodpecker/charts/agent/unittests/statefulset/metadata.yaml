@@ -1,0 +1,67 @@
+suite: test agent statefulset metadata
+templates:
+  - templates/statefulset.yaml
+tests:
+  - it: has no custom annotations or labels by default
+    asserts:
+      - notExists:
+          path: metadata.annotations
+      - notExists:
+          path: spec.template.metadata.annotations
+      - notExists:
+          path: metadata.labels.team
+      - notExists:
+          path: spec.template.metadata.labels.team
+  - it: adds statefulSet annotations and labels to the StatefulSet only
+    set:
+      statefulSet:
+        annotations:
+          audit.example.com/owner: ci
+        labels:
+          team: platform
+    asserts:
+      - equal:
+          path: metadata.annotations["audit.example.com/owner"]
+          value: ci
+      - equal:
+          path: metadata.labels.team
+          value: platform
+      - equal:
+          path: metadata.labels["app.kubernetes.io/name"]
+          value: agent
+      - notExists:
+          path: spec.template.metadata.labels.team
+      - notExists:
+          path: spec.template.metadata.annotations
+  - it: adds podLabels to the pod template, keeping the selector labels
+    set:
+      podLabels:
+        team: platform
+        monitoring: enabled
+    asserts:
+      - equal:
+          path: spec.template.metadata.labels.team
+          value: platform
+      - equal:
+          path: spec.template.metadata.labels.monitoring
+          value: enabled
+      - equal:
+          path: spec.template.metadata.labels["app.kubernetes.io/name"]
+          value: agent
+      - notExists:
+          path: spec.selector.matchLabels.team
+      - notExists:
+          path: metadata.labels.team
+  - it: keeps podAnnotations working next to podLabels
+    set:
+      podAnnotations:
+        prometheus.io/scrape: 'true'
+      podLabels:
+        team: platform
+    asserts:
+      - equal:
+          path: spec.template.metadata.annotations["prometheus.io/scrape"]
+          value: 'true'
+      - equal:
+          path: spec.template.metadata.labels.team
+          value: platform
