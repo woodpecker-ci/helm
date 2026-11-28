@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.9](https://github.com/woodpecker-ci/helm/releases/tag/3.7.9) - 2026-11-28
+
+### 📦️ Dependency
+
+- Update docker.io/pipelinecomponents/yamllint Docker tag to v0.35.30 [[#583](https://github.com/woodpecker-ci/helm/pull/583)]
+- Update dependency helm-unittest/helm-unittest to v1.3.0 [[#581](https://github.com/woodpecker-ci/helm/pull/581)]
+
 ## [3.7.8](https://github.com/woodpecker-ci/helm/releases/tag/3.7.8) - 2026-11-26
 
 ### 📦️ Dependency
